@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>SafePlots - Plot Management & Services</title>
+
+        <meta
+            name="description"
+            content="SafePlots is your trusted platform for plot management & services."
+        />
+        <meta
+            name="keywords"
+            content="plot management, land survey, property monitoring, real estate services, Hyderabad, Hyderabad Lakes"
+        />
+        <meta name="author" content="SafePlots" />
+        <meta name="robots" content="index, follow" />
+
+        <link rel="stylesheet" href="./app.css" media="all" />
+
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>"
+        />
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header>
+            <div class="header-container">
+                <div class="logo">
+                    <span class="logo-icon">🏠</span>
+                    SafePlots
+                </div>
+
+                <nav>
+                    <ul id="nav-menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#testimonials">Reviews</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    ☰
+                </button>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Plot Management Made Simple</h1>
+
+                    <p>
+                        SafePlots provides comprehensive land management,
+                        property surveys, and real estate solutions. Trusted by
+                        50+ property owners.
+                    </p>
+
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn btn-primary"
+                            >Get Started</a
+                        >
+                        <a href="#contact" class="btn btn-secondary"
+                            >Contact Us</a
+                        >
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+
+                        <div class="hero-stat">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Cities Covered</span>
+                        </div>
+
+                        <div class="hero-stat">
+                            <span class="stat-number">10000+</span>
+                            <span class="stat-label">Square Yards</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img
+                        src="https://via.placeholder.com/600x400/10b981/ffffff?text=SafePlots+Dashboard"
+                        alt="SafePlots Platform Demo"
+                        class="hero-screenshot"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title fade-in">Why Choose SafePlots?</h2>
+
+                <div class="features-grid">
+                    <div class="feature-card fade-in">
+                        <div class="feature-image">
+                            <img
+                                src="https://via.placeholder.com/300x200/3b82f6/ffffff?text=Plot+Finder"
+                                alt="Plot Finder Feature"
+                            />
+                        </div>
+
+                        <h3>Plot Finder</h3>
+
+                        <p>
+                            Accurately locate your land using our custom maps &
+                            on-ground verification services.
+                        </p>
+                    </div>
+
+                    <div class="feature-card fade-in">
+                        <div class="feature-image">
+                            <img
+                                src="https://via.placeholder.com/300x200/ef4444/ffffff?text=Monitoring"
+                                alt="Monitoring Feature"
+                            />
+                        </div>
+
+                        <h3>Monitoring</h3>
+
+                        <p>
+                            Real-time monitoring includes scheduled visits,
+                            automated tax & registration monitoring & monthly
+                            reports.
+                        </p>
+                    </div>
+
+                    <div class="feature-card fade-in">
+                        <div class="feature-image">
+                            <img
+                                src="https://via.placeholder.com/300x200/f59e0b/ffffff?text=Fencing"
+                                alt="Fencing Feature"
+                            />
+                        </div>
+
+                        <h3>Fencing & Cleaning</h3>
+
+                        <p>
+                            Professional fencing installation & property
+                            cleaning services to maintain & enhance your land
+                            value.
+                        </p>
+                    </div>
+
+                    <div class="feature-card fade-in">
+                        <div class="feature-image">
+                            <img
+                                src="https://via.placeholder.com/300x200/8b5cf6/ffffff?text=Survey+Maps"
+                                alt="Survey Maps Feature"
+                            />
+                        </div>
+
+                        <h3>Survey/Cadastral Maps</h3>
+
+                        <p>
+                            Survey/cadastral maps overlaid on google maps. First
+                            of its kind in Hyderabad. We offer both state &
+                            central maps.
+                        </p>
+                    </div>
+
+                    <div class="feature-card fade-in">
+                        <div class="feature-image">
+                            <img
+                                src="https://via.placeholder.com/300x200/10b981/ffffff?text=Tax+Management"
+                                alt="Tax Management Feature"
+                            />
+                        </div>
+
+                        <h3>Vacant Land Tax</h3>
+
+                        <p>
+                            We have maps for Urban Local Bodies (ULB) in
+                            Hyderabad. Check if your land is in ULB. Know your
+                            Vacant Land Tax number & due dates.
+                        </p>
+                    </div>
+
+                    <div class="feature-card fade-in">
+                        <div class="feature-image">
+                            <img
+                                src="https://via.placeholder.com/300x200/06b6d4/ffffff?text=Hyderabad+Lakes"
+                                alt="Hyderabad Lakes Feature"
+                            />
+                        </div>
+
+                        <h3>Hyderabad Lakes</h3>
+
+                        <p>
+                            We have mapped 1000+ lakes in Hyderabad overlaid on
+                            google maps. Check your plot status.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <h2 class="section-title fade-in">
+                    Simple, Transparent Pricing
+                </h2>
+
+                <div class="pricing-grid">
+                    <div class="pricing-card fade-in">
+                        <div class="pricing-header">
+                            <h3>Services</h3>
+
+                            <div class="price">
+                                <span class="currency">₹</span>
+                                <span class="amount">999</span>
+                                <span class="period">/month</span>
+                            </div>
+                        </div>
+
+                        <div class="pricing-features">
+                            <ul>
+                                <li>Covers plots up to 1000 sq. yards</li>
+                                <li>
+                                    Includes on-ground finder & visit service
+                                </li>
+
+                                <li>
+                                    Obtain Encumbrance Certificate, layout
+                                    status & more
+                                </li>
+
+                                <li>
+                                    Know your Vacant Land Tax number & due
+                                    amount
+                                </li>
+
+                                <li>Automated Tax & Registration monitoring</li>
+
+                                <li>Satellite-based plot monitoring</li>
+
+                                <li>Monthly reports</li>
+
+                                <li>Access to ULB maps</li>
+
+                                <li>Access to 1000+ lake maps</li>
+
+                                <li>Access to Survey & Cadastral maps</li>
+                            </ul>
+                        </div>
+
+                        <div class="pricing-cta">
+                            <a href="#contact" class="btn btn-primary"
+                                >Contact Us</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="pricing-card featured fade-in">
+                        <div class="pricing-header">
+                            <h3>Jobs</h3>
+
+                            <div class="price">
+                                <span class="currency">₹</span>
+
+                                <span class="amount">Custom</span>
+
+                                <span class="period">Pricing</span>
+                            </div>
+                        </div>
+
+                        <div class="pricing-features">
+                            <ul>
+                                <li>Plot Cleaning Services</li>
+
+                                <li>Professional Fencing Installation</li>
+
+                                <li>Plot Finder</li>
+
+                                <li>Scheduled Plot Visits</li>
+
+                                <li>Property ID Board</li>
+
+                                <li>Property Documentation</li>
+                                <li>Site Assessment Reports</li>
+                                <li>Maintenance Planning</li>
+                            </ul>
+                        </div>
+
+                        <div class="pricing-cta">
+                            <a href="#contact" class="btn btn-primary"
+                                >Get Quote</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2 class="section-title fade-in">What Our Customers Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card fade-in">
+                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                        <p>
+                            "SafePlots transformed how I manage my properties.
+                            The monitoring features saved me countless hours and
+                            gave me peace of mind."
+                        </p>
+                        <div class="testimonial-author">
+                            <img
+                                src="https://via.placeholder.com/50x50/10b981/ffffff?text=RK"
+                                alt="Rajesh Kumar"
+                            />
+                            <div>
+                                <h4>Rajesh Kumar</h4>
+                                <span>Property Developer, Hyderabad</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card fade-in">
+                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                        <p>
+                            "The survey mapping feature is incredibly accurate.
+                            It helped me resolve a boundary dispute quickly and
+                            professionally."
+                        </p>
+                        <div class="testimonial-author">
+                            <img
+                                src="https://via.placeholder.com/50x50/3b82f6/ffffff?text=SP"
+                                alt="Sunita Patel"
+                            />
+                            <div>
+                                <h4>Sunita Patel</h4>
+                                <span>Real Estate Agent, Mumbai</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card fade-in">
+                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                        <p>
+                            "Excellent customer support and the platform is so
+                            intuitive. I can manage all my plots from one
+                            dashboard."
+                        </p>
+                        <div class="testimonial-author">
+                            <img
+                                src="https://via.placeholder.com/50x50/f59e0b/ffffff?text=AM"
+                                alt="Amit Mehta"
+                            />
+                            <div>
+                                <h4>Amit Mehta</h4>
+                                <span>Land Owner, Bangalore</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials-stats">
+                    <div class="stat-box">
+                        <span class="stat-number">4.8/5</span>
+                        <span class="stat-label">Average Rating</span>
+                    </div>
+
+                    <div class="stat-box">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>How much does SafePlots cost?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                We offer flexible pricing starting at
+                                ₹999/month. Start with our 14-day free trial to
+                                see if SafePlots is right for you.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Is my data secure?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Absolutely. We use bank-level encryption and are
+                                ISO 27001 certified. Your data is stored
+                                securely in AWS cloud infrastructure.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Can I cancel anytime?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Yes, you can cancel your subscription at any
+                                time. No long-term contracts or hidden fees.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Do you offer customer support?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Yes, we provide 24/7 customer support via phone,
+                                email, and live chat. Our average response time
+                                is under 2 hours.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>What if I'm not satisfied?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                We offer a 30-day money-back guarantee. If
+                                you're not completely satisfied, we'll refund
+                                your payment.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Can I integrate with other tools?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Yes, SafePlots integrates with popular real
+                                estate software, accounting tools, and mapping
+                                services.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-content fade-in">
+                    <div class="contact-intro">
+                        <h3>Contact Us</h3>
+                        <p>
+                            Need help? Contact us for any questions or
+                            assistance.
+                        </p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-header">
+                            <div class="contact-icon">💬</div>
+                            <div>
+                                <h4>Contact Methods</h4>
+                                <p>Choose your preferred way to reach us</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-options">
+                            <button class="btn btn-call" onclick="makeCall()">
+                                📞 Call Now
+                            </button>
+                            <button
+                                class="btn btn-whatsapp"
+                                onclick="openWhatsApp()"
+                            >
+                                💬 WhatsApp
+                            </button>
+                            <button class="btn btn-email" onclick="copyEmail()">
+                                📧 <span id="email-text">Send Email</span>
+                            </button>
+                        </div>
+
+                        <div class="contact-info">
+                            <p>+91 7780391340 • admin@safeplots.com</p>
+                            <p>
+                                📍 84 Suraksha Enclave, Chandanagar, Hyderabad -
+                                500050
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-bottom">
+                    <span class="footer-brand"
+                        >&copy; 2025 <strong>SafePlots</strong></span
+                    >
+                    <span class="footer-links">
+                        <a href="#">Privacy</a> • <a href="#">Terms</a>
+                    </span>
+                    <span class="footer-social">
+                        <a
+                            href="https://www.x.com/safeplots"
+                            class="social-link"
+                            >X</a
+                        >
+                        <a
+                            href="https://www.linkedin.com/company/safeplots"
+                            class="social-link"
+                            >LinkedIn</a
+                        >
+                    </span>
+                </div>
+            </div>
+        </footer>
+
+        <script src="./app.js"></script>
+    </body>
+</html>
