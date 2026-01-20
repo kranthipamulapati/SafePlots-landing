@@ -199,18 +199,10 @@ img {
     gap: 10px;
 }
 
-.est {
-    font-size: 10px;
-    background: #000;
-    color: #fff;
-    padding: 2px 6px;
-    font-weight: 400;
-}
-
 .nav-links {
     display: flex;
     gap: 32px;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -225,10 +217,6 @@ img {
     gap: 24px;
     font-size: 12px;
     font-weight: 700;
-}
-
-.login-link {
-    text-decoration: underline;
 }
 
 /* =========================================
@@ -593,7 +581,8 @@ img {
 .audience-section {
     padding: 140px 0;
     /* Grid Pattern Background */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
     background-size: 40px 40px;
 }
