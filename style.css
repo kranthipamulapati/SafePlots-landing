@@ -215,6 +215,16 @@ img {
     font-weight: 700;
 }
 
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    color: #000;
+}
+
 /* =========================================
    HERO SECTION
    ========================================= */
@@ -681,6 +691,24 @@ img {
     .header-container {
         flex-direction: column;
         gap: 20px;
+    }
+
+    .mobile-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .nav-links,
+    .header-actions {
+        display: none;
+    }
+
+    /* Active State for Mobile Menu */
+    .header.active .nav-links,
+    .header.active .header-actions {
+        display: flex;
     }
 
     .nav-links {
