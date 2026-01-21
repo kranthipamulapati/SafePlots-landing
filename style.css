@@ -471,14 +471,14 @@ img {
 
 .step-number {
     font-size: 14px;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
     font-weight: 700;
     letter-spacing: 1px;
 }
 
 .step-icon {
     font-size: 48px;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
     display: block;
     /* ICON MONOCHROME HACK */
     filter: grayscale(100%) brightness(0%);
