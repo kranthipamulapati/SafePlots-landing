@@ -492,9 +492,9 @@ img {
 }
 
 /* =========================================
-   SPECS SECTION
+   servicesS SECTION
    ========================================= */
-.specs-section {
+.servicess-section {
     background-color: #000;
     padding: 100px 0;
     display: flex;
@@ -502,14 +502,14 @@ img {
     border-bottom: 1px solid #333;
 }
 
-.specs-box {
+.servicess-box {
     border: 4px solid #fff;
     padding: 60px;
     max-width: 800px;
     width: 100%;
 }
 
-.specs-header {
+.servicess-header {
     background: #fff;
     color: #000;
     font-family: var(--font-heading);
@@ -523,7 +523,7 @@ img {
     box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.3);
 }
 
-.specs-box h2 {
+.servicess-box h2 {
     font-size: 56px;
     font-weight: 900;
     text-transform: uppercase;
@@ -538,7 +538,7 @@ img {
     font-size: 14px;
 }
 
-.spec-row {
+.services-row {
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
@@ -548,11 +548,11 @@ img {
     font-weight: 500;
 }
 
-.spec-row:last-of-type {
+.services-row:last-of-type {
     border-bottom: 4px solid #fff;
 }
 
-.specs-footer {
+.servicess-footer {
     padding-top: 32px;
     line-height: 1.6;
     opacity: 0.6;
@@ -837,23 +837,23 @@ img {
         border-bottom: none;
     }
 
-    /* Mobile Specs */
-    .specs-section {
+    /* Mobile servicess */
+    .servicess-section {
         padding: 60px 0;
     }
 
-    .specs-box {
+    .servicess-box {
         border-width: 2px;
         padding: 30px 20px;
     }
 
-    .specs-header {
+    .servicess-header {
         font-size: 14px;
         padding: 8px 16px;
         margin-bottom: 30px;
     }
 
-    .specs-box h2 {
+    .servicess-box h2 {
         font-size: 36px;
         margin-bottom: 20px;
     }
@@ -864,7 +864,7 @@ img {
         padding-bottom: 15px;
     }
 
-    .spec-row {
+    .services-row {
         font-size: 14px;
         padding: 12px 0;
     }
