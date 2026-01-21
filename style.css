@@ -659,6 +659,54 @@ img {
 /* =========================================
    RESPONSIVE
    ========================================= */
+@media (max-width: 768px) {
+    /* Mobile Header */
+    .header {
+        height: auto;
+        padding: 20px 0;
+        position: relative;
+    }
+
+    .header-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Mobile Footer */
+    .footer-cta {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
 @media (max-width: 1024px) {
     .container {
         padding: 0 20px;
