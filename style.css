@@ -423,7 +423,7 @@ img {
    SERVICES SECTION
    ========================================= */
 .services {
-    padding: 140px 0;
+    padding: 80px 0;
     border-bottom: 2px solid #000;
 }
 
@@ -431,7 +431,7 @@ img {
     font-size: 64px;
     font-weight: 900;
     text-transform: uppercase;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
     letter-spacing: -2px;
     text-align: center;
 }
@@ -446,6 +446,7 @@ img {
     padding: 60px 40px;
     position: relative;
     border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
     background: #fff;
     transition: background 0.2s;
 }
@@ -454,11 +455,16 @@ img {
     background: #fff5f0;
 }
 
-.step-card:last-child {
+/* 3-column grid logic */
+.step-card:nth-child(3n) {
     border-right: none;
 }
 
-/* Fix grid borders */
+.step-card:nth-last-child(-n + 3) {
+    border-bottom: none;
+}
+
+/* Remove old manual helper classes if any remain */
 .step-card.border-left {
     border-left: none;
 }
@@ -763,6 +769,11 @@ img {
         border-right: none;
         border-bottom: 2px solid #000;
         padding: 40px 20px;
+    }
+
+    /* Reset the desktop grid logic for mobile */
+    .step-card:nth-last-child(-n + 3) {
+        border-bottom: 2px solid #000;
     }
 
     .step-card:last-child {
