@@ -16,4 +16,15 @@ if (mobileToggle) {
             mobileToggle.textContent = "☰"; // Menu icon
         }
     });
+
+    // Close menu when a link is clicked
+    const navLinks = document.querySelectorAll(".nav-links a");
+    navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            if (header.classList.contains("active")) {
+                header.classList.remove("active");
+                mobileToggle.textContent = "☰";
+            }
+        });
+    });
 }
