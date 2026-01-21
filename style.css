@@ -620,6 +620,10 @@ img {
     transform: scale(0.98);
 }
 
+.grid-card.border-orange {
+    border-color: var(--bg-accent);
+}
+
 .grid-card .icon {
     font-size: 32px;
     filter: grayscale(100%) brightness(0%); /* Ensure icons are black */
@@ -633,6 +637,34 @@ img {
     font-size: 18px;
     font-weight: 900;
     text-transform: uppercase;
+    margin-bottom: 16px; /* Added spacing */
+}
+
+.grid-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1; /* allow list to fill space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align bottom if needed, or just normal flow */
+    gap: 8px;
+}
+
+.grid-card li {
+    font-size: 13px; /* Slightly smaller for density */
+    font-family: var(--font-mono);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+.grid-card li::before {
+    content: "•";
+    color: var(--bg-accent);
+    font-weight: bold;
 }
 
 /* =========================================
