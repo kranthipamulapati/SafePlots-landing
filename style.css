@@ -651,9 +651,20 @@ img {
     color: #000;
 }
 
-.footer-links {
+.footer-nav-groups {
     display: flex;
-    gap: 32px;
+    gap: 40px;
+    align-items: center;
+}
+
+.footer-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer-group.socials {
+    font-size: 18px; /* Slightly larger for icons */
 }
 
 /* =========================================
@@ -697,10 +708,16 @@ img {
         text-align: center;
     }
 
-    .footer-links {
+    .footer-nav-groups {
         flex-direction: column;
-        gap: 16px;
+        gap: 24px;
         align-items: center;
+    }
+
+    .footer-group {
+        gap: 24px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
