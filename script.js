@@ -1,30 +1,24 @@
 /** @format */
 
-console.log("initialized.");
+document.addEventListener("DOMContentLoaded", () => {
+    const mobileToggle = document.querySelector(".mobile-toggle");
+    const header = document.querySelector(".header");
 
-const header = document.querySelector(".header");
-const mobileToggle = document.querySelector(".mobile-toggle");
+    if (mobileToggle && header) {
+        mobileToggle.addEventListener("click", () => {
+            header.classList.toggle("active");
+            // Switch icon between Hamburger (☰) and Close (✕)
+            const isOpened = header.classList.contains("active");
+            mobileToggle.textContent = isOpened ? "✕" : "☰";
+        });
+    }
 
-if (mobileToggle) {
-    mobileToggle.addEventListener("click", () => {
-        header.classList.toggle("active");
-
-        // Toggle Icon
-        if (header.classList.contains("active")) {
-            mobileToggle.textContent = "✕"; // Close icon
-        } else {
-            mobileToggle.textContent = "☰"; // Menu icon
-        }
-    });
-
-    // Close menu when a link is clicked
+    // Close mobile menu when clicking a link
     const navLinks = document.querySelectorAll(".nav-links a");
     navLinks.forEach((link) => {
         link.addEventListener("click", () => {
-            if (header.classList.contains("active")) {
-                header.classList.remove("active");
-                mobileToggle.textContent = "☰";
-            }
+            header.classList.remove("active");
+            if (mobileToggle) mobileToggle.textContent = "☰";
         });
     });
-}
+});
