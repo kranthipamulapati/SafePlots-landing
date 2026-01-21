@@ -492,6 +492,191 @@ img {
 }
 
 /* =========================================
+   SPECS SECTION
+   ========================================= */
+.specs-section {
+    background-color: #000;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #333;
+}
+
+.specs-box {
+    border: 4px solid #fff;
+    padding: 60px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.specs-header {
+    background: #fff;
+    color: #000;
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 20px;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 40px;
+    transform: rotate(-1deg);
+    box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.3);
+}
+
+.specs-box h2 {
+    font-size: 56px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    letter-spacing: -2px;
+}
+
+.serving-size {
+    margin-bottom: 40px;
+    border-bottom: 4px solid #fff;
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.spec-row:last-of-type {
+    border-bottom: 4px solid #fff;
+}
+
+.specs-footer {
+    padding-top: 32px;
+    line-height: 1.6;
+    opacity: 0.6;
+    font-size: 11px;
+}
+
+/* =========================================
+   MONITORS SECTION
+   ========================================= */
+.monitors-section {
+    padding: 140px 0; /* Increased from 60px for better spacing */
+    /* Grid Pattern Background */
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.grid-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.monitors-left h2 {
+    font-size: 56px; /* Increased from 48px */
+    line-height: 0.95;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.monitors-sub {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 450px;
+    line-height: 1.5;
+}
+
+.monitors-list li {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.check {
+    color: var(--bg-accent);
+    font-weight: 900;
+}
+
+.grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.grid-card {
+    height: 100%;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px;
+    border: 3px solid #000;
+    transition: transform 0.2s;
+}
+
+.grid-card:hover {
+    transform: scale(0.98);
+}
+
+.grid-card.border-orange {
+    border-color: var(--bg-accent);
+}
+
+.grid-card .icon {
+    font-size: 32px;
+    filter: grayscale(100%) brightness(0%); /* Ensure icons are black */
+}
+/* Invert check for white icons on black cards */
+.grid-card.bg-black .icon {
+    filter: grayscale(100%) brightness(200%);
+}
+
+.grid-card .label {
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 16px; /* Added spacing */
+}
+
+.grid-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1; /* allow list to fill space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align bottom if needed, or just normal flow */
+    gap: 8px;
+}
+
+.grid-card li {
+    font-size: 13px; /* Slightly smaller for density */
+    font-family: var(--font-mono);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+.grid-card li::before {
+    content: "•";
+    color: var(--bg-accent);
+    font-weight: bold;
+}
+
+/* =========================================
    FOOTER
    ========================================= */
 .footer-cta {
@@ -650,5 +835,68 @@ img {
 
     .step-card:last-child {
         border-bottom: none;
+    }
+
+    /* Mobile Specs */
+    .specs-section {
+        padding: 60px 0;
+    }
+
+    .specs-box {
+        border-width: 2px;
+        padding: 30px 20px;
+    }
+
+    .specs-header {
+        font-size: 14px;
+        padding: 8px 16px;
+        margin-bottom: 30px;
+    }
+
+    .specs-box h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .serving-size {
+        font-size: 12px;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+    }
+
+    .spec-row {
+        font-size: 14px;
+        padding: 12px 0;
+    }
+
+    /* Mobile Monitors */
+    .grid-2-col {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .monitors-left h2 {
+        font-size: 40px;
+        line-height: 1;
+    }
+
+    .monitors-sub {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .grid-2x2 {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .grid-card {
+        min-height: auto;
+        padding: 24px;
+    }
+
+    /* Global Fixes */
+    .container {
+        padding: 0 20px;
     }
 }
