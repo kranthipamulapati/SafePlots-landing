@@ -423,7 +423,7 @@ img {
    SERVICES SECTION
    ========================================= */
 .services {
-    padding: 80px 0;
+    padding: 40px 0;
     border-bottom: 2px solid #000;
 }
 
@@ -431,7 +431,7 @@ img {
     font-size: 64px;
     font-weight: 900;
     text-transform: uppercase;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     letter-spacing: -2px;
     text-align: center;
 }
@@ -443,7 +443,7 @@ img {
 }
 
 .step-card {
-    padding: 60px 40px;
+    padding: 20px;
     position: relative;
     border-right: 2px solid #000;
     border-bottom: 2px solid #000;
