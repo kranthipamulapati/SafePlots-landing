@@ -552,9 +552,9 @@ img {
 }
 
 /* =========================================
-   AUDIENCE SECTION
+   MONITORS SECTION
    ========================================= */
-.audience-section {
+.monitors-section {
     padding: 140px 0;
     /* Grid Pattern Background */
     background-image:
@@ -570,7 +570,7 @@ img {
     align-items: center;
 }
 
-.audience-left h2 {
+.monitors-left h2 {
     font-size: 64px;
     line-height: 0.95;
     font-weight: 900;
@@ -578,7 +578,7 @@ img {
     margin-bottom: 32px;
 }
 
-.audience-sub {
+.monitors-sub {
     font-size: 20px;
     color: #555;
     margin-bottom: 50px;
@@ -586,7 +586,7 @@ img {
     line-height: 1.5;
 }
 
-.audience-list li {
+.monitors-list li {
     font-size: 16px;
     font-weight: 700;
     margin-bottom: 20px;
