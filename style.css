@@ -326,97 +326,91 @@ img {
     display: inline-block;
 }
 
-/* Product Card Mockup */
-.product-card-mock {
-    width: 380px;
-    background: #fff;
-    border: 3px solid #000; /* Thicker border */
-    box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 1); /* Solid black shadow */
+/* Hero Cards Container */
+.hero-cards-container {
     position: relative;
-    transition: transform 0.3s ease;
-    animation: float 6s ease-in-out infinite;
+    width: 400px;
+    height: 400px;
 }
 
-@keyframes float {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-15px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
-}
-
-.card-header {
-    padding: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Base Card Style */
+.hero-card {
     background: #fff;
-    border-bottom: 2px solid #000;
-}
-
-.file-info {
-    font-size: 11px;
-    color: #000;
-    border: 1px solid #000;
-    padding: 4px 8px;
-    font-weight: 700;
-}
-
-.icon-box {
-    filter: grayscale(100%); /* Monochrome Icon */
-    font-size: 20px;
-}
-
-.card-body {
-    padding: 40px 32px;
-    min-height: 220px;
+    border: 3px solid #000;
+    padding: 20px;
+    position: absolute;
+    box-shadow: 12px 12px 0px 0px rgba(0, 0, 0, 1);
+    transition: transform 0.3s ease;
+    width: 260px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.card-body h3 {
-    font-size: 28px;
+.hero-card:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.card-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.card-label {
+    font-size: 18px;
     font-weight: 900;
-    margin-bottom: 16px;
     line-height: 1.1;
+    margin-bottom: 8px;
     text-transform: uppercase;
 }
 
-.card-body p {
-    font-size: 16px;
+.card-status {
+    font-size: 12px;
     color: #555;
-    font-family: var(--font-mono);
-    line-height: 1.4;
-}
-
-.card-footer {
-    padding: 20px 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #fff;
-    border-top: 2px solid #000;
-}
-
-.price {
-    font-size: 28px;
-    font-weight: 900;
-    color: #000;
-}
-
-.buy-btn {
-    background: #000;
-    color: #fff;
-    padding: 10px 24px;
-    font-size: 14px;
+    border-top: 1px solid #000;
+    padding-top: 8px;
     font-weight: 700;
-    text-transform: uppercase;
-    cursor: pointer;
+}
+
+/* Card Positioning */
+.hero-card-sat {
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background: #fff;
+}
+
+.hero-card-wall {
+    top: 80px;
+    right: -20px;
+    z-index: 2;
+    background: #eee;
+}
+
+.hero-card-trust {
+    bottom: -20px;
+    left: 40px;
+    z-index: 4;
+    background: var(--bg-accent);
+    color: #fff;
+    border-color: #000;
+}
+
+.hero-card-trust .card-status {
+    color: #fff;
+    border-color: #fff;
+}
+
+/* Animation */
+.hero-cards-container:hover .hero-card-sat {
+    transform: translate(-20px, -20px);
+}
+.hero-cards-container:hover .hero-card-wall {
+    transform: translate(20px, 10px);
+}
+.hero-cards-container:hover .hero-card-trust {
+    transform: translate(0px, 30px);
 }
 
 /* =========================================
