@@ -1135,7 +1135,7 @@ img {
    CONTACT SECTION
    ========================================= */
 .contact-section {
-    padding: 100px 0;
+    padding: 24px 0;
     border-bottom: 2px solid #000;
     background-color: #fff;
     /* Dot pattern */
@@ -1143,32 +1143,269 @@ img {
     background-size: 20px 20px;
 }
 
-.contact-card {
-    min-height: 400px;
+.contact-grid {
+    /* More control than generic grid-2-col */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
 }
 
-.contact-content {
-    margin-top: 40px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-details {
-    margin-top: auto;
+.contact-left-stack {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    min-height: 0;
+}
+
+.contact-left-stack .contact-card {
+    height: auto;
+}
+
+.contact-card {
+    min-height: 0;
+    height: auto;
+}
+
+.contact-content {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section .bento-card.contact-card {
+    padding: 14px;
+    box-shadow: 8px 8px 0px #000;
+    /* Override base .bento-card behavior that pushes content to bottom */
+    justify-content: flex-start;
+    gap: 14px;
+}
+
+.contact-section .bento-card.contact-card:hover {
+    /* Prevent cards from shifting off-screen */
+    transform: none;
+    box-shadow: 8px 8px 0px #000;
+}
+
+.contact-section .bento-card.contact-card .contact-content {
+    margin-top: 0;
+}
+
+.contact-subtitle {
+    font-size: 13px;
+    color: #444;
+    line-height: 1.5;
+}
+
+.contact-combined {
+    /* Stack on desktop: contact info first, then map */
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-map {
+    min-width: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 12px;
+    align-items: start;
+}
+
+.map-address {
+    margin: 0;
+    font-style: normal;
+}
+
+.map-address-link {
+    display: block;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    padding: 10px 12px;
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+.map-address-link:hover {
+    border-color: var(--bg-accent);
+    background: rgba(255, 68, 0, 0.08);
+}
+
+.contact-details {
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-info-card .contact-content {
+    gap: 18px;
+}
+
+.visit-office {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.visit-info {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 4px 2px;
+}
+
+.visit-title {
+    margin: 0;
+    font-size: 44px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1.05;
+    color: #000;
+}
+
+.visit-subtitle {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.55;
+    color: #555;
+    max-width: 56ch;
+}
+
+.visit-items {
+    margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.visit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.visit-item-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    background: rgba(255, 68, 0, 0.12);
+    color: var(--bg-accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 42px;
+}
+
+.visit-item-icon svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.visit-item-text {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.visit-item-heading {
+    font-size: 16px;
+    font-weight: 900;
+    color: #000;
+}
+
+.visit-item-value {
+    font-size: 13px;
+    line-height: 1.55;
+    color: #555;
+    overflow-wrap: anywhere;
+}
+
+.visit-item-value a {
+    color: #000;
+    text-decoration: none;
+}
+
+.visit-item-value a:hover {
+    color: var(--bg-accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.visit-maps-link {
+    align-self: flex-start;
+    display: inline-flex;
+    gap: 8px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.02);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.visit-maps-link:hover {
+    background: rgba(255, 68, 0, 0.08);
+    border-color: rgba(255, 68, 0, 0.35);
+}
+
+.visit-desc {
+    margin-top: 0;
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+}
+
+.map-embed {
+    margin-top: 12px;
+    border: 2px solid #000;
+    background: #fff;
+    aspect-ratio: 21 / 9;
+    width: 100%;
+    overflow: hidden;
+    max-height: 220px;
+}
+
+.map-iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.visit-us-card .map-embed {
+    margin-top: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #fff;
+    aspect-ratio: 4 / 3;
+    max-height: none;
+    border-radius: 18px;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12);
+}
+
+.visit-us-card .map-iframe {
+    border-radius: 18px;
 }
 
 .detail-item {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 14px;
 }
 
 .detail-item .icon {
-    font-size: 32px;
+    font-size: 22px;
 }
 
 .detail-text {
@@ -1185,9 +1422,10 @@ img {
 }
 
 .detail-text .value {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     color: #000;
+    overflow-wrap: anywhere;
 }
 
 .detail-text a.value:hover {
@@ -1199,16 +1437,30 @@ img {
 .address-box {
     margin-top: auto;
     padding: 24px;
-    border: 2px solid #fff; /* White border for contrast on black */
+    border: 2px solid currentColor;
     font-size: 16px;
     line-height: 1.6;
-    background: rgba(255, 255, 255, 0.1);
+    font-style: normal; /* address element default override */
+    color: #000;
+    background: rgba(0, 0, 0, 0.04);
     position: relative;
     /* Map visual hint */
     background-image: repeating-linear-gradient(
         45deg,
-        rgba(255, 255, 255, 0.05) 0px,
-        rgba(255, 255, 255, 0.05) 10px,
+        rgba(0, 0, 0, 0.04) 0px,
+        rgba(0, 0, 0, 0.04) 10px,
+        transparent 10px,
+        transparent 20px
+    );
+}
+
+.bento-card.bg-black .address-box {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.06) 0px,
+        rgba(255, 255, 255, 0.06) 10px,
         transparent 10px,
         transparent 20px
     );
@@ -1223,6 +1475,77 @@ img {
     color: var(--bg-accent);
 }
 
+/* map-link removed in favor of clickable address */
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #666;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    font-family: var(--font-heading);
+    font-size: 14px;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #777;
+}
+
+.form-input:focus-visible,
+.form-textarea:focus-visible {
+    outline: 2px solid var(--bg-accent);
+    outline-offset: 2px;
+    border-color: var(--bg-accent);
+}
+
+.hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.form-submit {
+    width: 100%;
+    justify-content: center;
+}
+
+.form-status {
+    min-height: 18px;
+    font-size: 12px;
+    color: #444;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .hero-title {
@@ -1232,6 +1555,27 @@ img {
     .grid-2-col {
         grid-template-columns: 1fr;
         gap: 60px;
+    }
+
+    .contact-grid {
+        gap: 24px;
+    }
+
+    .contact-combined {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-map {
+        grid-template-columns: 1fr;
+    }
+
+    .visit-office {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .visit-us-card .map-embed {
+        aspect-ratio: 16 / 10;
     }
 
     .steps-grid {
