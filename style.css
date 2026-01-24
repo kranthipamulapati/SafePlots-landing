@@ -632,21 +632,35 @@ img {
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
+    display: grid;
+    /* Brand can be a bit wider, others equal */
+    grid-template-columns: minmax(240px, 1.5fr) repeat(3, minmax(200px, 1fr));
+    column-gap: clamp(24px, 5vw, 96px);
+    row-gap: 40px;
     margin-bottom: 60px;
+    align-items: start;
 }
 
 .footer-col {
-    flex: 1;
-    min-width: 200px;
+    min-width: 0; /* allow grid items to shrink without pushing others */
+}
+
+/* Ensure consistent column order across ALL pages */
+.footer-col.brand-col {
+    order: 1;
+}
+.footer-col.links-col {
+    order: 2;
+}
+.footer-col.resources-col {
+    order: 3;
+}
+.footer-col.contact-col {
+    order: 4;
 }
 
 .brand-col {
-    flex: 1.5; /* Slightly wider */
-    max-width: 350px;
+    max-width: none;
 }
 
 .footer-heading {
@@ -781,14 +795,13 @@ img {
 /* Responsive */
 @media (max-width: 768px) {
     .footer-content {
-        flex-direction: column;
-        gap: 40px;
+        grid-template-columns: 1fr;
+        row-gap: 40px;
         text-align: center;
     }
 
     /* Ensure columns span full width on mobile (avoids left-offset blocks) */
     .footer-col {
-        width: 100%;
         min-width: 0;
     }
 
