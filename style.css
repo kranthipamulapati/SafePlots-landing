@@ -800,6 +800,118 @@ img {
     height: 60%;
     background: #000;
 }
+
+/* =========================================
+   CONTACT SECTION
+   ========================================= */
+.contact-section {
+    padding: 100px 0;
+    border-bottom: 2px solid #000;
+    background-color: #fff;
+    /* Dot pattern */
+    background-image: radial-gradient(#000 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.contact-card {
+    min-height: 400px;
+}
+
+.contact-content {
+    margin-top: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-details {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.detail-item .icon {
+    font-size: 32px;
+}
+
+.detail-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-text .label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #888;
+    margin-bottom: 4px;
+}
+
+.detail-text .value {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+}
+
+.detail-text a.value:hover {
+    color: var(--bg-accent);
+    text-decoration: underline;
+}
+
+/* Address Box Visual */
+.address-box {
+    margin-top: auto;
+    padding: 24px;
+    border: 2px solid #fff; /* White border for contrast on black */
+    font-size: 16px;
+    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.1);
+    position: relative;
+    /* Map visual hint */
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.05) 0px,
+        rgba(255, 255, 255, 0.05) 10px,
+        transparent 10px,
+        transparent 20px
+    );
+}
+
+.address-box::before {
+    content: "🗺️ VIEW MAP";
+    display: block;
+    margin-bottom: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--bg-accent);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .grid-2-col {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .step-card {
+        border-right: none !important;
+    }
+}
 .dash-chart::before {
     content: "";
     position: absolute;
