@@ -48,6 +48,13 @@ a {
     text-decoration: none;
 }
 
+/* Accessible focus rings (keyboard) */
+a:focus-visible {
+    outline: 2px solid var(--bg-accent);
+    outline-offset: 3px;
+    border-radius: 8px;
+}
+
 ul {
     list-style: none;
 }
@@ -618,6 +625,12 @@ img {
     border-top: 1px solid #222;
 }
 
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -652,6 +665,32 @@ img {
     color: #888;
 }
 
+/* Mini contact links under brand */
+.footer-mini-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-mini-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    border: 1px solid #333;
+    background: #111;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+
+.footer-mini-link:hover {
+    background: var(--bg-accent);
+    border-color: var(--bg-accent);
+    transform: translateY(-1px);
+}
+
 /* Links */
 .footer-links li {
     margin-bottom: 12px;
@@ -670,6 +709,10 @@ img {
 }
 
 /* Contact List */
+.footer-address {
+    font-style: normal;
+}
+
 .footer-contact-list li {
     display: flex;
     align-items: center;
@@ -692,32 +735,6 @@ img {
     text-decoration: underline;
 }
 
-/* Socials */
-.footer-socials {
-    display: flex;
-    gap: 12px;
-}
-
-.social-icon {
-    width: 36px;
-    height: 36px;
-    background: #111;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #333;
-    font-size: 14px;
-    font-weight: 700;
-    transition: all 0.2s;
-}
-
-.social-icon:hover {
-    background: var(--bg-accent);
-    border-color: var(--bg-accent);
-    transform: translateY(-2px);
-}
-
 /* Bottom Bar */
 .footer-bottom-bar {
     border-top: 1px solid #222;
@@ -736,11 +753,17 @@ img {
 }
 
 .legal-links a {
-    color: #666;
+    color: #888;
 }
 
 .legal-links a:hover {
     color: #fff;
+}
+
+.legal-links a[aria-current="page"] {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 /* Responsive */
@@ -751,7 +774,7 @@ img {
         text-align: center;
     }
 
-    .footer-socials {
+    .footer-mini-links {
         justify-content: center;
     }
 
