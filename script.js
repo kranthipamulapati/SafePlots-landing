@@ -73,4 +73,51 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
+    // Pricing page: monthly/yearly toggle
+    const pricingToggle = document.querySelector("[data-pricing-toggle]");
+    if (pricingToggle) {
+        const billingButtons = pricingToggle.querySelectorAll("[data-billing]");
+        const priceEls = document.querySelectorAll("[data-price]");
+        const periodEls = document.querySelectorAll("[data-price-period]");
+
+        const formatter = (() => {
+            try {
+                return new Intl.NumberFormat("en-IN");
+            } catch {
+                return { format: (n) => String(n) };
+            }
+        })();
+
+        const applyBilling = (billing) => {
+            const isYearly = billing === "yearly";
+            const periodLabel = isYearly ? "/year" : "/month";
+
+            billingButtons.forEach((btn) => {
+                const isActive = btn.dataset.billing === billing;
+                btn.classList.toggle("is-active", isActive);
+                btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+            });
+
+            periodEls.forEach((el) => {
+                el.textContent = periodLabel;
+            });
+
+            priceEls.forEach((el) => {
+                const raw = el.dataset[billing];
+                const amount = Number(raw);
+                el.textContent = Number.isFinite(amount)
+                    ? formatter.format(amount)
+                    : raw || "";
+            });
+        };
+
+        billingButtons.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                applyBilling(btn.dataset.billing || "monthly");
+            });
+        });
+
+        applyBilling("monthly");
+    }
 });
