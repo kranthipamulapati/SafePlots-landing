@@ -516,6 +516,30 @@ img {
     line-height: 1.4;
 }
 
+.how-sublist {
+    margin: 16px 0;
+    list-style: none;
+    padding-left: 0;
+}
+
+.how-sublist li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.how-sublist li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--bg-accent);
+    border-radius: 50%;
+}
+
 /* =========================================
    FOOTER
    ========================================= */
