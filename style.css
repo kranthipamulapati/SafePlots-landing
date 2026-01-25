@@ -1200,6 +1200,12 @@ img {
     border-bottom: 1px solid #000;
 }
 
+.page-pricing .pricing-why .section-title {
+    font-size: 40px;
+    letter-spacing: -1px;
+    margin-bottom: 18px;
+}
+
 .page-pricing .why-grid {
     margin-top: 24px;
     display: grid;
@@ -1233,6 +1239,48 @@ img {
     color: #444;
     font-size: 13px;
     line-height: 1.6;
+}
+
+.page-pricing .why-bullets {
+    margin-top: 24px;
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-pricing .why-bullets li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 12px;
+    color: #444;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.page-pricing .why-bullets li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--bg-accent);
+    font-weight: 900;
+}
+
+.page-pricing .why-bullets strong {
+    color: #000;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.3px;
+}
+
+.page-pricing .text-highlight {
+    background: rgba(255, 68, 0, 0.16);
+    border: 1px solid rgba(255, 68, 0, 0.35);
+    padding: 1px 6px;
+    border-radius: 999px;
+    color: #000;
+    font-weight: 700;
+    white-space: nowrap;
 }
 
 .page-pricing .pricing-services {
