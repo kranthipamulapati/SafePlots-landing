@@ -421,13 +421,8 @@ img {
 }
 
 /* =========================================
-   SERVICES SECTION
+   GENERIC COMPONENTS
    ========================================= */
-.services {
-    padding: 40px 0;
-    border-bottom: 2px solid #000;
-}
-
 .section-title {
     font-size: 64px;
     font-weight: 900;
@@ -437,77 +432,19 @@ img {
     text-align: center;
 }
 
-.steps-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border: 2px solid #000;
-}
-
-.step-card {
-    padding: 20px;
-    position: relative;
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
-    background: #fff;
-    transition: background 0.2s;
-}
-
-.step-card:hover {
-    background: #fff5f0;
-}
-
-/* 3-column grid logic */
-.step-card:nth-child(3n) {
-    border-right: none;
-}
-
-.step-card:nth-last-child(-n + 3) {
-    border-bottom: none;
-}
-
-/* Remove old manual helper classes if any remain */
-.step-card.border-left {
-    border-left: none;
-}
-
-.step-number {
-    font-size: 14px;
-    margin-bottom: 20px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.step-icon {
-    font-size: 48px;
-    margin-bottom: 20px;
-    display: block;
-    /* ICON MONOCHROME HACK */
-    filter: grayscale(100%) brightness(0%);
-}
-
-.step-card h3 {
-    font-size: 28px;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-.step-card p {
-    font-size: 18px;
-    color: #444;
-    line-height: 1.6;
-}
-
 /* =========================================
    HOW IT WORKS SECTION
    ========================================= */
 .how-it-works-section {
     padding: 100px 0;
-    /* Grid Pattern Background */
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
-    background-size: 40px 40px;
+    /* Subtle Dot Pattern */
+    background-color: #fff;
+    border-bottom: 2px solid #000;
+}
+
+#why-us {
+    background-color: #fff;
+    background-image: none;
 }
 
 .how-intro {
@@ -524,11 +461,23 @@ img {
     align-items: stretch; /* crucial for vertical line */
 }
 
+.grid-3-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+}
+
 .how-col {
     padding: 0 50px;
 }
 
-.how-col:first-child {
+/* Borders for 2-col layout */
+.grid-2-col > .how-col:first-child {
+    border-right: 2px solid #000;
+}
+
+/* Borders for 3-col layout: All except last get right border */
+.grid-3-col > .how-col:not(:last-child) {
     border-right: 2px solid #000;
 }
 
@@ -1581,157 +1530,6 @@ img {
 }
 
 /* =========================================
-   FEATURES SECTION 
-   ========================================= */
-.features-section {
-    padding: 40px 0;
-    background-color: #fff;
-    border-bottom: 2px solid #000;
-}
-
-.bento-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.bento-card {
-    border: 3px solid #000;
-    background: #fff;
-    padding: 20px;
-    position: relative;
-    box-shadow: 12px 12px 0px #000;
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden;
-}
-
-.bento-card.bg-black {
-    background: #000;
-    color: #fff;
-    box-shadow: 12px 12px 0px var(--bg-accent);
-}
-
-.bento-card.bg-black:hover {
-    box-shadow: 15px 15px 0px var(--bg-accent);
-}
-
-.bento-card:hover {
-    transform: translate(-3px, -3px);
-    box-shadow: 15px 15px 0px #000;
-}
-
-.card-dashboard {
-    grid-column: 1 / -1; /* Full width */
-    display: grid;
-    grid-template-columns: 1.2fr 1fr; /* Text wider than visual */
-    grid-template-rows: auto auto 1fr;
-    gap: 20px 40px;
-    align-items: start;
-}
-
-.card-dashboard .card-badge {
-    grid-column: 1;
-    align-self: start;
-    justify-self: start;
-}
-
-.card-dashboard .bento-title {
-    grid-column: 1;
-}
-
-.card-dashboard .bento-desc {
-    grid-column: 1;
-    max-width: 400px;
-}
-
-.card-dashboard .bento-visual {
-    grid-column: 2;
-    grid-row: 1 / 4;
-    align-self: center;
-    justify-self: center;
-    width: 100%;
-}
-
-.card-badge {
-    background: #000;
-    color: #fff;
-    padding: 8px 12px;
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    display: inline-block;
-    border: 2px solid #000; /* In case we invert colors */
-}
-
-.bento-title {
-    font-size: 40px;
-    font-weight: 900;
-    line-height: 1;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-    letter-spacing: -1px;
-}
-
-.bento-desc {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #444;
-}
-
-.card-icon {
-    font-size: 56px;
-    margin-bottom: 12px;
-}
-
-/* Dashboard Visual Mockup */
-.dash-mock {
-    background: #f4f4f4;
-    border: 3px solid #000;
-    padding: 20px;
-    border-radius: 0;
-    width: 100%;
-    aspect-ratio: 2/1;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
-}
-
-.dash-row {
-    height: 16px;
-    background: #ddd;
-    width: 100%;
-    border: 1px solid #000;
-}
-.dash-row:nth-child(2) {
-    width: 70%;
-}
-
-.dash-chart {
-    flex-grow: 1;
-    background: #fff;
-    border: 1px solid #000;
-    position: relative;
-    overflow: hidden;
-}
-.dash-chart::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 20%;
-    width: 20%;
-    height: 60%;
-    background: #000;
-}
-
-/* =========================================
    SEND A MESSAGE
    ========================================= */
 .message-section {
@@ -1864,6 +1662,47 @@ img {
     .step-card {
         border-right: none !important;
     }
+
+    /* How it Works / Why Us Mobile */
+    .how-intro {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .grid-2-col,
+    .grid-3-col {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .how-col {
+        padding: 0;
+    }
+
+    /* Clear vertical borders and add horizontal separation for mobile */
+    .how-col:first-child,
+    .grid-2-col > .how-col:first-child,
+    .grid-3-col > .how-col:not(:last-child) {
+        border-right: none;
+        border-bottom: 2px solid #000;
+        padding-bottom: 40px;
+        margin-bottom: 40px; /* spacing between stuck columns */
+    }
+
+    .how-col:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .how-title {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    .how-list {
+        padding-left: 0;
+    }
 }
 .dash-chart::before {
     content: "";
@@ -1975,89 +1814,6 @@ img {
         max-width: 400px;
     }
 
-    /* Mobile Services */
-    .section-title {
-        font-size: 40px;
-        margin-bottom: 60px;
-    }
-
-    .steps-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .step-card {
-        border-right: none;
-        border-bottom: 2px solid #000;
-        padding: 40px 20px;
-    }
-
-    /* Reset the desktop grid logic for mobile */
-    .step-card:nth-last-child(-n + 3) {
-        border-bottom: 2px solid #000;
-    }
-
-    .step-card:last-child {
-        border-bottom: none;
-    }
-
-    /* Mobile servicess */
-    .servicess-section {
-        padding: 60px 0;
-    }
-
-    .servicess-box {
-        border-width: 2px;
-        padding: 30px 20px;
-    }
-
-    .servicess-header {
-        font-size: 14px;
-        padding: 8px 16px;
-        margin-bottom: 30px;
-    }
-
-    .servicess-box h2 {
-        font-size: 36px;
-        margin-bottom: 20px;
-    }
-
-    .serving-size {
-        font-size: 12px;
-        margin-bottom: 20px;
-        padding-bottom: 15px;
-    }
-
-    .services-row {
-        font-size: 14px;
-        padding: 12px 0;
-    }
-
-    /* Mobile Monitors */
-    .grid-2-col {
-        grid-template-columns: 1fr;
-        gap: 60px;
-    }
-
-    .monitors-left h2 {
-        font-size: 40px;
-        line-height: 1;
-    }
-
-    .monitors-sub {
-        font-size: 18px;
-        margin-bottom: 30px;
-    }
-
-    .grid-2x2 {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .grid-card {
-        min-height: auto;
-        padding: 24px;
-    }
-
     /* Global Fixes */
     .container {
         padding: 0 20px;
@@ -2074,33 +1830,6 @@ img {
 
     .legal-summary-grid {
         grid-template-columns: 1fr;
-    }
-
-    /* Mobile Features */
-    .features-section {
-        padding: 60px 0;
-    }
-
-    .bento-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .card-dashboard {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        gap: 20px;
-    }
-
-    .card-dashboard .bento-visual {
-        grid-column: 1;
-        grid-row: auto;
-        order: 10;
-        margin-top: 20px;
-    }
-
-    .bento-title {
-        font-size: 32px;
     }
 }
 
