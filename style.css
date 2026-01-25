@@ -499,10 +499,10 @@ img {
 }
 
 /* =========================================
-   MONITORS SECTION
+   HOW IT WORKS SECTION
    ========================================= */
-.monitors-section {
-    padding: 140px 0; /* Increased from 60px for better spacing */
+.how-it-works-section {
+    padding: 100px 0;
     /* Grid Pattern Background */
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
@@ -510,109 +510,61 @@ img {
     background-size: 40px 40px;
 }
 
+.how-intro {
+    max-width: 600px;
+    margin: 0 auto 60px;
+    color: #555;
+    font-size: 18px;
+    text-align: center;
+}
+
 .grid-2-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 100px;
-    align-items: center;
+    align-items: stretch; /* crucial for vertical line */
 }
 
-.monitors-left h2 {
-    font-size: 56px; /* Increased from 48px */
-    line-height: 0.95;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 24px;
+.how-col {
+    padding: 0 50px;
 }
 
-.monitors-sub {
-    font-size: 20px;
-    color: #555;
-    margin-bottom: 40px;
-    max-width: 450px;
-    line-height: 1.5;
+.how-col:first-child {
+    border-right: 2px solid #000;
 }
 
-.monitors-list li {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.check {
-    color: var(--bg-accent);
-    font-weight: 900;
-}
-
-.grid-2x2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-}
-
-.grid-card {
-    height: 100%;
-    min-height: 260px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 32px;
-    border: 3px solid #000;
-    transition: transform 0.2s;
-}
-
-.grid-card:hover {
-    transform: scale(0.98);
-}
-
-.grid-card.border-orange {
-    border-color: var(--bg-accent);
-}
-
-.grid-card .icon {
+.how-title {
     font-size: 32px;
-    filter: grayscale(100%) brightness(0%); /* Ensure icons are black */
-}
-/* Invert check for white icons on black cards */
-.grid-card.bg-black .icon {
-    filter: grayscale(100%) brightness(200%);
-}
-
-.grid-card .label {
-    font-size: 18px;
     font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 16px; /* Added spacing */
-}
-
-.grid-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex-grow: 1; /* allow list to fill space */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; /* Align bottom if needed, or just normal flow */
-    gap: 8px;
-}
-
-.grid-card li {
-    font-size: 13px; /* Slightly smaller for density */
-    font-family: var(--font-mono);
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    line-height: 1.4;
-    opacity: 0.9;
-}
-
-.grid-card li::before {
-    content: "•";
+    margin-bottom: 30px;
+    text-align: center;
     color: var(--bg-accent);
-    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.how-list {
+    padding-left: 20px;
+}
+
+.how-list-item {
+    display: flex;
+    align-items: flex-start; /* aligns icon with top of text */
+    margin-bottom: 24px;
+    font-family: var(--font-mono);
+}
+
+.how-list-item .icon {
+    font-size: 24px;
+    margin-right: 16px;
+    line-height: 1;
+    margin-top: 2px; /* optical alignment */
+}
+
+.how-desc {
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+    margin-top: 4px;
+    line-height: 1.4;
 }
 
 /* =========================================
