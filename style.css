@@ -2151,3 +2151,38 @@ img {
         font-size: 32px;
     }
 }
+
+/* =========================================
+   CONTACT SECTION UPDATES
+   ========================================= */
+.contact-separation {
+    margin-bottom: 24px;
+}
+
+.contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-label {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 6px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.contact-link {
+    font-size: 24px;
+    font-weight: 900;
+    text-decoration: none;
+    color: #000;
+}
+
+.contact-badge-spacing {
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+}
