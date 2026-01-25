@@ -901,7 +901,7 @@ img {
 
 .page-pricing .plans-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 22px;
     margin-top: 22px;
 }
@@ -928,11 +928,21 @@ img {
 .page-pricing .plan-card.is-featured {
     background: #000;
     color: #fff;
+    border-color: #000;
 }
 
 .page-pricing .plan-card.is-featured .plan-tag,
 .page-pricing .plan-card.is-featured .plan-features {
     color: #ddd;
+}
+
+.page-pricing .plan-card.is-featured .btn.btn-outline {
+    border-color: var(--bg-accent);
+    color: var(--bg-accent);
+}
+.page-pricing .plan-card.is-featured .btn.btn-outline:hover {
+    background: var(--bg-accent);
+    color: #fff;
 }
 
 .page-pricing .plan-badge {
@@ -974,15 +984,30 @@ img {
     gap: 6px;
 }
 
+.page-pricing .plan-price.is-custom {
+    gap: 10px;
+}
+.page-pricing .plan-price.is-custom .price-value {
+    font-size: 34px;
+    letter-spacing: -0.5px;
+}
+
+.page-pricing .plan-card-custom {
+    background: #fff;
+    border-style: dashed;
+}
+
 .page-pricing .price-currency {
     font-weight: 900;
     font-size: 20px;
+    color: var(--bg-accent);
 }
 
 .page-pricing .price-value {
     font-weight: 900;
     font-size: 44px;
     letter-spacing: -1px;
+    color: var(--bg-accent);
 }
 
 .page-pricing .price-period {
@@ -1247,13 +1272,44 @@ img {
 }
 
 .page-pricing .service-price {
+    color: var(--bg-accent);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.page-pricing .service-desc {
+    margin-top: 6px;
     color: #444;
     font-size: 13px;
+    line-height: 1.6;
 }
 
 .page-pricing .service-cta {
     width: 100%;
+    padding: 10px 16px;
+    font-size: 12px;
     margin-top: auto;
+}
+
+/* Pricing page: CTAs should be black */
+.page-pricing .plan-cta,
+.page-pricing .service-cta {
+    background: #000;
+    border-color: #000;
+    color: #fff;
+}
+
+.page-pricing .plan-cta:hover,
+.page-pricing .service-cta:hover {
+    background: #222;
+    border-color: #222;
+    color: #fff;
+}
+
+/* Make "Request Quote" (Custom plan) button smaller on pricing page */
+.page-pricing .plan-card-custom .plan-cta {
+    padding: 10px 16px;
+    font-size: 12px;
 }
 
 .page-pricing .pricing-cta {
