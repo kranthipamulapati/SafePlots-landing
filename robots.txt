@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://safeplots.com/sitemap.xml
+Security: https://safeplots.com/.well-known/security.txt
