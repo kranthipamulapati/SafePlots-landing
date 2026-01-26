@@ -13,12 +13,27 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Close mobile menu when clicking a link
+    // Close mobile menu when clicking a link, but NOT if it's a dropdown trigger
     const navLinks = document.querySelectorAll(".nav-links a");
     navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
+        link.addEventListener("click", (e) => {
+            if (link.classList.contains("dropdown-trigger")) {
+                // On mobile, toggle the dropdown
+                if (window.innerWidth <= 1024) {
+                    e.preventDefault();
+                    const parent = link.closest(".nav-item");
+                    parent.classList.toggle("dropdown-open");
+                }
+                return; // Don't close header
+            }
+
             header.classList.remove("active");
             if (mobileToggle) mobileToggle.textContent = "☰";
+
+            // If it's a dropdown item, also close the dropdown so it's fresh for next time
+            document.querySelectorAll(".nav-item").forEach((item) => {
+                item.classList.remove("dropdown-open");
+            });
         });
     });
 
