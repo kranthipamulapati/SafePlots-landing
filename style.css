@@ -436,15 +436,48 @@ img {
    HOW IT WORKS SECTION
    ========================================= */
 .how-it-works-section {
-    padding: 100px 0;
-    /* Subtle Dot Pattern */
-    background-color: #fff;
+    padding: 20px 0;
     border-bottom: 2px solid #000;
 }
 
+/* Dark Mode for How It Works */
+#how-it-works {
+    background-color: #050505;
+    color: #ffffff;
+    background-image: radial-gradient(#222 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+#how-it-works .section-title {
+    color: #ffffff;
+}
+
+#how-it-works .how-intro {
+    color: #bbbbbb;
+}
+
+#how-it-works .how-desc {
+    color: #999999;
+}
+
+#how-it-works .grid-2-col > .how-col:first-child {
+    border-right-color: #333;
+}
+
+@media (max-width: 1024px) {
+    #how-it-works .how-col:first-child,
+    #how-it-works .grid-2-col > .how-col:first-child {
+        border-bottom-color: #333;
+    }
+}
+
 #why-us {
-    background-color: #fff;
-    background-image: none;
+    background-color: #ffffff;
+    /* Technical Grid Pattern */
+    background-image:
+        linear-gradient(#f0f0f0 1px, transparent 1px),
+        linear-gradient(90deg, #f0f0f0 1px, transparent 1px);
+    background-size: 40px 40px;
 }
 
 .how-intro {
@@ -1744,7 +1777,9 @@ img {
     .header {
         height: auto;
         padding: 20px 0;
-        position: relative;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     }
 
     .header-container {
