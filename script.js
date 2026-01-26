@@ -66,8 +66,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 setStatus("Sent! We’ll contact you soon.");
                 contactForm.reset();
             } catch (err) {
-                console.warn("Contact form submit failed (API not wired yet).", err);
-                setStatus("Couldn’t submit right now. Please call or email us.");
+                console.warn(
+                    "Contact form submit failed (API not wired yet).",
+                    err,
+                );
+                setStatus(
+                    "Couldn’t submit right now. Please call or email us.",
+                );
             } finally {
                 if (submitBtn) submitBtn.disabled = false;
             }

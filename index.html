@@ -127,7 +127,8 @@
                 <nav class="nav-links text-mono">
                     <a href="#how-it-works">How it works?</a>
                     <a href="#why-us">Why Us?</a>
-                    <a href="pricing/">Pricing</a>
+                    <a href="#plans">Pricing</a>
+                    <a href="#services">Services</a>
                     <a href="#contact">Contact</a>
                 </nav>
 
@@ -448,6 +449,266 @@
             </div>
         </section>
 
+        <section class="pricing-plans" id="plans">
+            <div class="container">
+                <div class="pricing-plans-header">
+                    <h2 class="section-title text-center">Plans</h2>
+
+                    <div class="pricing-toggle" data-pricing-toggle>
+                        <button
+                            class="toggle-btn is-active"
+                            type="button"
+                            data-billing="monthly"
+                            aria-pressed="true"
+                        >
+                            Monthly
+                        </button>
+                        <button
+                            class="toggle-btn"
+                            type="button"
+                            data-billing="yearly"
+                            aria-pressed="false"
+                        >
+                            Yearly <span class="toggle-save">Save 15%</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="plans-grid">
+                    <!-- Standard (Featured) -->
+                    <article class="plan-card">
+                        <div class="plan-head">
+                            <div class="plan-name">Standard</div>
+                            <div class="plan-tag text-mono">
+                                Best value monitoring
+                            </div>
+                        </div>
+
+                        <div class="plan-price" aria-label="Price">
+                            <span class="price-currency">₹</span>
+                            <span
+                                class="price-value"
+                                data-price
+                                data-monthly="99"
+                                data-yearly="999"
+                                >99</span
+                            >
+                            <span class="price-period" data-price-period
+                                >/month</span
+                            >
+                        </div>
+
+                        <ul class="plan-features text-mono">
+                            <li>Registration monitoring</li>
+                            <li>Satellite monitoring</li>
+                            <li>Tax monitoring</li>
+                            <li>Google earth updates</li>
+                            <li>Dashboard access</li>
+                        </ul>
+
+                        <a
+                            href="../index.html#contact"
+                            class="btn btn-primary plan-cta"
+                            >Start Standard</a
+                        >
+                    </article>
+
+                    <!-- Premium -->
+                    <article class="plan-card is-featured">
+                        <div class="plan-head">
+                            <div class="plan-name">Premium</div>
+                            <div class="plan-tag text-mono">
+                                Monitoring + visit
+                            </div>
+                        </div>
+
+                        <div class="plan-price" aria-label="Price">
+                            <span class="price-currency">₹</span>
+                            <span
+                                class="price-value"
+                                data-price
+                                data-monthly="999"
+                                data-yearly="9999"
+                                >999</span
+                            >
+                            <span class="price-period" data-price-period
+                                >/month</span
+                            >
+                        </div>
+
+                        <ul class="plan-features text-mono">
+                            <li>Includes all Standard features</li>
+                            <li>2 scheduled visits per year</li>
+                            <li>Detailed report per visit</li>
+                            <li>ID board installation</li>
+                            <li>Geotagged photos</li>
+                        </ul>
+
+                        <a
+                            href="../index.html#contact"
+                            class="btn btn-outline plan-cta"
+                            >Start Premium</a
+                        >
+                    </article>
+
+                    <!-- Custom -->
+                    <article class="plan-card plan-card-custom">
+                        <div class="plan-head">
+                            <div class="plan-name">Custom</div>
+                            <div class="plan-tag text-mono">
+                                Tailored for multiple plots / custom needs
+                            </div>
+                        </div>
+
+                        <div class="plan-price is-custom" aria-label="Price">
+                            <span class="price-value">Custom</span>
+                            <span class="price-period">/quote</span>
+                        </div>
+
+                        <ul class="plan-features text-mono">
+                            <li>Custom monitoring mix</li>
+                            <li>Custom on-ground visits</li>
+                            <li>Bundle services (cleaning/fencing/etc.)</li>
+                            <li>Multi-plot discounts</li>
+                            <li>Dedicated support</li>
+                        </ul>
+
+                        <a
+                            href="../index.html#contact"
+                            class="btn btn-outline plan-cta"
+                            >Request Quote</a
+                        >
+                    </article>
+                </div>
+
+                <p class="pricing-fineprint text-mono text-center">
+                    Prices shown are starting points. Site-specific work
+                    (materials, travel, fencing type) may affect final quotes.
+                </p>
+            </div>
+        </section>
+
+        <!-- One-Time Services -->
+        <section class="pricing-services" id="services">
+            <div class="container">
+                <h2 class="section-title text-center">One-Time Services</h2>
+                <p class="pricing-note text-mono text-center">
+                    Add any service with any plan. Pay only when you need it.
+                </p>
+
+                <div class="service-cards">
+                    <article class="service-card">
+                        <div class="service-title">Find my plot</div>
+
+                        <div class="service-price text-mono">₹4,999</div>
+
+                        <p class="service-desc text-mono">
+                            Lost track of your plot? We'll do on-ground search
+                            to locate your plot & share geotagged proof.
+                        </p>
+
+                        <a
+                            href="../index.html#contact"
+                            class="btn btn-outline service-cta"
+                            >Request Quote</a
+                        >
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-title">Plot Visit</div>
+
+                        <div class="service-price text-mono">
+                            ₹2,499 – ₹4,999
+                        </div>
+
+                        <p class="service-desc text-mono">
+                            A physical site inspection to assess your plot's
+                            condition & share detailed inspection report with
+                            geotagged photos.
+                        </p>
+
+                        <a
+                            href="../index.html#contact"
+                            class="btn btn-outline service-cta"
+                            >Request Quote</a
+                        >
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-title">Full Plot Cleaning</div>
+
+                        <div class="service-price text-mono">₹2,999-4,999</div>
+
+                        <p class="service-desc text-mono">
+                            Weed & debris clearing so your site stays visible,
+                            with before/after photos.
+                        </p>
+
+                        <a
+                            href="../index.html#contact"
+                            class="btn btn-outline service-cta"
+                            >Request Quote</a
+                        >
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-title">Fencing Installation</div>
+
+                        <div class="service-price text-mono">
+                            ₹19,999 – ₹49,999
+                        </div>
+
+                        <p class="service-desc text-mono">
+                            Barbed wire fencing starts at 20k/100 sq.yards &
+                            Precast compound walls at 50k/100 sq.yards.
+                        </p>
+
+                        <a
+                            href="../index.html#contact"
+                            class="btn btn-outline service-cta"
+                            >Request Quote</a
+                        >
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-title">Drone Video & Photos</div>
+
+                        <div class="service-price text-mono">
+                            ₹2,499 – ₹4,999
+                        </div>
+
+                        <p class="service-desc text-mono">
+                            Aerial photos & video for a clear view of plot &
+                            surrounding area.
+                        </p>
+
+                        <a
+                            href="../index.html#contact"
+                            class="btn btn-outline service-cta"
+                            >Request Quote</a
+                        >
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-title">ID Board Installation</div>
+
+                        <div class="service-price text-mono">₹999 – ₹2,499</div>
+
+                        <p class="service-desc text-mono">
+                            Install an ID board on-site to identify ownership &
+                            deter encroachment.
+                        </p>
+
+                        <a
+                            href="../index.html#contact"
+                            class="btn btn-outline service-cta"
+                            >Request Quote</a
+                        >
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <!-- Send a Message -->
         <section class="message-section" id="contact">
             <div class="container">
@@ -684,7 +945,7 @@
                                     <a href="#how-it-works">How it works</a>
                                 </li>
                                 <li><a href="#why-us">Why Us</a></li>
-                                <li><a href="pricing/">Pricing</a></li>
+                                <li><a href="#pricing">Pricing</a></li>
                                 <li><a href="#contact">Contact</a></li>
                             </ul>
                         </nav>

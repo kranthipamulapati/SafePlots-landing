@@ -754,14 +754,14 @@ img {
 /* =========================================
    PRICING PAGE
    ========================================= */
-.page-pricing .pricing-hero {
+.pricing-hero {
     padding: 80px 0 56px;
     border-bottom: 1px solid #000;
     background: #fff;
     text-align: center;
 }
 
-.page-pricing .pricing-kicker {
+.pricing-kicker {
     display: inline-block;
     padding: 8px 14px;
     border: 2px solid #000;
@@ -772,7 +772,7 @@ img {
     margin-bottom: 18px;
 }
 
-.page-pricing .pricing-sub {
+.pricing-sub {
     max-width: 820px;
     margin: 18px auto 0;
     font-size: 18px;
@@ -781,7 +781,7 @@ img {
     font-weight: 500;
 }
 
-.page-pricing .pricing-hero-actions {
+.pricing-hero-actions {
     margin-top: 28px;
     display: flex;
     justify-content: center;
@@ -789,33 +789,33 @@ img {
     flex-wrap: wrap;
 }
 
-.page-pricing .pricing-plans,
-.page-pricing .pricing-compare,
-.page-pricing .pricing-nri,
-.page-pricing .pricing-services,
-.page-pricing .pricing-why,
-.page-pricing .pricing-cta {
+.pricing-plans,
+.pricing-compare,
+.pricing-nri,
+.pricing-services,
+.pricing-why,
+.pricing-cta {
     padding: 80px 0;
 }
 
-.page-pricing .pricing-plans {
+.pricing-plans {
     background: #f9f9f9;
     border-bottom: 1px solid #000;
 }
 
-.page-pricing .pricing-plans-header {
+.pricing-plans-header {
     margin-bottom: 26px;
     text-align: center;
 }
 
-.page-pricing .pricing-note {
+.pricing-note {
     color: #666;
     font-size: 14px;
     margin-top: 10px;
     margin-bottom: 16px;
 }
 
-.page-pricing .pricing-toggle {
+.pricing-toggle {
     display: inline-flex;
     border: 2px solid #000;
     box-shadow: 4px 4px 0 #000;
@@ -824,7 +824,7 @@ img {
     background: #fff;
 }
 
-.page-pricing .toggle-btn {
+.toggle-btn {
     appearance: none;
     border: 0;
     background: transparent;
@@ -840,31 +840,31 @@ img {
         color 0.15s ease;
 }
 
-.page-pricing .toggle-btn.is-active {
+.toggle-btn.is-active {
     background: #000;
     color: #fff;
 }
 
-.page-pricing .toggle-save {
+.toggle-save {
     color: var(--bg-accent);
     margin-left: 8px;
     font-weight: 700;
 }
 
-.page-pricing .toggle-btn.is-active .toggle-save {
+.toggle-btn.is-active .toggle-save {
     color: #fff;
     text-decoration: underline;
     text-underline-offset: 3px;
 }
 
-.page-pricing .plans-grid {
+.plans-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 22px;
     margin-top: 22px;
 }
 
-.page-pricing .plan-card {
+.plan-card {
     border: 2px solid #000;
     background: #fff;
     box-shadow: 6px 6px 0 #000;
@@ -878,32 +878,32 @@ img {
     min-height: 100%;
 }
 
-.page-pricing .plan-card:hover {
+.plan-card:hover {
     transform: translate(-2px, -2px);
     box-shadow: 8px 8px 0 #000;
 }
 
-.page-pricing .plan-card.is-featured {
+.plan-card.is-featured {
     background: #000;
     color: #fff;
     border-color: #000;
 }
 
-.page-pricing .plan-card.is-featured .plan-tag,
-.page-pricing .plan-card.is-featured .plan-features {
+.plan-card.is-featured .plan-tag,
+.plan-card.is-featured .plan-features {
     color: #ddd;
 }
 
-.page-pricing .plan-card.is-featured .btn.btn-outline {
+.plan-card.is-featured .btn.btn-outline {
     border-color: var(--bg-accent);
     color: var(--bg-accent);
 }
-.page-pricing .plan-card.is-featured .btn.btn-outline:hover {
+.plan-card.is-featured .btn.btn-outline:hover {
     background: var(--bg-accent);
     color: #fff;
 }
 
-.page-pricing .plan-badge {
+.plan-badge {
     position: absolute;
     top: 14px;
     right: 14px;
@@ -917,24 +917,24 @@ img {
     font-size: 12px;
 }
 
-.page-pricing .plan-head {
+.plan-head {
     margin-bottom: 14px;
 }
 
-.page-pricing .plan-name {
+.plan-name {
     font-size: 24px;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -0.5px;
 }
 
-.page-pricing .plan-tag {
+.plan-tag {
     margin-top: 6px;
     font-size: 13px;
     color: #666;
 }
 
-.page-pricing .plan-price {
+.plan-price {
     margin-top: 10px;
     margin-bottom: 16px;
     display: flex;
@@ -942,53 +942,53 @@ img {
     gap: 6px;
 }
 
-.page-pricing .plan-price.is-custom {
+.plan-price.is-custom {
     gap: 10px;
 }
-.page-pricing .plan-price.is-custom .price-value {
+.plan-price.is-custom .price-value {
     font-size: 34px;
     letter-spacing: -0.5px;
 }
 
-.page-pricing .plan-card-custom {
+.plan-card-custom {
     background: #fff;
     border-style: dashed;
 }
 
-.page-pricing .price-currency {
+.price-currency {
     font-weight: 900;
     font-size: 20px;
     color: var(--bg-accent);
 }
 
-.page-pricing .price-value {
+.price-value {
     font-weight: 900;
     font-size: 44px;
     letter-spacing: -1px;
     color: var(--bg-accent);
 }
 
-.page-pricing .price-period {
+.price-period {
     font-weight: 700;
     font-size: 14px;
     opacity: 0.9;
 }
 
-.page-pricing .plan-features {
+.plan-features {
     margin-top: 8px;
     margin-bottom: 18px;
     color: #444;
     font-size: 13px;
 }
 
-.page-pricing .plan-features li {
+.plan-features li {
     padding-left: 22px;
     position: relative;
     margin-bottom: 10px;
     line-height: 1.4;
 }
 
-.page-pricing .plan-features li::before {
+.plan-features li::before {
     content: "✓";
     color: var(--bg-accent);
     position: absolute;
@@ -997,27 +997,27 @@ img {
     font-weight: 900;
 }
 
-.page-pricing .plan-card.is-featured .plan-features li::before {
+.plan-card.is-featured .plan-features li::before {
     color: #fff;
 }
 
-.page-pricing .plan-cta {
+.plan-cta {
     margin-top: auto;
     width: 100%;
 }
 
-.page-pricing .pricing-fineprint {
+.pricing-fineprint {
     margin-top: 24px;
     font-size: 12px;
     color: #666;
 }
 
-.page-pricing .pricing-compare {
+.pricing-compare {
     background: #fff;
     border-bottom: 1px solid #000;
 }
 
-.page-pricing .pricing-table-wrap {
+.pricing-table-wrap {
     margin-top: 18px;
     border: 2px solid #000;
     box-shadow: 6px 6px 0 #000;
@@ -1026,13 +1026,13 @@ img {
     background: #fff;
 }
 
-.page-pricing .pricing-table {
+.pricing-table {
     width: 100%;
     border-collapse: collapse;
     min-width: 760px;
 }
 
-.page-pricing .pricing-table thead th {
+.pricing-table thead th {
     background: #000;
     color: #fff;
     text-transform: uppercase;
@@ -1042,33 +1042,33 @@ img {
     text-align: left;
 }
 
-.page-pricing .pricing-table tbody th,
-.page-pricing .pricing-table tbody td {
+.pricing-table tbody th,
+.pricing-table tbody td {
     border-top: 1px solid #ddd;
     padding: 14px 14px;
     font-size: 13px;
     vertical-align: top;
 }
 
-.page-pricing .pricing-table tbody th {
+.pricing-table tbody th {
     font-weight: 700;
     width: 30%;
     color: #000;
 }
 
-.page-pricing .pricing-nri {
+.pricing-nri {
     background: #fff;
     border-bottom: 1px solid #000;
 }
 
-.page-pricing .nri-grid {
+.nri-grid {
     margin-top: 24px;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
 }
 
-.page-pricing .nri-card {
+.nri-card {
     border: 2px solid #000;
     background: #fff;
     box-shadow: 6px 6px 0 #000;
@@ -1082,17 +1082,17 @@ img {
     position: relative;
 }
 
-.page-pricing .nri-card:hover {
+.nri-card:hover {
     transform: translate(-2px, -2px);
     box-shadow: 8px 8px 0 #000;
 }
 
-.page-pricing .nri-card.is-featured {
+.nri-card.is-featured {
     background: #000;
     color: #fff;
 }
 
-.page-pricing .nri-badge {
+.nri-badge {
     position: absolute;
     top: 14px;
     right: 14px;
@@ -1106,41 +1106,41 @@ img {
     font-size: 12px;
 }
 
-.page-pricing .nri-title {
+.nri-title {
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -0.5px;
     font-size: 18px;
 }
 
-.page-pricing .nri-price {
+.nri-price {
     color: #444;
     font-size: 13px;
 }
 
-.page-pricing .nri-card.is-featured .nri-price {
+.nri-card.is-featured .nri-price {
     color: #ddd;
 }
 
-.page-pricing .nri-features {
+.nri-features {
     color: #444;
     font-size: 13px;
     margin-top: 4px;
     margin-bottom: 10px;
 }
 
-.page-pricing .nri-card.is-featured .nri-features {
+.nri-card.is-featured .nri-features {
     color: #ddd;
 }
 
-.page-pricing .nri-features li {
+.nri-features li {
     padding-left: 22px;
     position: relative;
     margin-bottom: 10px;
     line-height: 1.4;
 }
 
-.page-pricing .nri-features li::before {
+.nri-features li::before {
     content: "✓";
     color: var(--bg-accent);
     position: absolute;
@@ -1149,29 +1149,29 @@ img {
     font-weight: 900;
 }
 
-.page-pricing .nri-card.is-featured .nri-features li::before {
+.nri-card.is-featured .nri-features li::before {
     color: #fff;
 }
 
-.page-pricing .pricing-why {
+.pricing-why {
     background: #fff;
     border-bottom: 1px solid #000;
 }
 
-.page-pricing .pricing-why .section-title {
+.pricing-why .section-title {
     font-size: 40px;
     letter-spacing: -1px;
     margin-bottom: 18px;
 }
 
-.page-pricing .why-grid {
+.why-grid {
     margin-top: 24px;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
 }
 
-.page-pricing .why-card {
+.why-card {
     border: 2px solid #000;
     background: #fff;
     box-shadow: 6px 6px 0 #000;
@@ -1181,32 +1181,32 @@ img {
         box-shadow 0.12s ease;
 }
 
-.page-pricing .why-card:hover {
+.why-card:hover {
     transform: translate(-2px, -2px);
     box-shadow: 8px 8px 0 #000;
 }
 
-.page-pricing .why-title {
+.why-title {
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -0.5px;
 }
 
-.page-pricing .why-desc {
+.why-desc {
     margin-top: 10px;
     color: #444;
     font-size: 13px;
     line-height: 1.6;
 }
 
-.page-pricing .why-bullets {
+.why-bullets {
     margin-top: 24px;
     max-width: 880px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.page-pricing .why-bullets li {
+.why-bullets li {
     position: relative;
     padding-left: 18px;
     margin-bottom: 12px;
@@ -1215,7 +1215,7 @@ img {
     line-height: 1.8;
 }
 
-.page-pricing .why-bullets li::before {
+.why-bullets li::before {
     content: "•";
     position: absolute;
     left: 0;
@@ -1224,14 +1224,14 @@ img {
     font-weight: 900;
 }
 
-.page-pricing .why-bullets strong {
+.why-bullets strong {
     color: #000;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -0.3px;
 }
 
-.page-pricing .text-highlight {
+.text-highlight {
     background: rgba(255, 68, 0, 0.16);
     border: 1px solid rgba(255, 68, 0, 0.35);
     padding: 1px 6px;
@@ -1241,19 +1241,19 @@ img {
     white-space: nowrap;
 }
 
-.page-pricing .pricing-services {
+.pricing-services {
     background: #f9f9f9;
     border-bottom: 1px solid #000;
 }
 
-.page-pricing .service-cards {
+.service-cards {
     margin-top: 24px;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
 }
 
-.page-pricing .service-card {
+.service-card {
     border: 2px solid #000;
     background: #fff;
     box-shadow: 6px 6px 0 #000;
@@ -1266,31 +1266,31 @@ img {
         box-shadow 0.12s ease;
 }
 
-.page-pricing .service-card:hover {
+.service-card:hover {
     transform: translate(-2px, -2px);
     box-shadow: 8px 8px 0 #000;
 }
 
-.page-pricing .service-title {
+.service-title {
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -0.5px;
 }
 
-.page-pricing .service-price {
+.service-price {
     color: var(--bg-accent);
     font-size: 13px;
     font-weight: 700;
 }
 
-.page-pricing .service-desc {
+.service-desc {
     margin-top: 6px;
     color: #444;
     font-size: 13px;
     line-height: 1.6;
 }
 
-.page-pricing .service-cta {
+.service-cta {
     width: 100%;
     padding: 10px 16px;
     font-size: 12px;
@@ -1298,31 +1298,31 @@ img {
 }
 
 /* Pricing page: CTAs should be black */
-.page-pricing .plan-cta,
-.page-pricing .service-cta {
+.plan-cta,
+.service-cta {
     background: #000;
     border-color: #000;
     color: #fff;
 }
 
-.page-pricing .plan-cta:hover,
-.page-pricing .service-cta:hover {
+.plan-cta:hover,
+.service-cta:hover {
     background: #222;
     border-color: #222;
     color: #fff;
 }
 
 /* Make "Request Quote" (Custom plan) button smaller on pricing page */
-.page-pricing .plan-card-custom .plan-cta {
+.plan-card-custom .plan-cta {
     padding: 10px 16px;
     font-size: 12px;
 }
 
-.page-pricing .pricing-cta {
+.pricing-cta {
     background: #fff;
 }
 
-.page-pricing .pricing-cta-card {
+.pricing-cta-card {
     border: 2px solid #000;
     box-shadow: 8px 8px 0 #000;
     padding: 30px;
@@ -1335,7 +1335,7 @@ img {
     border-radius: 18px;
 }
 
-.page-pricing .pricing-cta-title {
+.pricing-cta-title {
     font-size: 34px;
     font-weight: 900;
     letter-spacing: -1px;
@@ -1343,19 +1343,19 @@ img {
     text-transform: uppercase;
 }
 
-.page-pricing .pricing-cta-sub {
+.pricing-cta-sub {
     color: #ddd;
     max-width: 560px;
 }
 
-.page-pricing .pricing-cta-actions {
+.pricing-cta-actions {
     display: flex;
     gap: 14px;
     flex-wrap: wrap;
     justify-content: flex-end;
 }
 
-.page-pricing .pricing-cta-actions .btn {
+.pricing-cta-actions .btn {
     white-space: nowrap;
 }
 
@@ -1367,20 +1367,20 @@ img {
         column-gap: 32px;
     }
 
-    .page-pricing .plans-grid {
+    .plans-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .page-pricing .service-cards {
+    .service-cards {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .page-pricing .nri-grid,
-    .page-pricing .why-grid {
+    .nri-grid,
+    .why-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .page-pricing .pricing-cta-card {
+    .pricing-cta-card {
         flex-direction: column;
         align-items: flex-start;
     }
@@ -1393,24 +1393,24 @@ img {
         text-align: center;
     }
 
-    .page-pricing .plans-grid {
+    .plans-grid {
         grid-template-columns: 1fr;
     }
 
-    .page-pricing .service-cards {
+    .service-cards {
         grid-template-columns: 1fr;
     }
 
-    .page-pricing .nri-grid,
-    .page-pricing .why-grid {
+    .nri-grid,
+    .why-grid {
         grid-template-columns: 1fr;
     }
 
-    .page-pricing .price-value {
+    .price-value {
         font-size: 40px;
     }
 
-    .page-pricing .pricing-cta-actions {
+    .pricing-cta-actions {
         width: 100%;
         justify-content: flex-start;
     }
