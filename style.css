@@ -574,6 +574,181 @@ img {
 }
 
 /* =========================================
+   PROCESS FLOW (HOW IT WORKS IMPROVED)
+   ========================================= */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+    counter-reset: process-counter; /* For step numbers */
+}
+
+.process-card {
+    background: #111;
+    border: 1px solid #333;
+    padding: 30px 24px;
+    position: relative;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.process-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--bg-accent);
+}
+
+.process-step-number {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    font-size: 40px;
+    font-weight: 900;
+    color: #222;
+    font-family: var(--font-heading);
+    line-height: 1;
+    z-index: 0;
+}
+
+.process-card:hover .process-step-number {
+    color: #333;
+}
+
+.process-icon {
+    font-size: 32px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.process-title {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+
+.process-desc {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.process-answer-box {
+    background: #222;
+    padding: 12px;
+    border-radius: 4px;
+    border-left: 2px solid var(--bg-accent);
+    margin-top: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.process-question {
+    font-size: 11px;
+    color: #666;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+.process-answer {
+    font-size: 13px;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Cost CTA Banner */
+.cost-banner {
+    background: var(--bg-accent);
+    color: #fff;
+    padding: 24px;
+    margin-top: 40px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    border: 2px solid #000;
+    box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+.cost-banner-text {
+    font-size: 20px;
+}
+
+.cost-price {
+    background: #000;
+    color: #fff;
+    padding: 4px 12px;
+    margin: 0 8px;
+    display: inline-block;
+}
+
+/* Feature Cards (Online/Offline Services) */
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.feature-card {
+    background: #111;
+    border: 1px solid #333;
+    padding: 24px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    transition: all 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--bg-accent);
+    background: #151515;
+}
+
+.feature-card .icon {
+    font-size: 28px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.feature-card-content {
+    flex-grow: 1;
+}
+
+.feature-title {
+    color: #fff;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.feature-desc {
+    color: #999;
+    font-size: 13px;
+    line-height: 1.5;
+    font-family: var(--font-mono);
+}
+
+/* =========================================
    FOOTER
    ========================================= */
 .site-footer {
