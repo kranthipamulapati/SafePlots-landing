@@ -900,30 +900,11 @@ img {
     border-top: 1px solid #222;
     padding-top: 18px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
     font-size: 13px;
-}
-
-.legal-links {
-    display: flex;
-    gap: 16px;
-}
-
-.legal-links a {
-    color: #888;
-}
-
-.legal-links a:hover {
-    color: #fff;
-}
-
-.legal-links a[aria-current="page"] {
-    color: #fff;
-    text-decoration: underline;
-    text-underline-offset: 4px;
 }
 
 /* =========================================
