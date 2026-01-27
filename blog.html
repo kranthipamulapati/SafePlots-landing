@@ -76,9 +76,17 @@
         </header>
 
         <!-- Blog Hero -->
-        <section class="hero" style="min-height: 50vh; align-items: center">
+        <section
+            class="hero"
+            style="
+                min-height: 30vh;
+                display: flex;
+                align-items: center;
+                padding: 40px 0;
+            "
+        >
             <div class="container text-center">
-                <h1 class="hero-title">
+                <h1 class="hero-title" style="margin-bottom: 10px">
                     LATEST <span class="text-orange">UPDATES</span>
                 </h1>
                 <p class="hero-desc" style="margin: 0 auto">
@@ -117,9 +125,10 @@
                             plot vulnerable and how technology bridges the gap.
                         </p>
                         <a
-                            href="#"
-                            class="btn btn-outline plan-cta"
+                            href="javascript:void(0)"
+                            class="btn btn-outline plan-cta blog-read-more"
                             style="margin-top: auto"
+                            data-target="article-1"
                             >Read More &rarr;</a
                         >
                     </article>
@@ -146,9 +155,10 @@
                             checking and paying your VLT on time.
                         </p>
                         <a
-                            href="#"
-                            class="btn btn-outline plan-cta"
+                            href="javascript:void(0)"
+                            class="btn btn-outline plan-cta blog-read-more"
                             style="margin-top: auto"
+                            data-target="article-2"
                             >Read More &rarr;</a
                         >
                     </article>
@@ -176,14 +186,14 @@
                             fencing.
                         </p>
                         <a
-                            href="#"
-                            class="btn btn-outline plan-cta"
+                            href="javascript:void(0)"
+                            class="btn btn-outline plan-cta blog-read-more"
                             style="margin-top: auto"
+                            data-target="article-3"
                             >Read More &rarr;</a
                         >
                     </article>
 
-                    <!-- Article 4 -->
                     <article
                         class="plan-card"
                         style="
@@ -205,12 +215,112 @@
                             our tech stack.
                         </p>
                         <a
-                            href="#"
-                            class="btn btn-outline plan-cta"
+                            href="javascript:void(0)"
+                            class="btn btn-outline plan-cta blog-read-more"
                             style="margin-top: auto"
+                            data-target="article-4"
                             >Read More &rarr;</a
                         >
                     </article>
+                </div>
+
+                <!-- Full Article Viewer Section -->
+                <div id="blog-article-viewer" class="article-viewer-container" style="display: none; margin-top: 60px;">
+                    <article class="plan-card" style="box-shadow: 10px 10px 0 #000; width: 100%; max-width: 100%;">
+                        <div id="viewer-content">
+                            <!-- Article Content Library (Hidden) -->
+                            <div class="blog-content-library" style="display: none;">
+                                <div id="library-article-1">
+                                    <h2 class="section-title" style="font-size: 32px; text-align: left; margin-bottom: 20px;">Why NRI Plots are Easy Targets</h2>
+                                    <p style="color: #333; line-height: 1.6; margin-bottom: 15px;">
+                                        NRI (Non-Resident Indian) properties, particularly vacant plots, are high-stakes targets for encroachment and land-grabbing schemes in rapidly developing cities like Hyderabad. The reasons are multifaceted, but the primary factor is <strong>absence</strong>.
+                                    </p>
+                                    <p style="color: #333; line-height: 1.6; margin-bottom: 15px;">
+                                        When a property remains unmonitored for months or years, it signals to local land sharks that the owner is likely unaware of ground realities. Encroachers often use sophisticated tactics:
+                                    </p>
+                                    <ul style="color: #333; line-height: 1.6; margin-bottom: 15px; padding-left: 20px;">
+                                        <li><strong>Temporary Structures:</strong> Starting with a small hut or garbage dumping to test the waters.</li>
+                                        <li><strong>Forged Documents:</strong> Creating 'mirror' documents to claim ownership in local courts.</li>
+                                        <li><strong>Boundary Shifting:</strong> Gradually moving fences of adjacent properties to slowly consume yours.</li>
+                                    </ul>
+                                    <p style="color: #333; line-height: 1.6;">
+                                        SafePlots bridges this geographical gap using high-resolution satellite imagery and frequent ground verification, ensuring that your property is never truly "absent."
+                                    </p>
+                                </div>
+
+                                <div id="library-article-2">
+                                    <h2 class="section-title" style="font-size: 32px; text-align: left; margin-bottom: 20px;">Understanding Vacant Land Tax (VLT)</h2>
+                                    <p style="color: #333; line-height: 1.6; margin-bottom: 15px;">
+                                        Vacant Land Tax (VLT) is a mandatory tax levied by the Greater Hyderabad Municipal Corporation (GHMC) and other municipalities across Telangana on unconstructed plots. In 2026, with the merger of several peripheral municipalities into GHMC, the enforcement is stricter than ever.
+                                    </p>
+                                    <p style="color: #333; line-height: 1.6; margin-bottom: 15px;">
+                                        <strong>How is VLT calculated?</strong><br>
+                                        In Hyderabad, VLT is typically charged at <strong>0.5% of the estimated capital value</strong> of the land. If the land is not maintained (e.g., used for illegal dumping), a penalty of 0.25% can be added.
+                                    </p>
+                                    <p style="color: #333; line-height: 1.6; margin-bottom: 15px;">
+                                        <strong>Why you shouldn't ignore it:</strong><br>
+                                        Accumulating VLT dues can lead to:
+                                    </p>
+                                    <ul style="color: #333; line-height: 1.6; margin-bottom: 15px; padding-left: 20px;">
+                                        <li>High interest penalties (often 24% per annum).</li>
+                                        <li>Difficulties during property sale or registration.</li>
+                                        <li>Legal notices from the municipal authorities.</li>
+                                    </ul>
+                                    <p style="color: #333; line-height: 1.6;">
+                                        SafePlots helps NRIs track their VLT status and facilitates timely payments through our unified dashboard, preventing costly legal headaches.
+                                    </p>
+                                </div>
+
+                                <div id="library-article-3">
+                                    <h2 class="section-title" style="font-size: 32px; text-align: left; margin-bottom: 20px;">Precast Walls vs Fencing</h2>
+                                    <p style="color: #333; line-height: 1.6; margin-bottom: 15px;">
+                                        Choosing the right physical barrier for your plot is the first line of defense. But should you go for a simple barbed wire fence or a robust precast compound wall?
+                                    </p>
+                                    <p style="color: #333; line-height: 1.6; margin-bottom: 15px;">
+                                        <strong>Barbed Wire Fencing:</strong><br>
+                                        <em>Pros:</em> Cost-effective, quick to install (usually 1 day), clear visual marker of ownership.<br>
+                                        <em>Cons:</em> Easily cut, provides minimal physical protection against animals or persistent trespassers.
+                                    </p>
+                                    <p style="color: #333; line-height: 1.6; margin-bottom: 15px;">
+                                        <strong>Precast Compound Walls:</strong><br>
+                                        <em>Pros:</em> Extremely durable, provides high privacy, very difficult to breach, increases property value.<br>
+                                        <em>Cons:</em> Higher initial investment, requires 2-3 days for installation.
+                                    </p>
+                                    <p style="color: #333; line-height: 1.6;">
+                                        At SafePlots, we recommend Precast walls for plots in rapidly developing areas where encroachment risks are higher. For remote layouts, a high-quality ID board paired with barbed wire is a great starting point.
+                                    </p>
+                                </div>
+
+                                <div id="library-article-4">
+                                    <h2 class="section-title" style="font-size: 32px; text-align: left; margin-bottom: 20px;">Satellite Monitoring Explained</h2>
+                                    <p style="color: #333; line-height: 1.6; margin-bottom: 15px;">
+                                        At SafePlots, we don't just rely on ground teams. We task high-resolution satellites to monitor your property from space. But how does it actually work?
+                                    </p>
+                                    <p style="color: #333; line-height: 1.6; margin-bottom: 15px;">
+                                        We use sub-meter resolution imagery that can detect changes as small as a parked vehicle or a pile of bricks. Our system performs <strong>NDVI (Normalized Difference Vegetation Index)</strong> analysis to detect clearing of land or new construction activity automatically.
+                                    </p>
+                                    <p style="color: #333; line-height: 1.6; margin-bottom: 15px;">
+                                        <strong>Key Technical Features:</strong><br>
+                                    </p>
+                                    <ul style="color: #333; line-height: 1.6; margin-bottom: 15px; padding-left: 20px;">
+                                        <li><strong>5-Day Return Time:</strong> New images of your plot are processed every week.</li>
+                                        <li><strong>AI-Driven Alerts:</strong> Our algorithms flag suspicious changes instantly.</li>
+                                        <li><strong>Historical Comparison:</strong> Track how the surrounding area has changed over years.</li>
+                                    </ul>
+                                    <p style="color: #333; line-height: 1.6;">
+                                        This technology allows us to provide NRIs with "eyes on the ground" from thousands of miles away, 24/7.
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="viewer-display-area">
+                                <!-- Content will be injected here -->
+                            </div>
+                            <div style="margin-top: 30px; text-align: right;">
+                                <button class="btn btn-black" onclick="document.getElementById('blog-article-viewer').style.display='none'">Close Article</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
                 </div>
             </div>
         </section>

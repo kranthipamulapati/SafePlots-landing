@@ -158,4 +158,31 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    // Blog expansion logic (Redesigned for Viewer)
+    const blogReadMoreBtns = document.querySelectorAll(".blog-read-more");
+    const articleViewer = document.getElementById("blog-article-viewer");
+    const viewerDisplayArea = document.getElementById("viewer-display-area");
+
+    blogReadMoreBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const targetId = btn.dataset.target;
+            const libraryId = `library-${targetId}`;
+            const sourceEl = document.getElementById(libraryId);
+
+            if (sourceEl && articleViewer && viewerDisplayArea) {
+                // Inject content from library to viewer
+                viewerDisplayArea.innerHTML = sourceEl.innerHTML;
+
+                // Show viewer
+                articleViewer.style.display = "block";
+
+                // Scroll to viewer
+                articleViewer.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                });
+            }
+        });
+    });
 });
