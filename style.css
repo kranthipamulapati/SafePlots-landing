@@ -121,14 +121,24 @@ img {
     font-weight: 900;
     font-size: 24px;
     letter-spacing: -1px;
-    display: flex;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+    white-space: nowrap;
+}
+.logo .logo-icon,
+.logo::first-line {
+    display: inline;
 }
 .logo-icon {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     object-fit: contain;
+    flex-shrink: 0;
+    vertical-align: middle;
+    margin-right: 4px;
 }
 .nav-links {
     display: flex;
