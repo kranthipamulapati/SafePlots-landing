@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 viewerDisplayArea.innerHTML = sourceEl.innerHTML;
 
                 // Show viewer
-                articleViewer.style.display = "block";
+                articleViewer.classList.remove("hidden");
 
                 // Scroll to viewer
                 articleViewer.scrollIntoView({
