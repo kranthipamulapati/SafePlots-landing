@@ -1912,6 +1912,18 @@ img {
     color: #444;
 }
 
+.bento-card {
+    border: 2px solid #000;
+    background: #fff;
+    border-radius: 12px;
+}
+
+.message-card {
+    border: 2px solid #000;
+    border-radius: 16px;
+    /* other existing styles */
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .hero-title {
