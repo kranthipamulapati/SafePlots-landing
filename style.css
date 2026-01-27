@@ -889,7 +889,7 @@ img {
 }
 .pricing-plans,
 .pricing-services {
-    padding: 40px 0;
+    padding: 20px 0;
     min-height: 100vh;
 }
 .pricing-plans {
@@ -953,7 +953,7 @@ img {
     border: 2px solid #000;
     background: #fff;
     box-shadow: 6px 6px 0 #000;
-    padding: 26px 22px;
+    padding: 20px 20px;
     transition:
         transform 0.12s ease,
         box-shadow 0.12s ease;
@@ -996,9 +996,6 @@ img {
     text-transform: uppercase;
     font-size: 12px;
 }
-.plan-head {
-    margin-bottom: 14px;
-}
 .plan-name {
     font-size: 24px;
     font-weight: 900;
@@ -1006,13 +1003,10 @@ img {
     letter-spacing: -0.5px;
 }
 .plan-tag {
-    margin-top: 6px;
     font-size: 13px;
     color: #666;
 }
 .plan-price {
-    margin-top: 10px;
-    margin-bottom: 16px;
     display: flex;
     align-items: baseline;
     gap: 6px;
@@ -1045,8 +1039,6 @@ img {
     opacity: 0.9;
 }
 .plan-features {
-    margin-top: 8px;
-    margin-bottom: 18px;
     color: #444;
     font-size: 13px;
 }
