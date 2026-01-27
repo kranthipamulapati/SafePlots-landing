@@ -143,4 +143,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         applyBilling("monthly");
     }
+
+    // Auto-fill contact form message for service quote buttons
+    const serviceCtaButtons = document.querySelectorAll(".service-cta");
+    const messageTextarea = document.querySelector(
+        "#contactForm textarea[name='message']",
+    );
+
+    serviceCtaButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const serviceName = btn.dataset.service;
+            if (messageTextarea && serviceName) {
+                messageTextarea.value = `I would like to get a quote for: ${serviceName}`;
+            }
+        });
+    });
 });

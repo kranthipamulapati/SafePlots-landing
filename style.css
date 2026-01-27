@@ -1482,6 +1482,18 @@ img {
     box-shadow: 8px 8px 0 #000;
 }
 
+.service-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 4px;
+}
+
+.service-icon {
+    font-size: 24px;
+    line-height: 1;
+}
+
 .service-title {
     font-weight: 900;
     text-transform: uppercase;
