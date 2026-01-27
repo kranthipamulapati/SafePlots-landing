@@ -213,7 +213,7 @@ img {
 }
 
 .arrow {
-    font-size: 10px;
+    font-size: 16px;
     transition: transform 0.2s ease;
 }
 
@@ -1001,12 +1001,9 @@ img {
 }
 
 .pricing-plans,
-.pricing-compare,
-.pricing-nri,
-.pricing-services,
-.pricing-why,
-.pricing-cta {
+.pricing-services {
     padding: 40px 0;
+    min-height: 100vh;
 }
 
 .pricing-plans {

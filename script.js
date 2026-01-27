@@ -18,9 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
     navLinks.forEach((link) => {
         link.addEventListener("click", (e) => {
             if (link.classList.contains("dropdown-trigger")) {
+                e.preventDefault();
                 // On mobile, toggle the dropdown
                 if (window.innerWidth <= 1024) {
-                    e.preventDefault();
                     const parent = link.closest(".nav-item");
                     parent.classList.toggle("dropdown-open");
                 }
