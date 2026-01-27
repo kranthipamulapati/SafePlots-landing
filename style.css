@@ -1010,7 +1010,7 @@ img {
 }
 
 .pricing-plans {
-    background: #f9f9f9;
+    background: #ffffff;
     border-bottom: 1px solid #000;
 }
 
@@ -1453,7 +1453,7 @@ img {
 }
 
 .pricing-services {
-    background: #f9f9f9;
+    background: #f1f5f9; /* Subtle cool-gray background */
     border-bottom: 1px solid #000;
 }
 
@@ -1461,7 +1461,7 @@ img {
     margin-top: 24px;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
+    gap: 40px; /* Increased from 18px */
 }
 
 .service-card {
