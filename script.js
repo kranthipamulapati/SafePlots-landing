@@ -64,17 +64,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (submitBtn) submitBtn.disabled = true;
                 setStatus("Sending…");
 
-                const res = await fetch("/api/contact", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({
-                        name: payload.name || "",
-                        phone: payload.phone || "",
-                        email: payload.email || "",
-                        message: payload.message || "",
-                        source: "landing",
-                    }),
-                });
+                const res = await fetch(
+                    "https://database.safeplots.com/api/collections/landing_contacts/records",
+                    {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            name: payload.name || "",
+                            phone: payload.phone || "",
+                            email: payload.email || "",
+                            message: payload.message || "",
+                            source: "landing",
+                        }),
+                    },
+                );
 
                 if (!res.ok) throw new Error(`Request failed: ${res.status}`);
 
