@@ -511,7 +511,7 @@ img {
 }
 .how-intro {
     max-width: 600px;
-    margin: 0 auto 60px;
+    margin: 0px auto 24px auto;
     color: #555;
     font-size: 18px;
     text-align: center;
@@ -1675,7 +1675,7 @@ img {
     } /* How it Works / Why Us Mobile */
     .how-intro {
         font-size: 16px;
-        margin-bottom: 40px;
+        margin-bottom: 24px;
     }
     .grid-2-col,
     .grid-3-col {
@@ -1690,8 +1690,7 @@ img {
     .grid-3-col > .how-col:not(:last-child) {
         border-right: none;
         border-bottom: 2px solid #000;
-        padding-bottom: 40px;
-        margin-bottom: 40px; /* spacing between stuck columns */
+        margin-bottom: 20px; /* spacing between stuck columns */
     }
     .how-col:last-child {
         border-bottom: none;
