@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (span1 && span2) {
         const textPairs = [
             ["SAFEGUARD YOUR PLOTS", "FROM YOUR HOME."],
-            ["MONITOR YOUR PLOTS", "WHILE YOU'RE AWAY."],
+            ["MONITOR YOUR PLOTS", "WHILE YOURE AWAY."],
             ["SECURE YOUR PLOTS", "AT YOUR CONVENIENCE."],
             ["FENCE YOUR PLOTS", "WITHOUT THE HASSLE."],
         ];
