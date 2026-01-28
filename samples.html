@@ -101,87 +101,6 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="style.css?v=20260128" />
-
-        <style>
-            /* Page Specific Styles */
-            .page-header {
-                padding: 80px 0 40px;
-                background-color: #f9f9f9;
-                border-bottom: 2px solid #000;
-                text-align: center;
-            }
-            .page-title {
-                font-size: 56px;
-                font-weight: 900;
-                margin-bottom: 16px;
-                text-transform: uppercase;
-                letter-spacing: -2px;
-            }
-            .page-subtitle {
-                font-size: 18px;
-                color: #555;
-                max-width: 600px;
-                margin: 0 auto;
-                font-family: var(--font-mono);
-            }
-
-            .sample-section {
-                padding: 80px 0;
-                border-bottom: 1px solid #eee;
-            }
-            .sample-section:nth-child(even) {
-                background-color: #f9f9f9;
-            }
-            .sample-grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 40px;
-                align-items: center;
-                margin-top: 40px;
-            }
-            .text-content {
-                padding-right: 40px;
-            }
-            .sample-visual {
-                background: #fff;
-                padding: 20px;
-                border: 2px solid #000;
-                box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.1);
-            }
-            .sample-img {
-                width: 100%;
-                height: auto;
-                display: block;
-                background-color: #ddd;
-                min-height: 300px;
-                object-fit: cover;
-            }
-            .feature-list {
-                margin-top: 24px;
-            }
-            .feature-list li {
-                margin-bottom: 12px;
-                display: flex;
-                align-items: flex-start;
-                gap: 10px;
-                font-family: var(--font-mono);
-                font-size: 14px;
-            }
-            .check {
-                color: var(--bg-accent);
-                font-weight: bold;
-            }
-
-            @media (max-width: 768px) {
-                .sample-grid {
-                    grid-template-columns: 1fr;
-                }
-                .text-content {
-                    padding-right: 0;
-                    margin-bottom: 40px;
-                }
-            }
-        </style>
     </head>
     <body>
         <!-- Header -->
@@ -248,7 +167,7 @@
             <div class="container">
                 <div class="sample-grid">
                     <div class="text-content">
-                        <h2 class="section-title" style="text-align: left">
+                        <h2 class="section-title section-title-left">
                             Satellite Monitoring
                         </h2>
                         <p class="hero-desc">
@@ -282,10 +201,7 @@
                             alt="Satellite Monitoring Interface"
                             class="sample-img"
                         />
-                        <p
-                            class="text-mono text-xs text-center"
-                            style="margin-top: 10px; color: #666"
-                        >
+                        <p class="text-mono text-xs text-center sample-caption">
                             Dashboard View: Historical Imagery Comparison
                         </p>
                     </div>
@@ -296,17 +212,16 @@
         <!-- 2. Reports -->
         <section class="sample-section">
             <div class="container">
-                <div class="sample-grid">
-                    <div class="sample-visual" style="order: 2">
+                <div class="sample-grid sample-grid-reverse">
+                    <div class="sample-visual">
                         <img
                             src="https://placehold.co/600x800/eee/333?text=Sample+PDF+Report+Preview"
                             alt="Sample PDF Report"
-                            class="sample-img"
-                            style="aspect-ratio: 1/1.4"
+                            class="sample-img sample-img-tall"
                         />
                     </div>
-                    <div class="text-content" style="order: 1">
-                        <h2 class="section-title" style="text-align: left">
+                    <div class="text-content">
+                        <h2 class="section-title section-title-left">
                             Comprehensive Reports
                         </h2>
                         <p class="hero-desc">
@@ -344,22 +259,14 @@
         <section class="sample-section">
             <div class="container">
                 <h2 class="section-title text-center">On-Ground Protection</h2>
-                <p
-                    class="text-center text-mono"
-                    style="
-                        margin-bottom: 40px;
-                        max-width: 600px;
-                        margin-left: auto;
-                        margin-right: auto;
-                    "
-                >
+                <p class="text-center text-mono sample-intro">
                     Physical barriers and clear ownership signage are the first
                     line of defense against land grabbers.
                 </p>
 
-                <div class="grid-2-col" style="gap: 40px">
+                <div class="grid-2-col gap-20">
                     <!-- ID Boards -->
-                    <div class="how-col" style="border: none; padding: 0">
+                    <div class="how-col sample-card-no-border">
                         <div class="sample-visual">
                             <img
                                 src="https://placehold.co/600x400/ff4400/fff?text=ID+Board+Installation"
@@ -367,14 +274,7 @@
                                 class="sample-img"
                             />
                         </div>
-                        <h3
-                            class="how-title text-mono"
-                            style="
-                                font-size: 24px;
-                                margin-top: 20px;
-                                text-align: left;
-                            "
-                        >
+                        <h3 class="how-title text-mono sample-card-title">
                             High-Visibility ID Boards
                         </h3>
                         <p class="how-desc">
@@ -385,7 +285,7 @@
                     </div>
 
                     <!-- Fencing -->
-                    <div class="how-col" style="border: none; padding: 0">
+                    <div class="how-col sample-card-no-border">
                         <div class="sample-visual">
                             <img
                                 src="https://placehold.co/600x400/333/fff?text=Precast+Wall+%26+Fencing"
@@ -393,14 +293,7 @@
                                 class="sample-img"
                             />
                         </div>
-                        <h3
-                            class="how-title text-mono"
-                            style="
-                                font-size: 24px;
-                                margin-top: 20px;
-                                text-align: left;
-                            "
-                        >
+                        <h3 class="how-title text-mono sample-card-title">
                             Professional Fencing
                         </h3>
                         <p class="how-desc">
@@ -414,25 +307,13 @@
         </section>
 
         <!-- CTA -->
-        <section
-            style="
-                padding: 100px 0;
-                background-color: #000;
-                color: #fff;
-                text-align: center;
-            "
-        >
+        <section class="cta-dark">
             <div class="container">
-                <h2
-                    class="section-title"
-                    style="color: #fff; margin-bottom: 20px"
-                >
-                    Ready to Secure Your Plot?
-                </h2>
-                <p class="text-mono" style="margin-bottom: 40px; color: #999">
+                <h2 class="section-title">Ready to Secure Your Plot?</h2>
+                <p class="text-mono cta-subtitle">
                     Get started with our protection plans today.
                 </p>
-                <div class="hero-cta-group" style="justify-content: center">
+                <div class="hero-cta-group justify-center">
                     <a
                         href="https://web.safeplots.com"
                         class="btn btn-primary"
@@ -440,10 +321,7 @@
                         rel="noopener noreferrer"
                         >GET STARTED &rarr;</a
                     >
-                    <a
-                        href="index.html#contact"
-                        class="btn btn-outline"
-                        style="color: #fff; border-color: #fff"
+                    <a href="index.html#contact" class="btn btn-outline"
                         >Contact Us</a
                     >
                 </div>
