@@ -1,0 +1,482 @@
+<!-- @format -->
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Samples | SafePlots</title>
+        <meta
+            name="description"
+            content="View samples of our satellite monitoring, inspection reports, ID boards, and fencing works."
+        />
+
+        <!-- Favicons -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="assets/icons/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="assets/icons/favicon-16x16.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="assets/icons/apple-touch-icon-180x180.png"
+        />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Mono:wght@400;700&display=swap"
+        />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css?v=20260128" />
+
+        <style>
+            /* Page Specific Styles */
+            .page-header {
+                padding: 80px 0 40px;
+                background-color: #f9f9f9;
+                border-bottom: 2px solid #000;
+                text-align: center;
+            }
+            .page-title {
+                font-size: 56px;
+                font-weight: 900;
+                margin-bottom: 16px;
+                text-transform: uppercase;
+                letter-spacing: -2px;
+            }
+            .page-subtitle {
+                font-size: 18px;
+                color: #555;
+                max-width: 600px;
+                margin: 0 auto;
+                font-family: var(--font-mono);
+            }
+
+            .sample-section {
+                padding: 80px 0;
+                border-bottom: 1px solid #eee;
+            }
+            .sample-section:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .sample-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+                align-items: center;
+                margin-top: 40px;
+            }
+            .text-content {
+                padding-right: 40px;
+            }
+            .sample-visual {
+                background: #fff;
+                padding: 20px;
+                border: 2px solid #000;
+                box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.1);
+            }
+            .sample-img {
+                width: 100%;
+                height: auto;
+                display: block;
+                background-color: #ddd;
+                min-height: 300px;
+                object-fit: cover;
+            }
+            .feature-list {
+                margin-top: 24px;
+            }
+            .feature-list li {
+                margin-bottom: 12px;
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+                font-family: var(--font-mono);
+                font-size: 14px;
+            }
+            .check {
+                color: var(--bg-accent);
+                font-weight: bold;
+            }
+
+            @media (max-width: 768px) {
+                .sample-grid {
+                    grid-template-columns: 1fr;
+                }
+                .text-content {
+                    padding-right: 0;
+                    margin-bottom: 40px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <div class="header-container">
+                <a href="index.html" class="logo">
+                    <img
+                        src="assets/icons/favicon-48x48.png"
+                        alt=""
+                        class="logo-icon"
+                    />
+                    <span>SafePlots</span>
+                </a>
+
+                <button class="mobile-toggle" aria-label="Toggle Menu">
+                    ☰
+                </button>
+
+                <nav class="nav-links text-mono">
+                    <a href="index.html#how-it-works">How it works?</a>
+                    <a href="index.html#why-us">Why SafePlots?</a>
+                    <a href="index.html#plans">Plans</a>
+                    <a href="index.html#services">Services</a>
+
+                    <div class="nav-item has-dropdown">
+                        <a href="#" class="dropdown-trigger"
+                            >Company <span class="arrow">▾</span></a
+                        >
+                        <div class="dropdown-menu">
+                            <a href="about.html">About Us</a>
+                            <a href="blog.html">Blog</a>
+                            <a href="faq.html">FAQ</a>
+                        </div>
+                    </div>
+
+                    <a href="index.html#contact">Contact</a>
+                </nav>
+
+                <div class="header-actions text-mono">
+                    <a
+                        href="https://web.safeplots.com"
+                        class="btn btn-black"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Login / Signup</a
+                    >
+                </div>
+            </div>
+        </header>
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Our Work Samples</h1>
+                <p class="page-subtitle">
+                    See real examples of how we protect and manage plots for our
+                    clients.
+                </p>
+            </div>
+        </section>
+
+        <!-- 1. Remote Sensing -->
+        <section class="sample-section">
+            <div class="container">
+                <div class="sample-grid">
+                    <div class="text-content">
+                        <h2 class="section-title" style="text-align: left">
+                            Satellite Monitoring
+                        </h2>
+                        <p class="hero-desc">
+                            We use high-resolution satellite imagery to track
+                            your plot every 5 days. Our advanced NDVI analysis
+                            detects vegetation changes and potential
+                            encroachments automatically.
+                        </p>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Before & After:</strong> Compare imagery
+                                over time to spot changes.
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Resolution:</strong> High-res imagery
+                                clear enough to see new structures.
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Frequency:</strong> Revisit time of 5
+                                days ensures rapid detection.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sample-visual">
+                        <!-- Placeholder for Satellite GIF/Image -->
+                        <img
+                            src="https://placehold.co/600x400/222/fff?text=Satellite+Before+%26+After+View"
+                            alt="Satellite Monitoring Interface"
+                            class="sample-img"
+                        />
+                        <p
+                            class="text-mono text-xs text-center"
+                            style="margin-top: 10px; color: #666"
+                        >
+                            Dashboard View: Historical Imagery Comparison
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Reports -->
+        <section class="sample-section">
+            <div class="container">
+                <div class="sample-grid">
+                    <div class="sample-visual" style="order: 2">
+                        <img
+                            src="https://placehold.co/600x800/eee/333?text=Sample+PDF+Report+Preview"
+                            alt="Sample PDF Report"
+                            class="sample-img"
+                            style="aspect-ratio: 1/1.4"
+                        />
+                    </div>
+                    <div class="text-content" style="order: 1">
+                        <h2 class="section-title" style="text-align: left">
+                            Comprehensive Reports
+                        </h2>
+                        <p class="hero-desc">
+                            Receive detailed monthly PDF reports that summarize
+                            all monitoring activities. Perfect for your records
+                            and peace of mind.
+                        </p>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Status Summary:</strong> Clear
+                                safe/unsafe status indicators.
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Visual Proof:</strong> Includes latest
+                                satellite visuals and ground photos.
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Legal Checks:</strong> Encumbrance & Tax
+                                payment status updates.
+                            </li>
+                        </ul>
+                        <br />
+                        <a href="#" class="btn btn-outline"
+                            >Download Sample PDF</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Ground Protection -->
+        <section class="sample-section">
+            <div class="container">
+                <h2 class="section-title text-center">On-Ground Protection</h2>
+                <p
+                    class="text-center text-mono"
+                    style="
+                        margin-bottom: 40px;
+                        max-width: 600px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    "
+                >
+                    Physical barriers and clear ownership signage are the first
+                    line of defense against land grabbers.
+                </p>
+
+                <div class="grid-2-col" style="gap: 40px">
+                    <!-- ID Boards -->
+                    <div class="how-col" style="border: none; padding: 0">
+                        <div class="sample-visual">
+                            <img
+                                src="https://placehold.co/600x400/ff4400/fff?text=ID+Board+Installation"
+                                alt="ID Board Sample"
+                                class="sample-img"
+                            />
+                        </div>
+                        <h3
+                            class="how-title text-mono"
+                            style="
+                                font-size: 24px;
+                                margin-top: 20px;
+                                text-align: left;
+                            "
+                        >
+                            High-Visibility ID Boards
+                        </h3>
+                        <p class="how-desc">
+                            Rugged, weather-proof signage explicitly stating
+                            ownership and warnings against trespassing.
+                            Installed firmly on-site.
+                        </p>
+                    </div>
+
+                    <!-- Fencing -->
+                    <div class="how-col" style="border: none; padding: 0">
+                        <div class="sample-visual">
+                            <img
+                                src="https://placehold.co/600x400/333/fff?text=Precast+Wall+%26+Fencing"
+                                alt="Fencing Sample"
+                                class="sample-img"
+                            />
+                        </div>
+                        <h3
+                            class="how-title text-mono"
+                            style="
+                                font-size: 24px;
+                                margin-top: 20px;
+                                text-align: left;
+                            "
+                        >
+                            Professional Fencing
+                        </h3>
+                        <p class="how-desc">
+                            From barbed wire to precast compound walls, we
+                            handle end-to-end installation with quality
+                            materials to secure your boundaries.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section
+            style="
+                padding: 100px 0;
+                background-color: #000;
+                color: #fff;
+                text-align: center;
+            "
+        >
+            <div class="container">
+                <h2
+                    class="section-title"
+                    style="color: #fff; margin-bottom: 20px"
+                >
+                    Ready to Secure Your Plot?
+                </h2>
+                <p class="text-mono" style="margin-bottom: 40px; color: #999">
+                    Get started with our protection plans today.
+                </p>
+                <div class="hero-cta-group" style="justify-content: center">
+                    <a
+                        href="https://web.safeplots.com"
+                        class="btn btn-primary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >GET STARTED &rarr;</a
+                    >
+                    <a
+                        href="index.html#contact"
+                        class="btn btn-outline"
+                        style="color: #fff; border-color: #fff"
+                        >Contact Us</a
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <!-- Brand Column -->
+                    <div class="footer-col brand-col">
+                        <a href="index.html" class="footer-logo logo">
+                            <img
+                                src="assets/icons/favicon-48x48.png"
+                                alt=""
+                                class="logo-icon"
+                                style="filter: grayscale(100%); opacity: 0.7"
+                            />
+                            <span style="color: #fff">SafePlots</span>
+                        </a>
+                        <p class="footer-desc text-mono">
+                            Comprehensive plot monitoring & protection services
+                            for NRIs and plot owners. We combine satellite tech
+                            with on-ground action.
+                        </p>
+                    </div>
+
+                    <!-- Links Column -->
+                    <div class="footer-col links-col">
+                        <h4 class="footer-heading text-mono">Company</h4>
+                        <ul class="footer-links text-mono">
+                            <li><a href="about.html">About Us</a></li>
+                            <li>
+                                <a href="index.html#how-it-works"
+                                    >How it works</a
+                                >
+                            </li>
+                            <li><a href="index.html#plans">Pricing</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Resources Column -->
+                    <div class="footer-col resources-col">
+                        <h4 class="footer-heading text-mono">Legal</h4>
+                        <ul class="footer-links text-mono">
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                            <li>
+                                <a href="refund-policy.html">Refund Policy</a>
+                            </li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Column -->
+                    <div class="footer-col contact-col">
+                        <h4 class="footer-heading text-mono">Contact</h4>
+                        <ul class="footer-contact-list text-mono">
+                            <li style="color: #888; font-size: 14px">
+                                <span>📧</span>
+                                <a
+                                    href="mailto:admin@safeplots.com"
+                                    style="color: #888; text-decoration: none"
+                                    >admin@safeplots.com</a
+                                >
+                            </li>
+                            <li
+                                style="
+                                    color: #888;
+                                    font-size: 14px;
+                                    margin-top: 10px;
+                                "
+                            >
+                                <span>📱</span> +91 77803 91340
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="footer-bottom border-top"
+                    style="
+                        border-color: #222;
+                        padding-top: 24px;
+                        text-align: center;
+                    "
+                >
+                    <p class="text-mono text-xs" style="color: #555">
+                        &copy; 2026 SafePlots. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
