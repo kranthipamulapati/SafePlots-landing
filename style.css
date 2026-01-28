@@ -945,8 +945,7 @@ img {
 .plans-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 22px;
-    margin-top: 22px;
+    gap: 36px;
 }
 .plan-card {
     border: 2px solid #000;
