@@ -181,4 +181,35 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    // Hero Text Animation
+    const span1 = document.getElementById("dynamic-text-1");
+    const span2 = document.getElementById("dynamic-text-2");
+
+    if (span1 && span2) {
+        const textPairs = [
+            ["SAFEGUARD YOUR PLOTS", "FROM YOUR HOME."],
+            ["MONITOR YOUR PLOTS", "WHILE YOU'RE AWAY."],
+            ["SECURE YOUR PLOTS", "AT YOUR CONVENIENCE."],
+            ["FENCE YOUR PLOTS", "WITHOUT THE HASSLE."],
+        ];
+
+        let currentIndex = 0;
+
+        setInterval(() => {
+            // Trigger Fade Out
+            span1.classList.add("fade-out");
+            span2.classList.add("fade-out");
+
+            // Wait for transition to complete, then swap text and fade in
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % textPairs.length;
+                span1.textContent = textPairs[currentIndex][0];
+                span2.textContent = textPairs[currentIndex][1];
+
+                span1.classList.remove("fade-out");
+                span2.classList.remove("fade-out");
+            }, 500); // Matches CSS transition duration
+        }, 5000); // Cycle every 5 seconds
+    }
 });

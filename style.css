@@ -1777,7 +1777,7 @@ img {
     .hero-content {
         border-right: none;
         border-bottom: 2px solid #000;
-        padding: 20px 20px;
+        padding: 24px 20px;
         text-align: center;
         align-items: center;
     }
@@ -2527,4 +2527,20 @@ img {
     border-radius: 4px;
     font-weight: 700;
     margin-bottom: 1rem;
+}
+
+/* Hero Text Animation */
+.hero-title span {
+    display: inline-block; /* Essential for transform */
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+    opacity: 1;
+    transform: translateY(0);
+    vertical-align: top; /* Prevent layout jumps */
+}
+
+.hero-title span.fade-out {
+    opacity: 0;
+    transform: translateY(-20px);
 }
