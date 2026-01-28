@@ -97,6 +97,9 @@ img {
 }
 .hidden {
     display: none !important;
+}
+.card-badge {
+    font-weight: bold;
 } /* =========================================   HEADER   ========================================= */
 .header {
     height: var(--header-height);
