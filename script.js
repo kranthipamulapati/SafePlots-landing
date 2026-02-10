@@ -230,6 +230,22 @@ document.addEventListener("DOMContentLoaded", () => {
         );
     }
 
+    // Header Navigation Links
+    const headerNavLinks = document.querySelectorAll(
+        ".nav-links a:not(.dropdown-trigger)",
+    );
+    headerNavLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            const linkText = link.textContent.trim();
+            const linkHref = link.getAttribute("href");
+            trackEvent("nav_click", {
+                location: "header",
+                link_text: linkText,
+                link_href: linkHref,
+            });
+        });
+    });
+
     // Hero Buttons
     const heroPrimary = document.querySelector(".hero-cta-group .btn-primary");
     if (heroPrimary) {
@@ -280,6 +296,86 @@ document.addEventListener("DOMContentLoaded", () => {
                 trackEvent("service_quote_click", {
                     service: btn.dataset.service,
                 });
+            });
+        });
+    }
+
+    // Footer Social Media Links
+    const socialLinks = document.querySelectorAll(
+        ".footer-socials .social-icon",
+    );
+    socialLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            const platform = link.getAttribute("aria-label");
+            trackEvent("social_click", {
+                platform: platform,
+                location: "footer",
+            });
+        });
+    });
+
+    // Footer Navigation Links
+    const footerLinks = document.querySelectorAll(".footer-links a");
+    footerLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            const linkText = link.textContent.trim();
+            const linkHref = link.getAttribute("href");
+            trackEvent("footer_link_click", {
+                link_text: linkText,
+                link_href: linkHref,
+            });
+        });
+    });
+
+    // Footer Contact Links (Phone, Email, Maps)
+    const footerPhoneLink = document.querySelector(
+        ".footer-contact-list a[href^='tel']",
+    );
+    if (footerPhoneLink) {
+        footerPhoneLink.addEventListener("click", () => {
+            trackEvent("contact_click", { type: "phone", location: "footer" });
+        });
+    }
+
+    const footerEmailLink = document.querySelector(
+        ".footer-contact-list a[href^='mailto']",
+    );
+    if (footerEmailLink) {
+        footerEmailLink.addEventListener("click", () => {
+            trackEvent("contact_click", { type: "email", location: "footer" });
+        });
+    }
+
+    const footerMapsLink = document.querySelector(
+        ".footer-contact-list a[href*='google.com/maps']",
+    );
+    if (footerMapsLink) {
+        footerMapsLink.addEventListener("click", () => {
+            trackEvent("contact_click", { type: "maps", location: "footer" });
+        });
+    }
+
+    // Contact Section Links (Phone, Email)
+    const contactPhoneLink = document.querySelector(
+        ".contact-item a[href^='tel']",
+    );
+    if (contactPhoneLink) {
+        contactPhoneLink.addEventListener("click", () => {
+            trackEvent("contact_click", {
+                type: "phone",
+                location: "contact_section",
+            });
+        });
+    }
+
+    const contactEmailLink = document.querySelector(
+        ".contact-item a[href^='mailto']",
+    );
+    if (contactEmailLink) {
+        contactEmailLink.addEventListener("click", () => {
+            trackEvent("contact_click", {
+                type: "email",
+                location: "contact_section",
             });
         });
     }
