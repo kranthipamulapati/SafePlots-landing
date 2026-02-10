@@ -1,6 +1,13 @@
 /** @format */
 
 document.addEventListener("DOMContentLoaded", () => {
+    // -- PostHog Tracking Helper --
+    const trackEvent = (eventName, props = {}) => {
+        if (window.posthog) {
+            window.posthog.capture(eventName, props);
+        }
+    };
+
     const mobileToggle = document.querySelector(".mobile-toggle");
     const header = document.querySelector(".header");
 
@@ -82,6 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (!res.ok) throw new Error(`Request failed: ${res.status}`);
 
                 setStatus("Sent! We’ll contact you soon.");
+                trackEvent("contact_form_success", { source: "landing" });
                 contactForm.reset();
             } catch (err) {
                 setStatus(
@@ -210,5 +218,69 @@ document.addEventListener("DOMContentLoaded", () => {
                 span2.classList.remove("fade-out");
             }, 500); // Matches CSS transition duration
         }, 5000); // Cycle every 5 seconds
+    }
+
+    // -- PostHog Tracking Listeners --
+
+    // Header Login
+    const loginBtn = document.querySelector(".header-actions .btn-black");
+    if (loginBtn) {
+        loginBtn.addEventListener("click", () =>
+            trackEvent("login_click", { location: "header" }),
+        );
+    }
+
+    // Hero Buttons
+    const heroPrimary = document.querySelector(".hero-cta-group .btn-primary");
+    if (heroPrimary) {
+        heroPrimary.addEventListener("click", () =>
+            trackEvent("get_started_click", { location: "hero" }),
+        );
+    }
+
+    const heroSecondary = document.querySelector(
+        ".hero-cta-group .btn-outline",
+    );
+    if (heroSecondary) {
+        heroSecondary.addEventListener("click", () =>
+            trackEvent("view_samples_click", { location: "hero" }),
+        );
+    }
+
+    // Pricing Plans
+    const digitalShieldBtn = document.querySelector(
+        ".plan-card:not(.is-featured):not(.plan-card-custom) .plan-cta",
+    );
+    if (digitalShieldBtn) {
+        digitalShieldBtn.addEventListener("click", () =>
+            trackEvent("plan_select", { plan: "Digital Shield" }),
+        );
+    }
+
+    const protectionProBtn = document.querySelector(
+        ".plan-card.is-featured .plan-cta",
+    );
+    if (protectionProBtn) {
+        protectionProBtn.addEventListener("click", () =>
+            trackEvent("plan_select", { plan: "Protection Pro" }),
+        );
+    }
+
+    const customPlanBtn = document.querySelector(".plan-card-custom .plan-cta");
+    if (customPlanBtn) {
+        customPlanBtn.addEventListener("click", () =>
+            trackEvent("plan_select", { plan: "Custom" }),
+        );
+    }
+
+    // Services (re-using serviceCtaButtons if available)
+    if (typeof serviceCtaButtons !== "undefined") {
+        serviceCtaButtons.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                trackEvent("service_quote_click", {
+                    service: btn.dataset.service,
+                });
+            });
+        });
     }
 });
