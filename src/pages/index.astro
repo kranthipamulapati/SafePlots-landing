@@ -1,140 +1,19 @@
 ---
     import Header from '../components/Header.astro';
     import Footer from '../components/Footer.astro';
+    import SeoHead from '../components/SeoHead.astro';
 ---
 
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
-        <meta http-equiv="Pragma" content="no-cache" />
-        <meta http-equiv="Expires" content="0" />
-
-        <!-- PWA & Mobile Meta -->
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/src/assets/icons/favicon-32x32.png"
+        <SeoHead
+            title="SafePlots | NRI Plot Monitoring, Fencing & VLT Services Hyderabad"
+            description="Trusted NRI plot management & Fencing (Precast/Wire). Services: VLT, Legal, Cleaning & Satellite Monitoring. View Survey Maps & Lakes on our App."
+            canonical="https://safeplots.com/"
+            keywords="Plot Monitoring, NRI Services, Land Fencing, Vacant Land Tax, Precast Walls, Survey Maps, Hyderabad Real Estate, Property Management, SafePlots"
+            includeOrganizationSchema={true}
         />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/src/assets/icons/favicon-16x16.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/src/assets/icons/apple-touch-icon-180x180.png"
-        />
-        <meta name="theme-color" content="#ff4400" />
-        <link rel="canonical" href="https://safeplots.com/" />
-
-        <!-- SEO Meta Tags -->
-        <title>
-            SafePlots | NRI Plot Monitoring, Fencing & VLT Services Hyderabad
-        </title>
-        <meta
-            name="description"
-            content="Trusted NRI plot management & Fencing (Precast/Wire). Services: VLT, Legal, Cleaning & Satellite Monitoring. View Survey Maps & Lakes on our App."
-        />
-        <meta
-            name="keywords"
-            content="Plot Monitoring, NRI Services, Land Fencing, Vacant Land Tax, Precast Walls, Survey Maps, Hyderabad Real Estate, Property Management, SafePlots"
-        />
-        <meta name="author" content="SafePlots" />
-        <meta name="robots" content="index, follow" />
-
-        <!-- Open Graph Tags -->
-        <meta property="og:site_name" content="SafePlots" />
-        <meta property="og:url" content="https://safeplots.com/" />
-        <meta
-            property="og:title"
-            content="SafePlots | NRI Plot Monitoring, Fencing & VLT Services Hyderabad"
-        />
-        <meta
-            property="og:description"
-            content="Trusted NRI plot management & Fencing (Precast/Wire). Services: VLT, Legal, Cleaning & Satellite Monitoring. View Survey Maps & Lakes on our App."
-        />
-        <meta property="og:type" content="website" />
-        <meta
-            property="og:image"
-            content="https://safeplots.com/assets/images/og-image.png"
-        />
-        <meta property="og:image:alt" content="SafePlots Dashboard Preview" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-            name="twitter:title"
-            content="SafePlots | NRI Plot Monitoring, Fencing & VLT Services Hyderabad"
-        />
-        <meta
-            name="twitter:description"
-            content="Trusted NRI plot management & Fencing (Precast/Wire). Services: VLT, Legal, Cleaning & Satellite Monitoring. View Survey Maps & Lakes on our App."
-        />
-        <meta
-            name="twitter:image"
-            content="https://safeplots.com/assets/images/og-image.png"
-        />
-        <meta name="twitter:image:alt" content="SafePlots Dashboard Preview" />
-
-        <!-- Structured Data (JSON-LD) -->
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                "name": "SafePlots",
-                "url": "https://safeplots.com",
-                "logo": "https://safeplots.com/assets/icons/android-chrome-512x512.png",
-                "description": "Trusted NRI plot management & Fencing (Precast/Wire). Services: VLT, Legal, Cleaning & Satellite Monitoring. View Survey Maps & Lakes on our App.",
-                "telephone": "+91 77803 91340",
-                "email": "admin@safeplots.com",
-                "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "H.No.84, Maruthi Hill Society, Suraksha Colony, Bandam Kommu, Chanda Nagar",
-                    "addressLocality": "Hyderabad",
-                    "addressRegion": "Telangana",
-                    "postalCode": "500050",
-                    "addressCountry": "IN"
-                },
-                "areaServed": {
-                    "@type": "City",
-                    "name": "Hyderabad"
-                },
-                "knowsAbout": [
-                    "Plot Fencing",
-                    "Vacant Land Tax (VLT)",
-                    "Satellite Monitoring",
-                    "Legal Verification",
-                    "Survey Maps",
-                    "Cadastral Maps",
-                    "Hyderabad Lakes"
-                ],
-                "sameAs": [
-                    "https://www.facebook.com/profile.php?id=61587030331368",
-                    "https://x.com/safeplots",
-                    "https://instagram.com/safeplots",
-                    "https://linkedin.com/company/safeplots"
-                ]
-            }
-        </script>
-
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Mono:wght@400;700&display=swap"
-        />
-
-        <!-- CSS -->
-        <link rel="stylesheet" href="/src/styles/app.css?v=20260210" />
     </head>
     
     <body>

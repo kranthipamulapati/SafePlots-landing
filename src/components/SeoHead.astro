@@ -1,0 +1,165 @@
+---
+type JsonValue =
+    | string
+    | number
+    | boolean
+    | null
+    | JsonValue[]
+    | { [key: string]: JsonValue };
+
+interface Props {
+    title: string;
+    description: string;
+    canonical: string;
+    keywords?: string;
+    robots?: string;
+    author?: string;
+    ogSiteName?: string;
+    ogType?: string;
+    ogImage?: string;
+    ogImageAlt?: string;
+    ogImageWidth?: string;
+    ogImageHeight?: string;
+    twitterCard?: string;
+    themeColor?: string;
+    cssVersion?: string;
+    includeOrganizationSchema?: boolean;
+    organizationSchema?: JsonValue;
+}
+
+const {
+    title,
+    description,
+    canonical,
+    keywords = '',
+    robots = 'index, follow',
+    author = 'SafePlots',
+    ogSiteName = 'SafePlots',
+    ogType = 'website',
+    ogImage = 'https://safeplots.com/assets/images/og-image.png',
+    ogImageAlt = 'SafePlots Dashboard Preview',
+    ogImageWidth = '1200',
+    ogImageHeight = '630',
+    twitterCard = 'summary_large_image',
+    themeColor = '#ff4400',
+    cssVersion = '20260210',
+    includeOrganizationSchema = false,
+    organizationSchema = null
+} = Astro.props as Props;
+
+const organizationJsonLd: JsonValue = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'SafePlots',
+    url: 'https://safeplots.com',
+    logo: 'https://safeplots.com/assets/icons/android-chrome-512x512.png',
+    description,
+    telephone: '+91 77803 91340',
+    email: 'admin@safeplots.com',
+    address: {
+        '@type': 'PostalAddress',
+        streetAddress:
+            'H.No.84, Maruthi Hill Society, Suraksha Colony, Bandam Kommu, Chanda Nagar',
+        addressLocality: 'Hyderabad',
+        addressRegion: 'Telangana',
+        postalCode: '500050',
+        addressCountry: 'IN'
+    },
+    areaServed: {
+        '@type': 'City',
+        name: 'Hyderabad'
+    },
+    knowsAbout: [
+        'Plot Fencing',
+        'Vacant Land Tax (VLT)',
+        'Satellite Monitoring',
+        'Legal Verification',
+        'Survey Maps',
+        'Cadastral Maps',
+        'Hyderabad Lakes'
+    ],
+    sameAs: [
+        'https://www.facebook.com/profile.php?id=61587030331368',
+        'https://x.com/safeplots',
+        'https://instagram.com/safeplots',
+        'https://linkedin.com/company/safeplots'
+    ]
+};
+
+const schemaToRender =
+    includeOrganizationSchema && organizationSchema
+        ? organizationSchema
+        : includeOrganizationSchema
+          ? organizationJsonLd
+          : null;
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+<!-- PWA & Mobile Meta -->
+<link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/src/assets/icons/favicon-32x32.png"
+/>
+<link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/src/assets/icons/favicon-16x16.png"
+/>
+<link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/src/assets/icons/apple-touch-icon-180x180.png"
+/>
+<meta name="theme-color" content={themeColor} />
+<link rel="canonical" href={canonical} />
+
+<!-- SEO Meta Tags -->
+<title>{title}</title>
+<meta name="description" content={description} />
+{keywords && <meta name="keywords" content={keywords} />}
+<meta name="author" content={author} />
+<meta name="robots" content={robots} />
+
+<!-- Open Graph Tags -->
+<meta property="og:site_name" content={ogSiteName} />
+<meta property="og:url" content={canonical} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content={ogType} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:alt" content={ogImageAlt} />
+<meta property="og:image:width" content={ogImageWidth} />
+<meta property="og:image:height" content={ogImageHeight} />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content={twitterCard} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+<meta name="twitter:image:alt" content={ogImageAlt} />
+
+{schemaToRender && (
+    <script
+        type="application/ld+json"
+        set:html={JSON.stringify(schemaToRender)}
+    />
+)}
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Mono:wght@400;700&display=swap"
+/>
+
+<!-- CSS -->
+<link rel="stylesheet" href={`/src/styles/app.css?v=${cssVersion}`} />

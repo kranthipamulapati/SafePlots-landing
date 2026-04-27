@@ -1,91 +1,18 @@
 ---
     import Header from '../components/Header.astro';
     import Footer from '../components/Footer.astro';
+    import SeoHead from '../components/SeoHead.astro';
 ---
 
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
-        <meta http-equiv="Pragma" content="no-cache" />
-        <meta http-equiv="Expires" content="0" />
-
-        <!-- PWA & Mobile Meta -->
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/src/assets/icons/favicon-32x32.png"
+        <SeoHead
+            title="Terms & Conditions | SafePlots"
+            description="SafePlots Terms & Conditions - Service agreement, eligibility, subscription terms, and user responsibilities."
+            canonical="https://safeplots.com/terms/"
+            keywords="Terms of Service, SafePlots, Plot Monitoring Agreement, User Terms"
         />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/src/assets/icons/favicon-16x16.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/src/assets/icons/apple-touch-icon-180x180.png"
-        />
-        <meta name="theme-color" content="#ff4400" />
-        <link rel="canonical" href="https://safeplots.com/terms/" />
-
-        <!-- SEO Meta Tags -->
-        <title>Terms & Conditions | SafePlots</title>
-        <meta
-            name="description"
-            content="SafePlots Terms & Conditions - Service agreement, eligibility, subscription terms, and user responsibilities."
-        />
-        <meta
-            name="keywords"
-            content="Terms of Service, SafePlots, Plot Monitoring Agreement, User Terms"
-        />
-        <meta name="author" content="SafePlots" />
-        <meta name="robots" content="index, follow" />
-
-        <!-- Open Graph Tags -->
-        <meta property="og:site_name" content="SafePlots" />
-        <meta property="og:url" content="https://safeplots.com/terms/" />
-        <meta property="og:title" content="Terms & Conditions | SafePlots" />
-        <meta
-            property="og:description"
-            content="SafePlots Terms & Conditions - Service agreement, eligibility, subscription terms, and user responsibilities."
-        />
-        <meta property="og:type" content="website" />
-        <meta
-            property="og:image"
-            content="https://safeplots.com/assets/images/og-image.png"
-        />
-        <meta property="og:image:alt" content="SafePlots Dashboard Preview" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Terms & Conditions | SafePlots" />
-        <meta
-            name="twitter:description"
-            content="SafePlots Terms & Conditions - Service agreement, eligibility, subscription terms, and user responsibilities."
-        />
-        <meta
-            name="twitter:image"
-            content="https://safeplots.com/assets/images/og-image.png"
-        />
-        <meta name="twitter:image:alt" content="SafePlots Dashboard Preview" />
-
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Mono:wght@400;700&display=swap"
-        />
-
-        <!-- CSS -->
-        <link rel="stylesheet" href="/src/styles/app.css?v=20260210" />
     </head>
     <body class="page-legal">
 
