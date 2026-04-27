@@ -17,18 +17,18 @@
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/assets/icons/favicon-32x32.png"
+            href="/src/assets/icons/favicon-32x32.png"
         />
         <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/assets/icons/favicon-16x16.png"
+            href="/src/assets/icons/favicon-16x16.png"
         />
         <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="/assets/icons/apple-touch-icon-180x180.png"
+            href="/src/assets/icons/apple-touch-icon-180x180.png"
         />
         <meta name="theme-color" content="#ff4400" />
         <link rel="canonical" href="https://safeplots.com" />
@@ -134,11 +134,11 @@
         />
 
         <!-- CSS -->
-        <link rel="stylesheet" href="style.css?v=20260210" />
+        <link rel="stylesheet" href="/src/styles/app.css?v=20260210" />
     </head>
     
     <body>
-        <Header client:load />
+        <Header />
 
         <!-- Hero Section -->
         <section class="hero">
@@ -199,7 +199,7 @@
                             rel="noopener noreferrer"
                             >GET STARTED &rarr;</a
                         >
-                        <a href="samples.html" class="btn btn-outline"
+                        <a href="/samples" class="btn btn-outline"
                             >VIEW SAMPLES</a
                         >
                     </div>
@@ -1007,9 +1007,9 @@
             </div>
         </section>
 
-        <Footer client:load />
+        <Footer />
 
-        <script src="/script.js?v=20260210" is:inline></script>
-        <script src="/posthog-init.js?v=20260210" is:inline></script>
+        <script src="/src/scripts/app.js?v=20260210"></script>
+        <script src="/src/scripts/posthog-init.js?v=20260210"></script>
     </body>
 </html>

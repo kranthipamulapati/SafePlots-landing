@@ -1,0 +1,507 @@
+---
+    import Header from '../components/Header.astro';
+    import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+
+        <!-- PWA & Mobile Meta -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/src/assets/icons/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/src/assets/icons/favicon-16x16.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/src/assets/icons/apple-touch-icon-180x180.png"
+        />
+        <meta name="theme-color" content="#ff4400" />
+        <link rel="canonical" href="https://safeplots.com/samples" />
+
+        <!-- SEO Meta Tags -->
+        <title>Samples | SafePlots - Work Samples & Inspection Reports</title>
+        <meta
+            name="description"
+            content="View samples of our satellite monitoring, inspection reports, ID boards, and fencing works. See how we protect your plot."
+        />
+        <meta
+            name="keywords"
+            content="SafePlots samples, inspection reports, plot fencing photos, satellite monitoring examples, NRI plot management work"
+        />
+        <meta name="author" content="SafePlots" />
+        <meta name="robots" content="index, follow" />
+
+        <!-- Open Graph Tags -->
+        <meta property="og:site_name" content="SafePlots" />
+        <meta property="og:url" content="https://safeplots.com/samples" />
+        <meta
+            property="og:title"
+            content="Samples | SafePlots - Work Samples & Inspection Reports"
+        />
+        <meta
+            property="og:description"
+            content="View samples of our satellite monitoring, inspection reports, ID boards, and fencing works. See how we protect your plot."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:image"
+            content="https://safeplots.com/assets/images/og-image.png"
+        />
+        <meta property="og:image:alt" content="SafePlots Work Samples" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Samples | SafePlots - Work Samples & Inspection Reports"
+        />
+        <meta
+            name="twitter:description"
+            content="View samples of our satellite monitoring, inspection reports, ID boards, and fencing works. See how we protect your plot."
+        />
+        <meta
+            name="twitter:image"
+            content="https://safeplots.com/assets/images/og-image.png"
+        />
+        <meta name="twitter:image:alt" content="SafePlots Work Samples" />
+
+        <!-- Structured Data (JSON-LD) -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "SafePlots Samples",
+                "description": "samples of plot monitoring and fencing work",
+                "url": "https://safeplots.com/samples"
+            }
+        </script>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Mono:wght@400;700&display=swap"
+        />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/src/styles/app.css?v=20260210" />
+    </head>
+    <body>
+
+        <Header />
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Our Work Samples</h1>
+
+                <p class="page-subtitle">
+                    See real examples of how we protect and manage plots for our
+                    clients.
+                </p>
+            </div>
+        </section>
+
+        <!-- 1. ID Board -->
+        <section class="sample-section">
+            <div class="container">
+                <div class="sample-grid">
+                    <div class="text-content">
+                        <h2 class="section-title section-title-left">
+                            ID Board Installation
+                        </h2>
+
+                        <p class="hero-desc">
+                            We install high-visibility ID boards on your plot.
+                            These rugged, weather-proof signage boards deter
+                            land grabbers & trespassers.
+                        </p>
+
+                        <ul class="feature-list">
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Weather-Proof:</strong> Durable
+                                materials that withstand harsh conditions.
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Legal Disclaimers:</strong>
+                                legal warnings can be included on request to
+                                deter potential encroachers.
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Ownership Records:</strong> Official
+                                ownership records can be included on request for
+                                added authenticity.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sample-visual">
+                        <img
+                            src="/src/assets/images/id_board.jpg"
+                            alt="ID Board Installation"
+                            class="sample-img"
+                            loading="lazy"
+                        />
+
+                        <p class="text-mono text-xs text-center sample-caption">
+                            High-Visibility ID Board Installed on client's Plot
+                            in Bapatla
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Fencing -->
+        <section class="sample-section">
+            <div class="container">
+                <div class="sample-grid sample-grid-reverse">
+                    <div class="sample-visual">
+                        <img
+                            src="/src/assets/images/after_fencing.jpg"
+                            alt="Professional Fencing"
+                            class="sample-img"
+                            loading="lazy"
+                        />
+
+                        <p class="text-mono text-xs text-center sample-caption">
+                            Completed Fencing Work on a Client Plot
+                        </p>
+                    </div>
+
+                    <div class="text-content">
+                        <h2 class="section-title section-title-left">
+                            Professional Fencing
+                        </h2>
+
+                        <p class="hero-desc">
+                            Secure your plot boundaries with our professional
+                            fencing solutions. From barbed wire to precast
+                            compound walls, we handle complete installation.
+                        </p>
+
+                        <ul class="feature-list">
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Multiple Options:</strong> Barbed wire
+                                or precast compound walls.
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Quality Materials:</strong> Durable
+                                construction for long-lasting protection.
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>End-to-End Service:</strong> We manage
+                                everything from survey, labour, material
+                                procurement, transport & installation.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Bhuvan -->
+        <section class="sample-section">
+            <div class="container">
+                <div class="sample-grid">
+                    <div class="text-content">
+                        <h2 class="section-title section-title-left">
+                            Bhuvan Data
+                        </h2>
+
+                        <p class="hero-desc">
+                            We utilize ISRO's Bhuvan geospatial platform for
+                            survey / cadastral data.
+                        </p>
+
+                        <ul class="feature-list">
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Maps:</strong> Latest google maps.
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Coverage:</strong> Entire India.
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Survey numbers:</strong> Prodived by
+                                ISRO & as per Official Indian (central)
+                                government records.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sample-visual">
+                        <img
+                            src="/src/assets/images/bhuvan.jpg"
+                            alt="Bhuvan Satellite View"
+                            class="sample-img"
+                            loading="lazy"
+                        />
+                        <p class="text-mono text-xs text-center sample-caption">
+                            Bhuvan data overlaid on google maps of ICRISAT,
+                            Hyderabad
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Dharani -->
+        <section class="sample-section">
+            <div class="container">
+                <div class="sample-grid sample-grid-reverse">
+                    <div class="sample-visual">
+                        <img
+                            src="/src/assets/images/dharani.jpg"
+                            alt="Dharani Portal"
+                            class="sample-img"
+                            loading="lazy"
+                        />
+
+                        <p class="text-mono text-xs text-center sample-caption">
+                            Dharani Portal Land Records Verification
+                        </p>
+                    </div>
+
+                    <div class="text-content">
+                        <h2 class="section-title section-title-left">
+                            Dharani data
+                        </h2>
+
+                        <p class="hero-desc">
+                            We utilize Telangana's Dharani / BhuBharati
+                            geospatial platform for survey / cadastral data.
+                        </p>
+
+                        <ul class="feature-list">
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Maps:</strong> Latest google maps.
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Coverage:</strong> Covers 10491 villages
+                                of total 10957 villages in Telangana.
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Survey numbers:</strong> Prodived by
+                                Dharani / BhuBharati & as per state government
+                                records.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Lakes -->
+        <section class="sample-section">
+            <div class="container">
+                <div class="sample-grid">
+                    <div class="text-content">
+                        <h2 class="section-title section-title-left">
+                            Hyderabad Lakes FTL & Buffer Zones
+                        </h2>
+
+                        <p class="hero-desc">
+                            We verify if your plot falls within lake boundaries
+                            or Full Tank Level (FTL) zones. This critical check
+                            prevents future legal complications.
+                        </p>
+
+                        <ul class="feature-list">
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Coverage:</strong> 1000+ lakes in &
+                                around Hyderabad.
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>FTL & buffer zones:</strong> Check
+                                against HMDA/GHMC lake FTL & buffer zones.
+                            </li>
+
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Legal Clarity:</strong> Avoid
+                                construction restrictions & demolition risks.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sample-visual">
+                        <img
+                            src="/src/assets/images/lakes.jpg"
+                            alt="Lakes FTL Zone Map"
+                            class="sample-img"
+                            loading="lazy"
+                        />
+                        <p class="text-mono text-xs text-center sample-caption">
+                            Lake and FTL Zone Boundary Verification
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Satellite Monitoring -->
+        <section class="sample-section">
+            <div class="container">
+                <div class="sample-grid sample-grid-reverse">
+                    <div class="sample-visual">
+                        <img
+                            src="https://placehold.co/600x400/222/fff?text=Satellite+Before+%26+After+View"
+                            alt="Satellite Monitoring Interface"
+                            class="sample-img"
+                            loading="lazy"
+                        />
+                        <p class="text-mono text-xs text-center sample-caption">
+                            Dashboard View: Historical Imagery Comparison
+                        </p>
+                    </div>
+                    <div class="text-content">
+                        <h2 class="section-title section-title-left">
+                            Satellite Monitoring
+                        </h2>
+                        <p class="hero-desc">
+                            We use high-resolution satellite imagery to track
+                            your plot every 5 days. Our advanced NDVI analysis
+                            detects vegetation changes and potential
+                            encroachments automatically.
+                        </p>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Before & After:</strong> Compare imagery
+                                over time to spot changes.
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Resolution:</strong> High-res imagery
+                                clear enough to see new structures.
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Frequency:</strong> Revisit time of 5
+                                days ensures rapid detection.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Comprehensive Reports -->
+        <section class="sample-section">
+            <div class="container">
+                <div class="sample-grid">
+                    <div class="text-content">
+                        <h2 class="section-title section-title-left">
+                            Comprehensive Reports
+                        </h2>
+                        <p class="hero-desc">
+                            Receive detailed monthly PDF reports that summarize
+                            all monitoring activities. Perfect for your records
+                            and peace of mind.
+                        </p>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Status Summary:</strong> Clear
+                                safe/unsafe status indicators.
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Visual Proof:</strong> Includes latest
+                                satellite visuals and ground photos.
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <strong>Legal Checks:</strong> Encumbrance & Tax
+                                payment status updates.
+                            </li>
+                        </ul>
+                        <br />
+                        <a href="#" class="btn btn-outline"
+                            >Download Sample PDF</a
+                        >
+                    </div>
+                    <div class="sample-visual">
+                        <img
+                            src="https://placehold.co/600x800/eee/333?text=Sample+PDF+Report+Preview"
+                            alt="Sample PDF Report"
+                            class="sample-img sample-img-tall"
+                            loading="lazy"
+                        />
+                        <p class="text-mono text-xs text-center sample-caption">
+                            Monthly PDF Report Sample
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-dark">
+            <div class="container">
+                <h2 class="section-title">Ready to Secure Your Plot?</h2>
+                <p class="text-mono cta-subtitle">
+                    Get started with our protection plans today.
+                </p>
+                <div class="hero-cta-group justify-center">
+                    <a
+                        href="https://web.safeplots.com"
+                        class="btn btn-primary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >GET STARTED &rarr;</a
+                    >
+                    <a href="/#contact" class="btn btn-outline"
+                        >Contact Us</a
+                    >
+                </div>
+            </div>
+        </section>
+
+        <Footer />
+
+        <script src="/src/scripts/app.js?v=20260210"></script>
+        <script src="/src/scripts/posthog-init.js?v=20260210"></script>
+    </body>
+</html>

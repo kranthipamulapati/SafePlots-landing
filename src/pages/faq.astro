@@ -1,0 +1,193 @@
+---
+    import Header from '../components/Header.astro';
+    import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+
+        <!-- PWA & Mobile Meta -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/src/assets/icons/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/src/assets/icons/favicon-16x16.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/src/assets/icons/apple-touch-icon-180x180.png"
+        />
+        <meta name="theme-color" content="#ff4400" />
+        <link rel="canonical" href="https://safeplots.com/faq" />
+
+        <!-- SEO Meta Tags -->
+        <title>FAQ | SafePlots - Frequently Asked Questions</title>
+        <meta
+            name="description"
+            content="Got questions? Find answers about SafePlots services, Plans, NRI plot monitoring, and more."
+        />
+        <meta
+            name="keywords"
+            content="SafePlots FAQ, Plot Monitoring Questions, NRI Services Help, Real Estate Management Queries"
+        />
+        <meta name="author" content="SafePlots" />
+        <meta name="robots" content="index, follow" />
+
+        <!-- Open Graph Tags -->
+        <meta property="og:site_name" content="SafePlots" />
+        <meta property="og:url" content="https://safeplots.com/faq" />
+        <meta
+            property="og:title"
+            content="FAQ | SafePlots - Frequently Asked Questions"
+        />
+        <meta
+            property="og:description"
+            content="Got questions? Find answers about SafePlots services, Plans, NRI plot monitoring, and more."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:image"
+            content="https://safeplots.com/assets/images/og-image.png"
+        />
+        <meta property="og:image:alt" content="SafePlots Dashboard Preview" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="FAQ | SafePlots - Frequently Asked Questions"
+        />
+        <meta
+            name="twitter:description"
+            content="Got questions? Find answers about SafePlots services, Plans, NRI plot monitoring, and more."
+        />
+        <meta
+            name="twitter:image"
+            content="https://safeplots.com/assets/images/og-image.png"
+        />
+        <meta name="twitter:image:alt" content="SafePlots Dashboard Preview" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Mono:wght@400;700&display=swap"
+        />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/src/styles/app.css?v=20260210" />
+    </head>
+    <body class="page-faq">
+        <Header />
+
+        <section class="hero min-h-50vh items-center">
+            <div class="container text-center">
+                <h1 class="hero-title">
+                    FREQUENTLY ASKED<br /><span class="text-orange"
+                        >QUESTIONS</span
+                    >
+                </h1>
+                <p class="hero-desc mx-auto">
+                    Everything you need to know about SafePlots services, plans,
+                    and how we protect your land.
+                </p>
+            </div>
+        </section>
+
+        <section class="faq-section py-80">
+            <div class="container max-w-900">
+                <div class="faq-grid flex-col gap-20">
+                    <details class="faq-item faq-item-details">
+                        <summary class="faq-summary">
+                            CAN I MONITOR MULTIPLE PLOTS?
+                            <span class="icon">▼</span>
+                        </summary>
+                        <div class="faq-content faq-content-box">
+                            Yes! Our "Unified Dashboard" allows you to add and
+                            manage as many plots as you own. You can see the
+                            status of all your properties in one single view. We
+                            also offer custom plans for multi-plot owners.
+                        </div>
+                    </details>
+
+                    <details class="faq-item faq-item-details">
+                        <summary class="faq-summary">
+                            WHAT CITIES DO YOU COVER?
+                            <span class="icon">▼</span>
+                        </summary>
+                        <div class="faq-content faq-content-box">
+                            Currently, we focus on Hyderabad, Vijayawada,
+                            Guntur, and Vizag. We are rapidly expanding to other
+                            major cities in India. If you have a plot elsewhere,
+                            contact us, and we might still be able to help with
+                            satellite monitoring.
+                        </div>
+                    </details>
+
+                    <details class="faq-item faq-item-details">
+                        <summary class="faq-summary">
+                            DO YOU PROVIDE LEGAL ASSISTANCE?
+                            <span class="icon">▼</span>
+                        </summary>
+                        <div class="faq-content faq-content-box">
+                            Yes, we monitor Encumbrance Certificates (EC) and
+                            Vacant Land Tax (VLT) status. If legal issues arise,
+                            we can connect you with trusted property lawyers in
+                            our network, but we are primarily a monitoring and
+                            management service.
+                        </div>
+                    </details>
+
+                    <details class="faq-item faq-item-details">
+                        <summary class="faq-summary">
+                            HOW OFTEN ARE PHYSICAL VISITS CONDUCTED?
+                            <span class="icon">▼</span>
+                        </summary>
+                        <div class="faq-content faq-content-box">
+                            It depends on your plan. "Digital Shield" is purely
+                            digital (satellite + records). "Protection Pro"
+                            includes 2 scheduled physical visits per year. You
+                            can also request on-demand "One-Time Visits"
+                            whenever you like for an additional fee.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section bg-secondary text-inverse py-80">
+            <div class="container text-center">
+                <h2 class="section-title text-inverse">
+                    STILL HAVE QUESTIONS?
+                </h2>
+                <p class="text-grey mb-30">
+                    Our team is ready to help you secure your assets.
+                </p>
+                <a href="/#contact" class="btn btn-primary"
+                    >Contact Us</a
+                >
+            </div>
+        </section>
+
+        <Footer />
+
+        <script src="/src/scripts/app.js?v=20260210"></script>
+        <script src="/src/scripts/posthog-init.js?v=20260210"></script>
+    </body>
+</html>

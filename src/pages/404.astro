@@ -1,0 +1,72 @@
+---
+    import Header from '../components/Header.astro';
+    import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+
+        <!-- PWA & Mobile Meta -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/src/assets/icons/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/src/assets/icons/favicon-16x16.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/src/assets/icons/apple-touch-icon-180x180.png"
+        />
+        <meta name="theme-color" content="#ff4400" />
+
+        <!-- SEO Meta Tags -->
+        <title>404 - Page Not Found | SafePlots</title>
+        <meta name="robots" content="noindex, follow" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Mono:wght@400;700&display=swap"
+        />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/src/styles/app.css?v=20260210" />
+    </head>
+    <body class="page-legal">
+       <Header />
+
+        <main class="container">
+            <div class="error-content">
+                <div class="error-kicker text-mono">ERROR</div>
+                <h1 class="error-code">404</h1>
+                <p class="error-message">
+                    The plot you are looking for has been moved, removed, or
+                    never existed. Let's get you back on safe ground.
+                </p>
+                <div class="header-actions">
+                    <a href="/" class="btn btn-black">Back to Home</a>
+                </div>
+            </div>
+        </main>
+
+        <Footer />
+
+        <script src="/src/scripts/app.js?v=20260210"></script>
+        <script src="/src/scripts/posthog-init.js?v=20260210"></script>
+    </body>
+</html>

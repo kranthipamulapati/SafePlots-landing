@@ -1,0 +1,124 @@
+---
+    import Header from '../components/Header.astro';
+    import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+
+        <!-- PWA & Mobile Meta -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/src/assets/icons/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/src/assets/icons/favicon-16x16.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/src/assets/icons/apple-touch-icon-180x180.png"
+        />
+        <meta name="theme-color" content="#ff4400" />
+        <link rel="canonical" href="https://safeplots.com/status/" />
+
+        <!-- SEO Meta Tags -->
+        <title>Status | SafePlots</title>
+        <meta
+            name="description"
+            content="SafePlots Service Status - Check current system status and maintenance updates."
+        />
+        <meta
+            name="keywords"
+            content="SafePlots Status, System Health, Maintenance"
+        />
+        <meta name="author" content="SafePlots" />
+        <meta name="robots" content="index, follow" />
+
+        <!-- Open Graph Tags -->
+        <meta property="og:site_name" content="SafePlots" />
+        <meta property="og:url" content="https://safeplots.com/status/" />
+        <meta property="og:title" content="Status | SafePlots" />
+        <meta
+            property="og:description"
+            content="SafePlots Service Status - Check current system status and maintenance updates."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:image"
+            content="https://safeplots.com/assets/images/og-image.png"
+        />
+        <meta property="og:image:alt" content="SafePlots Dashboard Preview" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Status | SafePlots" />
+        <meta
+            name="twitter:description"
+            content="SafePlots Service Status - Check current system status and maintenance updates."
+        />
+        <meta
+            name="twitter:image"
+            content="https://safeplots.com/assets/images/og-image.png"
+        />
+        <meta name="twitter:image:alt" content="SafePlots Dashboard Preview" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Mono:wght@400;700&display=swap"
+        />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/src/styles/app.css?v=20260210" />
+    </head>
+    <body class="page-legal">
+
+        <Header />
+
+        <main class="legal-content container">
+            <div class="legal-hero">
+                <div class="legal-kicker text-mono">Information</div>
+                <h1 class="section-title">Status</h1>
+                <div class="legal-updated text-mono">
+                    Last Updated: January 2026
+                </div>
+            </div>
+
+            <div class="legal-text">
+                <p>
+                    Service status updates will be posted here. If you’re facing
+                    an issue, please contact us and we’ll help you quickly.
+                </p>
+
+                <h3>Contact</h3>
+                <p>
+                    Email:
+                    <a href="mailto:admin@safeplots.com">admin@safeplots.com</a
+                    ><br />
+                    Phone: <a href="tel:+917780391340">+91 77803 91340</a>
+                </p>
+            </div>
+        </main>
+
+        <Footer />
+
+        <script src="/src/scripts/app.js?v=20260210"></script>
+        <script src="/src/scripts/posthog-init.js?v=20260210"></script>
+    </body>
+</html>
