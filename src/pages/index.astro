@@ -1,17 +1,1295 @@
----
+<!-- @format -->
 
----
-
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+
+        <!-- PWA & Mobile Meta -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/assets/icons/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/assets/icons/favicon-16x16.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/assets/icons/apple-touch-icon-180x180.png"
+        />
+        <meta name="theme-color" content="#ff4400" />
+        <link rel="manifest" href="manifest.json" />
+        <link rel="canonical" href="https://safeplots.com" />
+
+        <!-- SEO Meta Tags -->
+        <title>
+            SafePlots | NRI Plot Monitoring, Fencing & VLT Services Hyderabad
+        </title>
+        <meta
+            name="description"
+            content="Trusted NRI plot management & Fencing (Precast/Wire). Services: VLT, Legal, Cleaning & Satellite Monitoring. View Survey Maps & Lakes on our App."
+        />
+        <meta
+            name="keywords"
+            content="Plot Monitoring, NRI Services, Land Fencing, Vacant Land Tax, Precast Walls, Survey Maps, Hyderabad Real Estate, Property Management, SafePlots"
+        />
+        <meta name="author" content="SafePlots" />
+        <meta name="robots" content="index, follow" />
+
+        <!-- Open Graph Tags -->
+        <meta property="og:site_name" content="SafePlots" />
+        <meta property="og:url" content="https://safeplots.com" />
+        <meta
+            property="og:title"
+            content="SafePlots | NRI Plot Monitoring, Fencing & VLT Services Hyderabad"
+        />
+        <meta
+            property="og:description"
+            content="Trusted NRI plot management & Fencing (Precast/Wire). Services: VLT, Legal, Cleaning & Satellite Monitoring. View Survey Maps & Lakes on our App."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:image"
+            content="https://safeplots.com/assets/images/og-image.png"
+        />
+        <meta property="og:image:alt" content="SafePlots Dashboard Preview" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="SafePlots | NRI Plot Monitoring, Fencing & VLT Services Hyderabad"
+        />
+        <meta
+            name="twitter:description"
+            content="Trusted NRI plot management & Fencing (Precast/Wire). Services: VLT, Legal, Cleaning & Satellite Monitoring. View Survey Maps & Lakes on our App."
+        />
+        <meta
+            name="twitter:image"
+            content="https://safeplots.com/assets/images/og-image.png"
+        />
+        <meta name="twitter:image:alt" content="SafePlots Dashboard Preview" />
+
+        <!-- Structured Data (JSON-LD) -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "SafePlots",
+                "url": "https://safeplots.com",
+                "logo": "https://safeplots.com/assets/icons/android-chrome-512x512.png",
+                "description": "Trusted NRI plot management & Fencing (Precast/Wire). Services: VLT, Legal, Cleaning & Satellite Monitoring. View Survey Maps & Lakes on our App.",
+                "telephone": "+91 77803 91340",
+                "email": "admin@safeplots.com",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "H.No.84, Maruthi Hill Society, Suraksha Colony, Bandam Kommu, Chanda Nagar",
+                    "addressLocality": "Hyderabad",
+                    "addressRegion": "Telangana",
+                    "postalCode": "500050",
+                    "addressCountry": "IN"
+                },
+                "areaServed": {
+                    "@type": "City",
+                    "name": "Hyderabad"
+                },
+                "knowsAbout": [
+                    "Plot Fencing",
+                    "Vacant Land Tax (VLT)",
+                    "Satellite Monitoring",
+                    "Legal Verification",
+                    "Survey Maps",
+                    "Cadastral Maps",
+                    "Hyderabad Lakes"
+                ],
+                "sameAs": [
+                    "https://www.facebook.com/profile.php?id=61587030331368",
+                    "https://x.com/safeplots",
+                    "https://instagram.com/safeplots",
+                    "https://linkedin.com/company/safeplots"
+                ]
+            }
+        </script>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Mono:wght@400;700&display=swap"
+        />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css?v=20260210" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-container">
+                <a href="index.html" class="logo"
+                    ><img
+                        src="/assets/icons/favicon-48x48.png"
+                        alt="SafePlots logo"
+                        class="logo-icon"
+                    /><span>SafePlots</span></a
+                >
+
+                <button class="mobile-toggle" aria-label="Toggle Menu">
+                    ☰
+                </button>
+
+                <nav class="nav-links text-mono">
+                    <a href="#how-it-works">How it works?</a>
+                    <a href="#why-us">Why SafePlots?</a>
+                    <a href="#plans">Plans</a>
+                    <a href="#services">Services</a>
+
+                    <div class="nav-item has-dropdown">
+                        <a href="#" class="dropdown-trigger"
+                            >Company <span class="arrow">▾</span></a
+                        >
+                        <div class="dropdown-menu">
+                            <a href="about.html">About Us</a>
+                            <a href="blog.html">Blog</a>
+                            <a href="faq.html">FAQ</a>
+                        </div>
+                    </div>
+
+                    <a href="#contact">Contact</a>
+                </nav>
+
+                <div class="header-actions text-mono">
+                    <a
+                        href="https://web.safeplots.com"
+                        class="btn btn-black"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Login / Signup</a
+                    >
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-split">
+                <div class="hero-content">
+                    <div class="hero-label text-mono">
+                        PLOT MANAGEMENT FOR NRI & BUSY PROFESSIONALS
+                    </div>
+
+                    <h1 class="hero-title">
+                        <span class="text-orange" id="dynamic-text-1"
+                            >SAFEGUARD YOUR PLOTS</span
+                        ><br />
+                        <span id="dynamic-text-2">FROM YOUR HOME.</span>
+                    </h1>
+
+                    <p class="hero-desc">
+                        We combine tech with on-ground expertise to protect your
+                        plot from land sharks.
+                    </p>
+
+                    <!-- Quick Benefits -->
+                    <ul class="hero-benefits text-mono">
+                        <li>
+                            <span class="benefit-check">✓</span>Fully automated
+                            monitoring
+                        </li>
+
+                        <li>
+                            <span class="benefit-check">✓</span> Remote sensing
+                            using satellites
+                        </li>
+
+                        <li>
+                            <span class="benefit-check">✓</span>
+                            Weekly Tax & Registration Checks
+                        </li>
+
+                        <li>
+                            <span class="benefit-check">✓</span> Instant Risk
+                            Alerts
+                        </li>
+
+                        <li>
+                            <span class="benefit-check">✓</span> Monthly Reports
+                        </li>
+
+                        <li>
+                            <span class="benefit-check">✓</span> VLT Application
+                        </li>
+                    </ul>
+
+                    <div class="hero-cta-group">
+                        <a
+                            href="https://web.safeplots.com"
+                            class="btn btn-primary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >GET STARTED &rarr;</a
+                        >
+                        <a href="samples.html" class="btn btn-outline"
+                            >VIEW SAMPLES</a
+                        >
+                    </div>
+
+                    <!-- Stats Bar -->
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <span class="hero-stat-number" data-count="100"
+                                >100</span
+                            ><span class="stat-plus">+</span>
+                            <span class="hero-stat-label">Plots Secured</span>
+                        </div>
+
+                        <div class="hero-stat">
+                            <span class="hero-stat-number" data-count="50"
+                                >50</span
+                            ><span class="stat-plus">+</span>
+                            <span class="hero-stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-cards-container">
+                        <!-- Card 1: Satellite -->
+                        <div class="hero-card hero-card-sat">
+                            <div class="card-icon">🛰️</div>
+                            <div class="card-label">REMOTE SENSING</div>
+                            <div class="card-status text-mono">
+                                STATUS: SAFE
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Fencing -->
+                        <div class="hero-card hero-card-wall">
+                            <div class="card-icon">🧱</div>
+                            <div class="card-label">PRE-CAST WALL</div>
+                            <div class="card-status text-mono">
+                                Built in 48 Hrs
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Trust -->
+                        <div class="hero-card hero-card-trust">
+                            <div class="card-icon">🛡️</div>
+                            <div class="card-label">100% SECURE</div>
+                            <div class="card-status text-mono">
+                                Zero Encroachment
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works-section" id="how-it-works">
+            <div class="container">
+                <h2 class="section-title text-center">HOW IT WORKS?</h2>
+
+                <div class="process-grid">
+                    <!-- Step 1 -->
+                    <div class="process-card">
+                        <div class="process-step-number">01</div>
+                        <div class="process-icon text-mono">
+                            📂 Data Collection
+                        </div>
+                        <div class="process-desc text-mono">
+                            We collect data from all available sources - user /
+                            government / layout developer which may include EC,
+                            VLT, coordinates, layout info etc.
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="process-card">
+                        <div class="process-step-number">02</div>
+                        <div class="process-icon text-mono">🤝 Onboarding</div>
+                        <div class="process-desc text-mono">
+                            Your plot is added to our platform where you can
+                            view all details. We setup monitoring & services
+                            schedules based on your requirements.
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="process-card">
+                        <div class="process-step-number">03</div>
+                        <div class="process-icon text-mono">
+                            📍 Initial Visit
+                            <span class="text-mono">(optional)</span>
+                        </div>
+                        <div class="process-desc text-mono">
+                            We will physically visit the plot, identify
+                            boundaries & assess condition. You will receive a
+                            comprehensive report with geotagged photos.
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="process-card">
+                        <div class="process-step-number">04</div>
+                        <div class="process-icon text-mono">
+                            🛰️ Satellite Monitoring
+                        </div>
+                        <div class="process-desc text-mono">
+                            We task high-resolution satellites with revisit time
+                            of 5 days to track your plot. We process raw
+                            satellite data to perform NDVI analysis to detect
+                            anomalies.
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="process-card">
+                        <div class="process-step-number">05</div>
+                        <div class="process-icon text-mono">
+                            📝 EC & VLT Monitoring
+                        </div>
+                        <div class="process-desc text-mono">
+                            We monitor Encumbrance Certificates (EC) weekly &
+                            Vacant Land Tax (VLT) dues fortnightly to detect &
+                            notify you of any changes.
+                        </div>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="process-card">
+                        <div class="process-step-number">06</div>
+                        <div class="process-icon text-mono">
+                            🪧 FENCING & ID Board (OPTIONAL)
+                        </div>
+                        <div class="process-desc text-mono">
+                            Installation of physical barriers like precast walls
+                            or barbed wire & clear ownership signboard on-site
+                            to assert possession & deter encroachers.
+                        </div>
+                    </div>
+
+                    <!-- Step 7 -->
+                    <div class="process-card">
+                        <div class="process-step-number">07</div>
+                        <div class="process-icon text-mono">
+                            📅 Scheduled Inspections (optional)
+                        </div>
+                        <div class="process-desc text-mono">
+                            Regular physical visits (Quarterly/Half-yearly) with
+                            detailed PDF reports & fresh visual evidence.
+                        </div>
+                    </div>
+
+                    <!-- Step 8 -->
+                    <div class="process-card">
+                        <div class="process-step-number">08</div>
+                        <div class="process-icon text-mono">
+                            🚨 Monthly Reports & Risk Alerts
+                        </div>
+                        <div class="process-desc text-mono">
+                            Receive monthly progress reports and instant alerts
+                            for any potential risks detected through monitoring
+                            or ground inspections.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why SafePlots Section -->
+        <section class="how-it-works-section" id="why-us">
+            <div class="container">
+                <h2 class="section-title text-center">WHY US?</h2>
+
+                <p class="how-intro text-mono">
+                    What differentiates us from others?
+                </p>
+
+                <div class="grid-3-col">
+                    <!-- Column 1: Monitoring -->
+                    <div class="how-col">
+                        <h3 class="how-title text-mono">ADVANCED MONITORING</h3>
+
+                        <ul class="how-list text-mono">
+                            <li class="how-list-item">
+                                <span class="icon">🛰️</span>
+
+                                <div>
+                                    <div>REMOTE SENSING SATELLITES</div>
+
+                                    <div class="how-desc">
+                                        We are the first company to offer this
+                                        feature.
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="how-list-item">
+                                <span class="icon">📝</span>
+
+                                <div>
+                                    <div>FULL AUTOMATION</div>
+
+                                    <div class="how-desc">
+                                        Our system does below tasks without
+                                        manual intervention:
+                                        <ul class="how-sublist">
+                                            <li>
+                                                Downloading & Processing raw
+                                                satellite data every 5 days
+                                            </li>
+
+                                            <li>
+                                                Weekly Encumbrance certificate
+                                                checks
+                                            </li>
+
+                                            <li>
+                                                Vacant land tax checks every 15
+                                                days
+                                            </li>
+
+                                            <li>
+                                                User notifications via email on
+                                                risk detection
+                                            </li>
+
+                                            <li>Monthly reports via email</li>
+                                        </ul>
+                                        With help of automation, we can monitor
+                                        plots at high frequency (weekly vs half
+                                        yearly in case of competitors).
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2: Features -->
+                    <div class="how-col">
+                        <h3 class="how-title text-mono">UNIQUE FEATURES</h3>
+
+                        <ul class="how-list text-mono">
+                            <li class="how-list-item">
+                                <span class="icon">🇮🇳</span>
+
+                                <div>
+                                    <div>ALL INDIA SURVEY MAPS</div>
+
+                                    <div class="how-desc">
+                                        Access official survey / cadastral maps
+                                        of Bhuvan / Dharani / BhuBharati
+                                        overlaid on Google Maps.
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="how-list-item">
+                                <span class="icon">🌊</span>
+                                <div>
+                                    <div>1000+ HYDERABAD LAKES</div>
+                                    <div class="how-desc">
+                                        FTL & Buffer zone of lakes overlaid on
+                                        Google Maps. Ensure your plot isn't in
+                                        restricted water body zones.
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="how-list-item">
+                                <span class="icon">📊</span>
+
+                                <div>
+                                    <div>UNIFIED DASHBOARD</div>
+
+                                    <div class="how-desc">
+                                        View all your plots tax, layout,
+                                        registration details in one place.
+                                        Real-time updates & progress at a
+                                        glance.
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Services -->
+                    <div class="how-col">
+                        <h3 class="how-title text-mono">
+                            SPECIALIZED SERVICES
+                        </h3>
+
+                        <ul class="how-list text-mono">
+                            <li class="how-list-item">
+                                <span class="icon">🗺️</span>
+
+                                <div>
+                                    <div>PLOT FINDER</div>
+                                    <div class="how-desc">
+                                        Lost track of your plot? We will help
+                                        you physically locate your missing plot
+                                        using survey maps & on-ground teams.
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="how-list-item">
+                                <span class="icon">🧹</span>
+
+                                <div>
+                                    <div>VLT APPLICATION</div>
+
+                                    <div class="how-desc">
+                                        We will apply for VLT application on
+                                        your behalf.
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing-plans" id="plans">
+            <div class="container">
+                <div class="pricing-plans-header">
+                    <h2 class="section-title text-center">Plans</h2>
+
+                    <div class="pricing-toggle" data-pricing-toggle>
+                        <button
+                            class="toggle-btn is-active"
+                            type="button"
+                            data-billing="monthly"
+                            aria-pressed="true"
+                        >
+                            Monthly
+                        </button>
+                        <button
+                            class="toggle-btn"
+                            type="button"
+                            data-billing="yearly"
+                            aria-pressed="false"
+                        >
+                            Yearly <span class="toggle-save">Save 15%</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="plans-grid">
+                    <!-- Digital Shield -->
+                    <article class="plan-card">
+                        <div class="plan-head">
+                            <div class="plan-name">Digital Shield</div>
+                            <div class="plan-tag text-mono">
+                                A continuously running digital protection layer
+                                for your land.
+                            </div>
+                        </div>
+
+                        <div class="plan-price" aria-label="Price">
+                            <span class="price-currency">₹</span>
+                            <span
+                                class="price-value"
+                                data-price
+                                data-monthly="199"
+                                data-yearly="1999"
+                                >199</span
+                            >
+                            <span class="price-period" data-price-period
+                                >/month</span
+                            >
+                        </div>
+
+                        <ul class="plan-features text-mono">
+                            <li>Satellite monitoring - every 5 days</li>
+                            <li>Registration check - every 7 days</li>
+                            <li>Tax monitoring - every 14 days</li>
+                            <li>Google earth updates - monthly</li>
+                            <li>Instant alerts via email</li>
+                            <li>Monthly summary reports</li>
+                            <li>All India survey/cadastral maps</li>
+                            <li>1000+ hyderabad lakes</li>
+                            <li>Dashboard access</li>
+                        </ul>
+
+                        <a
+                            href="https://web.safeplots.com"
+                            class="btn btn-primary plan-cta"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Start Digital Shield</a
+                        >
+                    </article>
+
+                    <!-- Protection Pro -->
+                    <article class="plan-card is-featured">
+                        <div class="plan-head">
+                            <div class="plan-name">Protection Pro</div>
+                            <div class="plan-tag text-mono">
+                                Digital Shield + Ground visits
+                            </div>
+                        </div>
+
+                        <div class="plan-price" aria-label="Price">
+                            <span class="price-currency">₹</span>
+                            <span
+                                class="price-value"
+                                data-price
+                                data-monthly="999"
+                                data-yearly="9999"
+                                >999</span
+                            >
+                            <span class="price-period" data-price-period
+                                >/month</span
+                            >
+                        </div>
+
+                        <ul class="plan-features text-mono">
+                            <li>Includes all Digital Shield features</li>
+                            <li>2 scheduled visits per year</li>
+                            <li>Detailed report per visit</li>
+                            <li>ID board</li>
+                            <li>Geotagged photos</li>
+                        </ul>
+
+                        <a
+                            href="https://web.safeplots.com"
+                            class="btn btn-outline plan-cta"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Start Protection Pro</a
+                        >
+                    </article>
+
+                    <!-- Custom -->
+                    <article class="plan-card plan-card-custom">
+                        <div class="plan-head">
+                            <div class="plan-name">Custom</div>
+                            <div class="plan-tag text-mono">
+                                Tailored for multiple plots / custom needs
+                            </div>
+                        </div>
+
+                        <div class="plan-price is-custom" aria-label="Price">
+                            <span class="price-value">Custom</span>
+                            <span class="price-period">/quote</span>
+                        </div>
+
+                        <ul class="plan-features text-mono">
+                            <li>Custom monitoring mix</li>
+                            <li>Custom on-ground visits</li>
+                            <li>Bundle services (cleaning/fencing/etc.)</li>
+                            <li>Multi-plot discounts</li>
+                            <li>Dedicated support</li>
+                        </ul>
+
+                        <a href="#contact" class="btn btn-outline plan-cta"
+                            >Request Quote</a
+                        >
+                    </article>
+                </div>
+
+                <p class="pricing-fineprint text-mono text-center">
+                    Prices shown are starting points. Site-specific work
+                    (materials, travel, fencing type) may affect final quotes.
+                </p>
+            </div>
+        </section>
+
+        <!-- One-Time Services -->
+        <section class="pricing-services" id="services">
+            <div class="container">
+                <h2 class="section-title text-center">Services</h2>
+                <p class="pricing-note text-mono text-center">
+                    Add any service with any plan. Pay only when you need it.
+                </p>
+
+                <div class="service-cards">
+                    <article class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">🔍</div>
+                            <div class="service-title">Find my plot</div>
+                        </div>
+
+                        <div class="service-price text-mono">
+                            ₹2,499 - 4,999
+                        </div>
+
+                        <p class="service-desc text-mono">
+                            Lost track of your plot? We'll do on-ground search
+                            to locate your plot & share geotagged proof.
+                        </p>
+
+                        <a
+                            href="#contact"
+                            class="btn btn-outline service-cta"
+                            data-service="Find my plot"
+                            >Get Quote</a
+                        >
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">🚶‍♂️</div>
+                            <div class="service-title">Plot Visit</div>
+                        </div>
+
+                        <div class="service-price text-mono">
+                            ₹2,499 – ₹4,999
+                        </div>
+
+                        <p class="service-desc text-mono">
+                            A physical site inspection to assess your plot's
+                            condition & share detailed inspection report with
+                            geotagged photos.
+                        </p>
+
+                        <a
+                            href="#contact"
+                            class="btn btn-outline service-cta"
+                            data-service="Plot Visit"
+                            >Get Quote</a
+                        >
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">🧹</div>
+                            <div class="service-title">Plot Cleaning</div>
+                        </div>
+
+                        <div class="service-price text-mono">₹1,999-4,999</div>
+
+                        <p class="service-desc text-mono">
+                            Weed & debris clearing so your site stays visible,
+                            with before/after photos.
+                        </p>
+
+                        <a
+                            href="#contact"
+                            class="btn btn-outline service-cta"
+                            data-service="Full Plot Cleaning"
+                            >Get Quote</a
+                        >
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">🧱</div>
+                            <div class="service-title">Fencing</div>
+                        </div>
+
+                        <div class="service-price text-mono">
+                            ₹19,999 – ₹49,999
+                        </div>
+
+                        <p class="service-desc text-mono">
+                            Barbed wire fencing starts at 20k/100 sq.yards &
+                            Precast compound walls at 50k/100 sq.yards.
+                        </p>
+
+                        <a
+                            href="#contact"
+                            class="btn btn-outline service-cta"
+                            data-service="Fencing"
+                            >Get Quote</a
+                        >
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">🚁</div>
+                            <div class="service-title">
+                                Drone Video & Photos
+                            </div>
+                        </div>
+
+                        <div class="service-price text-mono">
+                            ₹2,499 – ₹4,999
+                        </div>
+
+                        <p class="service-desc text-mono">
+                            Aerial photos & video for a clear view of plot &
+                            surrounding area.
+                        </p>
+
+                        <a
+                            href="#contact"
+                            class="btn btn-outline service-cta"
+                            data-service="Drone Video & Photos"
+                            >Get Quote</a
+                        >
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">🪧</div>
+                            <div class="service-title">ID Board</div>
+                        </div>
+
+                        <div class="service-price text-mono">₹999 – ₹2,499</div>
+
+                        <p class="service-desc text-mono">
+                            Install an ID board on-site to identify ownership &
+                            deter encroachment.
+                        </p>
+
+                        <a
+                            href="#contact"
+                            class="btn btn-outline service-cta"
+                            data-service="ID Board"
+                            >Get Quote</a
+                        >
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section class="testimonials-section" id="testimonials">
+            <div class="container">
+                <h2 class="section-title text-center">TRUSTED BY OWNERS</h2>
+                <p class="how-intro text-mono text-center">
+                    See what plot owners from USA, UK & Australia are saying
+                    about us.
+                </p>
+
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="t-stars">★★★★★</div>
+                        <div class="t-quote">
+                            "I live in Dallas and was worried about my plot in
+                            Shadnagar. SafePlots sent me drone videos and fixed
+                            the fencing in 3 days. Best service ever."
+                        </div>
+                        <div class="t-author">
+                            <div class="t-avatar">VR</div>
+                            <div class="t-info">
+                                <span class="t-name">Venkat R.</span>
+                                <span class="t-loc">NRI, USA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="t-stars">★★★★★</div>
+                        <div class="t-quote">
+                            "The satellite monitoring is a game changer. I get
+                            an email every week with the status. It gives me so
+                            much peace of mind sitting in London."
+                        </div>
+                        <div class="t-author">
+                            <div class="t-avatar">SK</div>
+                            <div class="t-info">
+                                <span class="t-name">Suresh K.</span>
+                                <span class="t-loc">NRI, UK</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="t-stars">★★★★★</div>
+                        <div class="t-quote">
+                            "They handled my VLT payment and cleared the bushes.
+                            The dashboard is very easy to use. Highly recommend
+                            for anyone with land in Hyderabad."
+                        </div>
+                        <div class="t-author">
+                            <div class="t-avatar">AM</div>
+                            <div class="t-info">
+                                <span class="t-name">Anitha M.</span>
+                                <span class="t-loc"
+                                    >Software Engineer, BLR</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Send a Message -->
+        <section class="message-section" id="contact">
+            <div class="container">
+                <h2 class="section-title text-center">CONTACT</h2>
+
+                <!-- Contact Info Card -->
+                <div
+                    class="bento-card bg-white message-card contact-separation"
+                >
+                    <!-- Contact Info Section -->
+                    <div class="contact-info-block">
+                        <div
+                            class="card-badge text-mono contact-badge-spacing bg-black text-white"
+                        >
+                            📞 CONTACT US
+                        </div>
+
+                        <div class="contact-grid">
+                            <div class="contact-item">
+                                <span class="text-mono contact-label"
+                                    >PHONE / WHATSAPP</span
+                                >
+                                <a
+                                    href="tel:+917780391340"
+                                    class="contact-link"
+                                >
+                                    +91 77803 91340
+                                </a>
+                            </div>
+
+                            <div class="contact-item">
+                                <span class="text-mono contact-label"
+                                    >EMAIL</span
+                                >
+                                <a
+                                    href="mailto:admin@safeplots.com"
+                                    class="contact-link"
+                                >
+                                    admin@safeplots.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message Form Card -->
+                <div class="bento-card bg-white message-card">
+                    <div class="card-badge text-mono bg-black text-white">
+                        ✍️ SEND A MESSAGE
+                    </div>
+
+                    <div class="message-content">
+                        <form class="contact-form" id="contactForm">
+                            <label class="form-field">
+                                <span class="form-label text-mono"
+                                    >FULL NAME</span
+                                >
+                                <input
+                                    class="form-input"
+                                    name="name"
+                                    autocomplete="name"
+                                    required
+                                    placeholder="Your name"
+                                />
+                            </label>
+
+                            <label class="form-field">
+                                <span class="form-label text-mono">PHONE</span>
+                                <input
+                                    class="form-input"
+                                    name="phone"
+                                    type="tel"
+                                    autocomplete="tel"
+                                    required
+                                    placeholder="Enter your phone number"
+                                />
+                            </label>
+
+                            <label class="form-field">
+                                <span class="form-label text-mono">EMAIL</span>
+                                <input
+                                    class="form-input"
+                                    name="email"
+                                    type="email"
+                                    autocomplete="email"
+                                    placeholder="name@example.com"
+                                />
+                            </label>
+
+                            <label class="form-field">
+                                <span class="form-label text-mono"
+                                    >MESSAGE</span
+                                >
+                                <textarea
+                                    class="form-textarea"
+                                    name="message"
+                                    rows="4"
+                                    placeholder="Tell us your plot location + what you need (monitoring/fencing/legal/etc)."
+                                ></textarea>
+                            </label>
+
+                            <!-- Honeypot (spam) -->
+                            <input
+                                class="hp-field"
+                                type="text"
+                                name="company"
+                                tabindex="-1"
+                                autocomplete="off"
+                                aria-hidden="true"
+                            />
+
+                            <button
+                                class="btn btn-primary form-submit"
+                                type="submit"
+                            >
+                                Submit &rarr;
+                            </button>
+
+                            <p
+                                class="form-status text-mono"
+                                role="status"
+                                aria-live="polite"
+                            ></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer" role="contentinfo">
+            <div class="container">
+                <div class="footer-content">
+                    <!-- Column 1: Brand -->
+                    <div class="footer-col brand-col">
+                        <a class="logo footer-logo text-white" href="index.html"
+                            ><img
+                                src="/assets/icons/favicon-48x48.png"
+                                alt="SafePlots logo"
+                                class="logo-icon"
+                            /><span>SafePlots</span></a
+                        >
+
+                        <p class="footer-desc">
+                            Professional plot management services for NRIs &amp;
+                            plot owners in Hyderabad, Vijayawada, Guntur &
+                            Vizag.
+                        </p>
+
+                        <nav class="footer-socials" aria-label="Social links">
+                            <a
+                                href="https://www.facebook.com/profile.php?id=61587030331368"
+                                class="social-icon"
+                                aria-label="Facebook"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    width="18"
+                                    height="18"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"
+                                    />
+                                </svg>
+                            </a>
+
+                            <a
+                                href="https://x.com/safeplots"
+                                class="social-icon"
+                                aria-label="X (Twitter)"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                                    />
+                                </svg>
+                            </a>
+
+                            <a
+                                href="https://instagram.com/safeplots"
+                                class="social-icon"
+                                aria-label="Instagram"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    width="18"
+                                    height="18"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                                    />
+                                </svg>
+                            </a>
+
+                            <a
+                                href="https://linkedin.com/company/safeplots"
+                                class="social-icon"
+                                aria-label="LinkedIn"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    width="18"
+                                    height="18"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                                    />
+                                </svg>
+                            </a>
+                        </nav>
+                    </div>
+
+                    <!-- Column 2: Explore -->
+                    <div class="footer-col links-col">
+                        <h4 class="footer-heading">Quick Links</h4>
+                        <nav aria-label="Footer explore">
+                            <ul class="footer-links">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li>
+                                    <a href="#how-it-works">How it works?</a>
+                                </li>
+                                <li><a href="#why-us">Why SafePlots?</a></li>
+                                <li><a href="#plans">Plans</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="faq.html">FAQ's</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Column 3: Resources & Legal -->
+                    <div class="footer-col resources-col">
+                        <h4 class="footer-heading">Resources & Legal</h4>
+                        <ul class="footer-links">
+                            <li>
+                                <a href="cookie-policy.html">Cookie Policy</a>
+                            </li>
+                            <li>
+                                <a href="accessibility.html">Accessibility</a>
+                            </li>
+                            <li><a href="security.html">Security</a></li>
+                            <li><a href="status.html">Status</a></li>
+                            <li><a href="sitemap.xml">Sitemap</a></li>
+                            <li><a href="terms.html">Terms</a></li>
+                            <li><a href="privacy.html">Privacy</a></li>
+                            <li>
+                                <a href="refund-policy.html">Refund Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Contact -->
+                    <div class="footer-col contact-col">
+                        <h4 class="footer-heading">Contact</h4>
+                        <address class="footer-address">
+                            <ul class="footer-contact-list">
+                                <li>
+                                    <span class="icon" aria-hidden="true">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 3a1 1 0 0 1 1-1h2.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.21 2.2z"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <a href="tel:+917780391340"
+                                        >+91 77803 91340</a
+                                    >
+                                </li>
+                                <li>
+                                    <span class="icon" aria-hidden="true">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <a href="mailto:admin@safeplots.com"
+                                        >admin@safeplots.com</a
+                                    >
+                                </li>
+
+                                <li>
+                                    <span class="icon" aria-hidden="true">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <span
+                                        >SafePlots, H.No.84, Maruthi Hill
+                                        Society, Suraksha Colony, Bandam Kommu,
+                                        Chanda Nagar, Hyderabad, Telangana
+                                        500050</span
+                                    >
+                                </li>
+                                <li>
+                                    <span class="icon" aria-hidden="true">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"
+                                            />
+                                            <path
+                                                d="M5 5h6v2H7v10h10v-4h2v6H5V5z"
+                                            />
+                                        </svg>
+                                    </span>
+                                    <a
+                                        href="https://www.google.com/maps?q=SafePlots,+H.No.84,+Maruthi+Hill+Society,+Suraksha+Colony,+Bandam+Kommu,+Chanda+Nagar,+Hyderabad,+Telangana+500050"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >Open in Google Maps</a
+                                    >
+                                </li>
+                            </ul>
+                        </address>
+                    </div>
+                </div>
+
+                <div class="footer-bottom-bar">
+                    <div class="copyright">
+                        <small
+                            >&copy; 2026 SafePlots. All rights reserved.</small
+                        >
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="/script.js?v=20260210" is:inline></script>
+        <script src="/posthog-init.js?v=20260210" is:inline></script>
+    </body>
 </html>
