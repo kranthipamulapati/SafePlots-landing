@@ -2,6 +2,7 @@
     import Header from '../components/Header.astro';
     import Footer from '../components/Footer.astro';
     import SeoHead from '../components/SeoHead.astro';
+    import PageScripts from '../components/PageScripts.astro';
 ---
 
 <!doctype html>
@@ -52,7 +53,6 @@
 
         <Footer />
 
-        <script src="/src/scripts/app.js?v=20260210"></script>
-        <script src="/src/scripts/posthog-init.js?v=20260210"></script>
+        <PageScripts />
     </body>
 </html>

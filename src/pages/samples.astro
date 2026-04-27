@@ -2,6 +2,7 @@
     import Header from '../components/Header.astro';
     import Footer from '../components/Footer.astro';
     import SeoHead from '../components/SeoHead.astro';
+    import PageScripts from '../components/PageScripts.astro';
 ---
 
 <!doctype html>
@@ -70,7 +71,7 @@
 
                     <div class="sample-visual">
                         <img
-                            src="/src/assets/images/id_board.jpg"
+                            src="/assets/images/id_board.jpg"
                             alt="ID Board Installation"
                             class="sample-img"
                             loading="lazy"
@@ -91,7 +92,7 @@
                 <div class="sample-grid sample-grid-reverse">
                     <div class="sample-visual">
                         <img
-                            src="/src/assets/images/after_fencing.jpg"
+                            src="/assets/images/after_fencing.jpg"
                             alt="Professional Fencing"
                             class="sample-img"
                             loading="lazy"
@@ -174,7 +175,7 @@
 
                     <div class="sample-visual">
                         <img
-                            src="/src/assets/images/bhuvan.jpg"
+                            src="/assets/images/bhuvan.jpg"
                             alt="Bhuvan Satellite View"
                             class="sample-img"
                             loading="lazy"
@@ -194,7 +195,7 @@
                 <div class="sample-grid sample-grid-reverse">
                     <div class="sample-visual">
                         <img
-                            src="/src/assets/images/dharani.jpg"
+                            src="/assets/images/dharani.jpg"
                             alt="Dharani Portal"
                             class="sample-img"
                             loading="lazy"
@@ -277,7 +278,7 @@
 
                     <div class="sample-visual">
                         <img
-                            src="/src/assets/images/lakes.jpg"
+                            src="/assets/images/lakes.jpg"
                             alt="Lakes FTL Zone Map"
                             class="sample-img"
                             loading="lazy"
@@ -411,7 +412,6 @@
 
         <Footer />
 
-        <script src="/src/scripts/app.js?v=20260210"></script>
-        <script src="/src/scripts/posthog-init.js?v=20260210"></script>
+        <PageScripts />
     </body>
 </html>

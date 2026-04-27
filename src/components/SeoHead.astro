@@ -27,6 +27,8 @@ interface Props {
     organizationSchema?: JsonValue;
 }
 
+import appCssUrl from '../styles/app.css?url';
+
 const {
     title,
     description,
@@ -105,18 +107,18 @@ const schemaToRender =
     rel="icon"
     type="image/png"
     sizes="32x32"
-    href="/src/assets/icons/favicon-32x32.png"
+    href="/assets/icons/favicon-32x32.png"
 />
 <link
     rel="icon"
     type="image/png"
     sizes="16x16"
-    href="/src/assets/icons/favicon-16x16.png"
+    href="/assets/icons/favicon-16x16.png"
 />
 <link
     rel="apple-touch-icon"
     sizes="180x180"
-    href="/src/assets/icons/apple-touch-icon-180x180.png"
+    href="/assets/icons/apple-touch-icon-180x180.png"
 />
 <meta name="theme-color" content={themeColor} />
 <link rel="canonical" href={canonical} />
@@ -162,4 +164,4 @@ const schemaToRender =
 />
 
 <!-- CSS -->
-<link rel="stylesheet" href={`/src/styles/app.css?v=${cssVersion}`} />
+<link rel="stylesheet" href={`${appCssUrl}?v=${cssVersion}`} />

@@ -2,6 +2,7 @@
     import Header from '../components/Header.astro';
     import Footer from '../components/Footer.astro';
     import SeoHead from '../components/SeoHead.astro';
+    import PageScripts from '../components/PageScripts.astro';
 ---
 
 <!doctype html>
@@ -201,7 +202,7 @@
                                         If your plot falls within these colored zones, you are liable to pay VLT regardless of whether it is in a gated community or an open layout. Note that this is good for you. I will explain below.
                                     </p>
 
-                                    <img src="/src/assets/images/ghmc.jpg" alt="GHMC Map" class="w-100p mb-20 rounded" loading="lazy">
+                                    <img src="/assets/images/ghmc.jpg" alt="GHMC Map" class="w-100p mb-20 rounded" loading="lazy">
 
                                     <h3 class="fs-24 text-left mb-15 mt-30">"You Might Not Need a Room"</h3>
 
@@ -352,7 +353,6 @@
 
         <Footer />
 
-        <script src="/src/scripts/app.js?v=20260210"></script>
-        <script src="/src/scripts/posthog-init.js?v=20260210"></script>
+        <PageScripts />
     </body>
 </html>
