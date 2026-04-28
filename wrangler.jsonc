@@ -2,6 +2,7 @@
     "name": "safeplots-landing",
     "compatibility_date": "2026-04-28", // Update to the day you deploy
     "assets": {
-      "directory": "./dist"
+      "directory": "./dist",
+      "not_found_handling": "404-page"
     }
   }
