@@ -1,17 +1,17 @@
 /// <reference types="node" />
-import { defineConfig, devices } from '@playwright/test';
+import {devices, defineConfig } from '@playwright/test';
 
 /**
  * E2E tests run against a production-like static build via `astro preview`.
  * Locally, set reuseExistingServer to speed up iteration when preview is already running.
  */
 export default defineConfig({
-    testDir: './e2e',
+    testDir: './__tests__/e2e',
     fullyParallel: true,
     forbidOnly: !!process.env.CI,
     retries: process.env.CI ? 2 : 0,
     workers: process.env.CI ? 2 : undefined,
-    reporter: [['list'], ['html', { open: 'never', outputFolder: 'playwright-report' }]],
+    reporter: [['list'], ['html', { open: 'never', outputFolder: '__tests__/playwright-report' }]],
     timeout: 30_000,
     use: {
         baseURL: 'http://127.0.0.1:4321',

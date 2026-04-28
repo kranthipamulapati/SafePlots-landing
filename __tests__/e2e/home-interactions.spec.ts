@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 
 test.describe('Home — pricing toggle', () => {
     test.beforeEach(async ({ page }) => {

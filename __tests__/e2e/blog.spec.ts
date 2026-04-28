@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 
 test.describe('Blog article viewer', () => {
     test('Read more reveals viewer and injects library content', async ({ page }) => {

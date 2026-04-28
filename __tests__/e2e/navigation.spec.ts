@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 
 /**
  * Header primary nav is hidden on small viewports until the hamburger opens.

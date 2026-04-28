@@ -1,5 +1,5 @@
-import { expect, test } from '@playwright/test';
 import { PAGE_PATHS } from './fixtures';
+import { test, expect } from '@playwright/test';
 
 test.describe('HTTP routes', () => {
     for (const path of PAGE_PATHS) {
