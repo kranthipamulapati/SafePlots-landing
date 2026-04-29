@@ -196,9 +196,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (span1 && span2) {
         const textPairs = [
-            ["SAFEGUARD YOUR PLOTS", "FROM YOUR HOME."],
-            ["SECURE YOUR PLOTS", "AT YOUR CONVENIENCE."],
-            ["FENCE YOUR PLOTS", "WITHOUT THE HASSLE."],
+            ["SAFEGUARD YOUR PLOTS", "FROM YOUR HOME"],
+            ["SECURE YOUR PLOTS", "AT YOUR CONVENIENCE"],
+            ["FENCE YOUR PLOTS", "WITHOUT THE HASSLE"],
         ];
 
         let currentIndex = 0;
