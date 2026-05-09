@@ -1,23 +1,25 @@
+/** @format */
+
 {
     "name": "safeplots-landing",
     "compatibility_date": "2026-04-28", // Update to the day you deploy
     "assets": {
-      "directory": "./dist",
-      "not_found_handling": "404-page"
+        "directory": "./dist",
+        "not_found_handling": "404-page",
     },
     "observability": {
-      "enabled": false,
-      "head_sampling_rate": 1,
-      "logs": {
-        "enabled": true,
-        "head_sampling_rate": 1,
-        "persist": true,
-        "invocation_logs": true
-      },
-      "traces": {
         "enabled": false,
-        "persist": true,
-        "head_sampling_rate": 1
-      }
-    }
-  }
+        "head_sampling_rate": 1,
+        "logs": {
+            "enabled": true,
+            "head_sampling_rate": 1,
+            "persist": true,
+            "invocation_logs": true,
+        },
+        "traces": {
+            "enabled": false,
+            "persist": true,
+            "head_sampling_rate": 1,
+        },
+    },
+}
