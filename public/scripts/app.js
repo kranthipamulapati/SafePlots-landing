@@ -1,5 +1,12 @@
 /** @format */
 
+/* Flip deferred full stylesheet from print → all (replaces inline onload; CSP-friendly). */
+document
+    .querySelectorAll('link[rel="stylesheet"][data-async-css][media="print"]')
+    .forEach((link) => {
+        link.media = "all";
+    });
+
 document.addEventListener("DOMContentLoaded", () => {
     // -- PostHog Tracking Helper --
     const trackEvent = (eventName, props = {}) => {
