@@ -12,7 +12,8 @@
         "astro": "astro",
         "test:e2e": "playwright test",
         "test:e2e:headed": "playwright test --headed",
-        "test:e2e:ui": "playwright test --ui"
+        "test:e2e:ui": "playwright test --ui",
+        "purgecss": "npx purgecss --css src/styles/app.css --content \"src/**/*.astro\" \"public/**/*.js\" --safelist active dropdown-open fade-out --output ._purge_tmp && node -e \"const fs=require('node:fs');fs.copyFileSync('._purge_tmp/app.css','src/styles/app.css');fs.rmSync('._purge_tmp',{recursive:true,force:true});\""
     },
     "dependencies": {
         "astro": "6.1.9"

@@ -22,7 +22,6 @@ interface Props {
     ogImageHeight?: string;
     twitterCard?: string;
     themeColor?: string;
-    cssVersion?: string;
     includeOrganizationSchema?: boolean;
     organizationSchema?: JsonValue;
 }
@@ -155,4 +154,4 @@ const schemaToRender =
 )}
 
 <!-- CSS -->
-<link rel="stylesheet" href={`${appCssUrl}`} />
+<link rel="stylesheet" href={appCssUrl} />
