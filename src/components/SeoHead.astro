@@ -44,7 +44,6 @@ const {
     ogImageHeight = '630',
     twitterCard = 'summary_large_image',
     themeColor = '#ff4400',
-    cssVersion = '20260210',
     includeOrganizationSchema = false,
     organizationSchema = null
 } = Astro.props as Props;
@@ -155,13 +154,5 @@ const schemaToRender =
     />
 )}
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Mono:wght@400;700&display=swap"
-/>
-
 <!-- CSS -->
-<link rel="stylesheet" href={`${appCssUrl}?v=${cssVersion}`} />
+<link rel="stylesheet" href={`${appCssUrl}`} />
