@@ -5,8 +5,7 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Strict-Transport-Security: max-age=31536000
-  Content-Security-Policy: 
-  default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://us-assets.i.posthog.com https://us.i.posthog.com; style-src 'self'; font-src 'self'; img-src 'self' https://placehold.co; connect-src 'self' https://database.safeplots.com https://us.i.posthog.com https://us-assets.i.posthog.com; frame-ancestors 'none';
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://us-assets.i.posthog.com https://us.i.posthog.com; style-src 'self'; font-src 'self'; img-src 'self' https://placehold.co; connect-src 'self' https://database.safeplots.com https://us.i.posthog.com https://us-assets.i.posthog.com; frame-ancestors 'none';
 
 # HTML files - always revalidate
 /*.html
