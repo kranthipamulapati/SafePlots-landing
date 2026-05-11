@@ -1,7 +1,6 @@
 /** @format */
 
 {
-    "main": "worker.js",
     "name": "safeplots-landing",
     "compatibility_date": "2026-04-28", // Update to the day you deploy
     "assets": {
