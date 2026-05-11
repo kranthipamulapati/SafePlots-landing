@@ -389,7 +389,7 @@
     color: #fff;
 }
 .toggle-save {
-    color: var(--bg-accent);
+    color: var(--bg-accent-aa);
     margin-left: 8px;
     font-weight: 700;
 }
@@ -550,7 +550,7 @@
     letter-spacing: -0.5px;
 }
 .service-price {
-    color: var(--bg-accent);
+    color: var(--bg-accent-aa);
     font-size: 14px;
     font-weight: 700;
 }

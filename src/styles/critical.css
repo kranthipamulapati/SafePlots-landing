@@ -47,6 +47,8 @@
     --bg-primary: #ffffff;
     --bg-secondary: #000000;
     --bg-accent: #ff4400;
+    /* WCAG 2.1 AA (~4.5:1) vs white for small text and white-on-accent UI */
+    --bg-accent-aa: #c2410c;
     --text-primary: #000000;
     --text-secondary: #666666;
     --text-inverse: #ffffff;
@@ -226,12 +228,13 @@ img {
     letter-spacing: 0.5px;
 }
 .btn-primary {
-    background-color: var(--bg-accent);
+    background-color: var(--bg-accent-aa);
     color: var(--text-inverse);
     border-color: var(--border-color);
     box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
 }
 .btn-primary:hover {
+    background-color: #9a3412;
     transform: translate(-1px, -1px);
     box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
 }
