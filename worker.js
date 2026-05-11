@@ -1,17 +1,27 @@
 /** @format */
 
+const CANONICAL_HOST = "safeplots.com";
+
 export default {
     async fetch(request, env) {
         const url = new URL(request.url);
+        const host = url.hostname.toLowerCase();
 
-        // Redirect www -> non-www
-        if (url.hostname === "www.safeplots.com") {
-            url.hostname = "safeplots.com";
-
-            return Response.redirect(url.toString(), 301);
+        if (host !== CANONICAL_HOST && host !== `www.${CANONICAL_HOST}`) {
+            return env.ASSETS.fetch(request);
         }
 
-        // Serve static assets
+        const needsRedirect =
+            host !== CANONICAL_HOST || url.protocol !== "https:";
+
+        if (needsRedirect) {
+            const canonical = new URL(
+                url.pathname + url.search,
+                `https://${CANONICAL_HOST}`
+            );
+            return Response.redirect(canonical.href, 301);
+        }
+
         return env.ASSETS.fetch(request);
     },
 };
