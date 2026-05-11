@@ -430,13 +430,17 @@ img {
     top: 240px;
     left: 140px;
     z-index: 4;
-    background: var(--bg-accent);
+    /* Same hue family as --bg-accent; meets WCAG AA vs white for small type */
+    background: var(--bg-accent-aa);
     color: #fff;
     border-color: #000;
 }
+.hero-card-trust .card-label {
+    color: #fff;
+}
 .hero-card-trust .card-status {
-    color: rgba(255, 255, 255, 0.9);
-    border-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.65);
 }
 @keyframes float {
     0%,
