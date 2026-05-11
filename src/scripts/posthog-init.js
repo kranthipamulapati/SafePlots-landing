@@ -56,7 +56,7 @@
         }),
         (e.__SV = 1));
 })(document, window.posthog || []);
-posthog.init("phc_ueCL3Eoc0drKKySSykw6mHSMqy4bHLXZFap01BksOGM", {
+window.posthog.init("phc_ueCL3Eoc0drKKySSykw6mHSMqy4bHLXZFap01BksOGM", {
     api_host: "https://us.i.posthog.com",
     defaults: "2025-11-30",
 });
