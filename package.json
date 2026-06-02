@@ -16,7 +16,7 @@
         "purgecss": "npx purgecss --css src/styles/app.css --content \"src/**/*.astro\" \"src/scripts/**/*.js\" --safelist active dropdown-open fade-out --output ._purge_tmp && node -e \"const fs=require('node:fs');fs.copyFileSync('._purge_tmp/app.css','src/styles/app.css');fs.rmSync('._purge_tmp',{recursive:true,force:true});\""
     },
     "dependencies": {
-        "astro": "6.1.9"
+        "astro": "6.4.2"
     },
     "devDependencies": {
         "@playwright/test": "1.59.1",
