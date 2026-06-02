@@ -51,13 +51,105 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Contact form (dummy API call; wire up later)
     const contactForm = document.querySelector("#contactForm");
     const statusEl = document.querySelector(".form-status");
     const submitBtn = document.querySelector(".form-submit");
 
     const setStatus = (msg) => {
         if (statusEl) statusEl.textContent = msg;
+    };
+
+    const CONTACT_LIMITS = {
+        name: { min: 1, max: 50 },
+        phone: { min: 7, max: 15 },
+        message: { max: 500 },
+    };
+
+    const trimField = (value) => String(value ?? "").trim();
+
+    const normalizePhone = (value) => trimField(value).replace(/\D/g, "");
+
+    const isValidEmail = (value) =>
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+
+    const validateContact = ({ name, phone, email, message }) => {
+        const errors = [];
+        const nameTrimmed = trimField(name);
+        const phoneDigits = normalizePhone(phone);
+        const emailTrimmed = trimField(email);
+        const messageTrimmed = trimField(message);
+
+        if (nameTrimmed.length < CONTACT_LIMITS.name.min) {
+            errors.push("Please enter your name.");
+        } else if (nameTrimmed.length > CONTACT_LIMITS.name.max) {
+            errors.push(
+                `Name must be ${CONTACT_LIMITS.name.max} characters or fewer.`,
+            );
+        }
+
+        if (phoneDigits.length < CONTACT_LIMITS.phone.min) {
+            errors.push(
+                `Phone must be ${CONTACT_LIMITS.phone.min}–${CONTACT_LIMITS.phone.max} digits.`,
+            );
+        } else if (phoneDigits.length > CONTACT_LIMITS.phone.max) {
+            errors.push(
+                `Phone must be ${CONTACT_LIMITS.phone.max} digits or fewer.`,
+            );
+        }
+
+        if (messageTrimmed.length > CONTACT_LIMITS.message.max) {
+            errors.push(
+                `Message must be ${CONTACT_LIMITS.message.max} characters or fewer.`,
+            );
+        }
+
+        if (emailTrimmed && !isValidEmail(emailTrimmed)) {
+            errors.push("Please enter a valid email address.");
+        }
+
+        return {
+            ok: errors.length === 0,
+            errors,
+            data: {
+                name: nameTrimmed,
+                phone: phoneDigits,
+                email: emailTrimmed,
+                message: messageTrimmed,
+            },
+        };
+    };
+
+    const PB_FIELD_LABELS = {
+        name: "Name",
+        phone: "Phone",
+        email: "Email",
+        message: "Message",
+    };
+
+    const formatPocketBaseError = (body) => {
+        if (!body || typeof body !== "object") return null;
+
+        const fieldErrors = body.data;
+        if (fieldErrors && typeof fieldErrors === "object") {
+            const parts = [];
+            for (const [field, info] of Object.entries(fieldErrors)) {
+                if (info && typeof info === "object" && info.message) {
+                    const label = PB_FIELD_LABELS[field] || field;
+                    parts.push(`${label}: ${info.message}`);
+                }
+            }
+            if (parts.length) return parts.join(" ");
+        }
+
+        const message =
+            typeof body.message === "string" ? body.message.trim() : "";
+        if (!message) return null;
+
+        if (/unique|duplicate/i.test(message)) {
+            return "We already received this message. We’ll get back to you soon.";
+        }
+
+        return message;
     };
 
     if (contactForm) {
@@ -74,6 +166,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
+            const validation = validateContact(payload);
+            if (!validation.ok) {
+                setStatus(validation.errors.join(" "));
+                return;
+            }
+
             try {
                 if (submitBtn) submitBtn.disabled = true;
                 setStatus("Sending…");
@@ -84,23 +182,32 @@ document.addEventListener("DOMContentLoaded", () => {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify({
-                            name: payload.name || "",
-                            phone: payload.phone || "",
-                            email: payload.email || "",
-                            message: payload.message || "",
+                            ...validation.data,
                             source: "landing",
                         }),
                     },
                 );
 
-                if (!res.ok) throw new Error(`Request failed: ${res.status}`);
+                if (!res.ok) {
+                    let pbBody = null;
+                    try {
+                        pbBody = await res.json();
+                    } catch {
+                        /* non-JSON error body */
+                    }
+                    const err = new Error("contact_submit_failed");
+                    err.pocketBase = pbBody;
+                    throw err;
+                }
 
                 setStatus("Sent! We’ll contact you soon.");
                 trackEvent("contact_form_success", { source: "landing" });
                 contactForm.reset();
             } catch (err) {
+                const pbMessage = formatPocketBaseError(err.pocketBase);
                 setStatus(
-                    "Couldn’t submit right now. Please call or email us.",
+                    pbMessage ||
+                        "Couldn’t submit right now. Please call or email us.",
                 );
             } finally {
                 if (submitBtn) submitBtn.disabled = false;
