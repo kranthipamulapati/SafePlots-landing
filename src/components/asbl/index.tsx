@@ -3,20 +3,16 @@
 import { useMemo, useState, useCallback } from "react";
 import { Map, ControlPosition, APIProvider } from "@vis.gl/react-google-maps";
 
-import {
-    ASBL_PROJECTS,
-    googleMapsMapId,
-    googleMapsApiKey,
-    icrisatGeoCenter,
-} from "./data";
-import { getPoisForCategory } from "./app";
-import type { AsblPoiCategoryId } from "./types";
-
 import NearbyPlaces from "./components/nearby-places";
 import DeckGlOverlay from "./components/deck-gl-overlay";
 import ProjectOverview from "./components/project-overview";
 import MapViewControls from "./components/map-view-controls";
 import MapCameraRotation from "./components/map-camera-rotation";
+
+import { ASBL_PROJECTS } from "./data";
+import { getPoisForCategory } from "./app";
+import type { AsblPoiCategoryId } from "./types";
+import { googleMapsMapId, googleMapsApiKey, icrisatGeoCenter } from "./config";
 
 const mapTypeControlOptions = {
     position: ControlPosition.TOP_RIGHT,
@@ -27,16 +23,31 @@ const fullscreenControlOptions = {
     position: ControlPosition.BOTTOM_RIGHT,
 };
 
-export default function AsblMap() {
+export default function AsblShowcase() {
+    const [autoRotate, setAutoRotate] = useState(true);
     const [project, setProject] = useState(ASBL_PROJECTS[0]);
     const [poiCategory, setPoiCategory] = useState<AsblPoiCategoryId>();
-    const [autoRotate, setAutoRotate] = useState(true);
+
     const stopAutoRotate = useCallback(() => setAutoRotate(false), []);
 
     const pois = useMemo(() => {
         if (!poiCategory) return [];
         return getPoisForCategory(project, poiCategory);
     }, [project, poiCategory]);
+
+    if (!googleMapsApiKey) {
+        return (
+            <div className="flex min-h-dvh items-center justify-center bg-slate-950 p-6 text-center text-white">
+                <p className="text-sm text-slate-400">
+                    Map unavailable: set{" "}
+                    <code className="text-slate-200">
+                        PUBLIC_GOOGLE_MAPS_API_KEY
+                    </code>{" "}
+                    in your environment.
+                </p>
+            </div>
+        );
+    }
 
     return (
         <APIProvider apiKey={googleMapsApiKey} region="IN" version="3.64">

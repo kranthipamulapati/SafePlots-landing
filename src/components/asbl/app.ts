@@ -9,7 +9,7 @@ import type {
     TowerFloorSlice,
     ASBLApartmentGrid,
     AsblPoiCategoryId,
-} from "./types.ts";
+} from "./types";
 
 function getTowerData(project: ASBLProjectRow): TowerData[] {
     return project.towers_config.map((tower, index) => ({

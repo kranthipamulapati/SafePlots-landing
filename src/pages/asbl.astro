@@ -1,7 +1,6 @@
 ---
-import AsblMap from "../components/asbl";
-import asblCss from "../components/asbl/app.css?url";
-
+import AsblShowcase from "../components/asbl";
+import appCss from "../components/asbl/app.css?url";
 ---
 
 <!doctype html>
@@ -10,9 +9,10 @@ import asblCss from "../components/asbl/app.css?url";
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>ASBL Showcase | SafePlots</title>
-        <link rel="stylesheet" href={asblCss} />
+        <meta name="robots" content="noindex" />
+        <link rel="stylesheet" href={appCss} />
     </head>
     <body>
-        <AsblMap client:only="react" />
+        <AsblShowcase client:only="react" />
     </body>
 </html>
