@@ -7,11 +7,6 @@ export const icrisatGeoCenter = {
     lng: 78.275954,
 };
 
-export const MAP_THEMES = [
-    { id: "light", label: "Light" },
-    { id: "dark", label: "Dark" },
-] as const;
-
 export const DEGREES_PER_SECOND = 2.5;
 
 export const APARTMENT_STATUSES: ApartmentStatus[] = [

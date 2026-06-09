@@ -1,7 +1,7 @@
 /** @format */
 
 import { useMemo, useState, useEffect, useCallback } from "react";
-import { Map, APIProvider, ColorScheme } from "@vis.gl/react-google-maps";
+import { Map, APIProvider } from "@vis.gl/react-google-maps";
 
 import SalesLegend from "./components/sales-legend";
 import NearbyPlaces from "./components/nearby-places";
@@ -25,12 +25,11 @@ import {
 import { ASBL_PROJECTS } from "./data";
 import { icrisatGeoCenter } from "./constants";
 
-import type { MapThemeId, Perspective, AsblPoiCategoryId } from "./types";
+import type { Perspective, AsblPoiCategoryId } from "./types";
 
 function AsblShowcase() {
     const [autoRotate, setAutoRotate] = useState(true);
     const [project, setProject] = useState(ASBL_PROJECTS[0]);
-    const [mapTheme, setMapTheme] = useState<MapThemeId>("dark");
     const [perspective, setPerspective] = useState<Perspective>("user");
     const [poiCategory, setPoiCategory] = useState<AsblPoiCategoryId>();
 
@@ -111,9 +110,7 @@ function AsblShowcase() {
                     )}
 
                     <MapViewControls
-                        mapTheme={mapTheme}
                         autoRotate={autoRotate}
-                        onMapThemeChange={setMapTheme}
                         onAutoRotateChange={setAutoRotate}
                     />
                 </aside>
@@ -128,11 +125,6 @@ function AsblShowcase() {
                     fullscreenControl={true}
                     streetViewControl={true}
                     mapTypeId="roadmap"
-                    colorScheme={
-                        mapTheme === "dark"
-                            ? ColorScheme.DARK
-                            : ColorScheme.LIGHT
-                    }
                     gestureHandling="greedy"
                     defaultCenter={icrisatGeoCenter}
                     mapTypeControlOptions={mapTypeControlOptions}

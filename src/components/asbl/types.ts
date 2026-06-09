@@ -85,8 +85,6 @@ type Rgba = [number, number, number, number];
 
 type Perspective = "user" | "sales";
 
-type MapThemeId = "light" | "dark";
-
 type ApartmentStatusId =
     | "available"
     | "booked"
@@ -106,7 +104,6 @@ export type {
     AsblPoi,
     TowerData,
     Coordinate,
-    MapThemeId,
     Perspective,
     AsblPoiRecord,
     AsblProjectPoi,
