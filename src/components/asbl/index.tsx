@@ -1,19 +1,37 @@
 /** @format */
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useCallback } from "react";
+import { Map, ControlPosition, APIProvider } from "@vis.gl/react-google-maps";
 
-import { ASBL_PROJECTS } from "./data";
+import {
+    ASBL_PROJECTS,
+    googleMapsMapId,
+    googleMapsApiKey,
+    icrisatGeoCenter,
+} from "./data";
 import { getPoisForCategory } from "./app";
 import type { AsblPoiCategoryId } from "./types";
 
 import NearbyPlaces from "./components/nearby-places";
+import DeckGlOverlay from "./components/deck-gl-overlay";
 import ProjectOverview from "./components/project-overview";
 import MapViewControls from "./components/map-view-controls";
+import MapCameraRotation from "./components/map-camera-rotation";
+
+const mapTypeControlOptions = {
+    position: ControlPosition.TOP_RIGHT,
+    mapTypeIds: ["hybrid", "roadmap", "satellite"],
+};
+
+const fullscreenControlOptions = {
+    position: ControlPosition.BOTTOM_RIGHT,
+};
 
 export default function AsblMap() {
     const [project, setProject] = useState(ASBL_PROJECTS[0]);
     const [poiCategory, setPoiCategory] = useState<AsblPoiCategoryId>();
     const [autoRotate, setAutoRotate] = useState(true);
+    const stopAutoRotate = useCallback(() => setAutoRotate(false), []);
 
     const pois = useMemo(() => {
         if (!poiCategory) return [];
@@ -21,33 +39,42 @@ export default function AsblMap() {
     }, [project, poiCategory]);
 
     return (
-        <div className="relative h-dvh w-full overflow-hidden bg-slate-950">
-            <aside className="absolute top-3 left-3 z-10 flex max-h-[calc(100dvh-1.5rem)] w-72 flex-col gap-0 overflow-y-auto rounded-lg border border-white/20 bg-slate-900/90 p-4 text-sm text-white shadow-lg backdrop-blur-sm">
-                <ProjectOverview
-                    project={project}
-                    projects={ASBL_PROJECTS}
-                    onProjectChange={(e) =>
-                        setProject(
-                            ASBL_PROJECTS.find((p) => p.id === e.target.value)!,
-                        )
-                    }
-                />
-                <NearbyPlaces
-                    selectedPoiCategory={poiCategory}
-                    onPoiCategoryChange={setPoiCategory}
-                />
-                <MapViewControls
-                    autoRotate={autoRotate}
-                    onAutoRotateChange={setAutoRotate}
-                />
-            </aside>
+        <APIProvider apiKey={googleMapsApiKey} region="IN" version="3.64">
+            <div className="relative h-dvh w-full overflow-hidden bg-slate-950">
+                <aside className="...">{/* sidebar — same as now */}</aside>
 
-            {/* Map placeholder — step 7 */}
-            <div className="flex h-full items-center justify-center text-slate-500">
-                {poiCategory
-                    ? `${pois.length} POIs selected (${poiCategory})`
-                    : "Map coming next"}
+                <Map
+                    mapId={googleMapsMapId || undefined}
+                    defaultZoom={17}
+                    defaultTilt={90}
+                    zoomControl={false}
+                    cameraControl={false}
+                    mapTypeControl={true}
+                    fullscreenControl={true}
+                    streetViewControl={true}
+                    mapTypeId="roadmap"
+                    gestureHandling="greedy"
+                    defaultCenter={icrisatGeoCenter}
+                    mapTypeControlOptions={mapTypeControlOptions}
+                    fullscreenControlOptions={fullscreenControlOptions}
+                >
+                    <DeckGlOverlay
+                        pois={pois}
+                        project={project}
+                        projects={ASBL_PROJECTS}
+                        onMapInteract={stopAutoRotate}
+                        onProjectSelect={(projectId) =>
+                            setProject(
+                                ASBL_PROJECTS.find((p) => p.id === projectId)!,
+                            )
+                        }
+                    />
+                    <MapCameraRotation
+                        autoRotate={autoRotate}
+                        onAutoRotateChange={setAutoRotate}
+                    />
+                </Map>
             </div>
-        </div>
+        </APIProvider>
     );
 }

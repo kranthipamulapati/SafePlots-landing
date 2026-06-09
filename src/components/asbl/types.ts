@@ -84,3 +84,7 @@ export type TowerLabelData = {
     isSelectedProject: boolean;
     position: [number, number, number];
 };
+
+export type FloorStripeColors = [Rgba, Rgba];
+
+export type Rgba = [number, number, number, number];
