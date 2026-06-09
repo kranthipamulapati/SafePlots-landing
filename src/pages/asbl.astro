@@ -1,5 +1,4 @@
 ---
-import AsblShowcase from "../components/asbl";
 import appCss from "../components/asbl/app.css?url";
 ---
 
@@ -13,13 +12,14 @@ import appCss from "../components/asbl/app.css?url";
         <link rel="stylesheet" href={appCss} />
     </head>
     <body>
-        <AsblShowcase client:only="react">
-            <div
-                slot="fallback"
-                class="flex min-h-dvh items-center justify-center bg-slate-950 text-sm text-slate-400"
-            >
-                Loading map…
-            </div>
-        </AsblShowcase>
+        <div
+            id="asbl-root"
+            class="flex min-h-dvh items-center justify-center bg-slate-950 text-sm text-slate-400"
+        >
+            Loading map…
+        </div>
+        <script>
+            import "../components/asbl/main.tsx";
+        </script>
     </body>
 </html>
