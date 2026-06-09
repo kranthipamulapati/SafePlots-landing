@@ -41,7 +41,27 @@ export default function AsblMap() {
     return (
         <APIProvider apiKey={googleMapsApiKey} region="IN" version="3.64">
             <div className="relative h-dvh w-full overflow-hidden bg-slate-950">
-                <aside className="...">{/* sidebar — same as now */}</aside>
+                <aside className="absolute top-3 left-3 z-10 flex max-h-[calc(100dvh-1.5rem)] w-72 flex-col gap-0 overflow-y-auto rounded-lg border border-white/20 bg-slate-900/90 p-4 text-sm text-white shadow-lg backdrop-blur-sm">
+                    <ProjectOverview
+                        project={project}
+                        projects={ASBL_PROJECTS}
+                        onProjectChange={(e) =>
+                            setProject(
+                                ASBL_PROJECTS.find(
+                                    (p) => p.id === e.target.value,
+                                )!,
+                            )
+                        }
+                    />
+                    <NearbyPlaces
+                        selectedPoiCategory={poiCategory}
+                        onPoiCategoryChange={setPoiCategory}
+                    />
+                    <MapViewControls
+                        autoRotate={autoRotate}
+                        onAutoRotateChange={setAutoRotate}
+                    />
+                </aside>
 
                 <Map
                     mapId={googleMapsMapId || undefined}
