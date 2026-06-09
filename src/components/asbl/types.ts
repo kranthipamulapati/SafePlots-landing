@@ -89,11 +89,28 @@ type FloorStripeColors = [Rgba, Rgba];
 
 type Rgba = [number, number, number, number];
 
+type Perspective = "user" | "sales";
+
+type ApartmentStatusId =
+    | "available"
+    | "booked"
+    | "sold"
+    | "hold"
+    | "not_released";
+
+type ApartmentStatus = {
+    id: ApartmentStatusId;
+    label: string;
+    description: string;
+    color: Rgba;
+};
+
 export type {
     Rgba,
     AsblPoi,
     TowerData,
     Coordinate,
+    Perspective,
     AsblPoiRecord,
     AsblProjectPoi,
     ASBLProjectRow,
@@ -101,7 +118,9 @@ export type {
     AsblPoiCategory,
     TowerFloorSlice,
     ASBLTowerConfig,
+    ApartmentStatus,
     ASBLApartmentGrid,
     AsblPoiCategoryId,
     FloorStripeColors,
+    ApartmentStatusId,
 };

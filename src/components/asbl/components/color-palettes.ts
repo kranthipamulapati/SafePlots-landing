@@ -1,6 +1,13 @@
 /** @format */
 
-import type { Rgba, FloorStripeColors, AsblPoiCategoryId } from "../types";
+import type {
+    Rgba,
+    FloorStripeColors,
+    AsblPoiCategoryId,
+    ApartmentStatusId,
+} from "../types";
+
+import { APARTMENT_STATUSES } from "../constants";
 
 const BUILDING_COLORS = {
     selected: {
@@ -47,9 +54,18 @@ const POI_CATEGORY_LINE_COLORS: Record<AsblPoiCategoryId, Rgba> = {
     dining: [251, 146, 60, 255],
 };
 
+const APARTMENT_STATUS_COLORS: Record<ApartmentStatusId, Rgba> =
+    Object.fromEntries(
+        APARTMENT_STATUSES.map((status) => [status.id, status.color]),
+    ) as Record<ApartmentStatusId, Rgba>;
+
+const APARTMENT_STATUS_FALLBACK: Rgba = [100, 116, 139, 200];
+
 export {
     LABEL_COLORS,
     BUILDING_COLORS,
     POI_CATEGORY_COLORS,
     POI_CATEGORY_LINE_COLORS,
+    APARTMENT_STATUS_COLORS,
+    APARTMENT_STATUS_FALLBACK,
 };

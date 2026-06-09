@@ -11,11 +11,15 @@ import {
 import { useMap } from "@vis.gl/react-google-maps";
 import { GoogleMapsOverlay } from "@deck.gl/google-maps";
 
+import { APARTMENT_STATUSES } from "../constants";
+
 import type {
     AsblPoi,
     Coordinate,
+    Perspective,
     ASBLProjectRow,
     TowerFloorSlice,
+    ApartmentStatusId,
 } from "../types";
 
 import {
@@ -28,21 +32,31 @@ import {
     LABEL_COLORS,
     BUILDING_COLORS,
     POI_CATEGORY_COLORS,
+    APARTMENT_STATUS_COLORS,
+    APARTMENT_STATUS_FALLBACK,
     POI_CATEGORY_LINE_COLORS,
 } from "./color-palettes";
 
 type Props = {
     pois?: AsblPoi[];
+    perspective: Perspective;
     project: ASBLProjectRow;
     projects: ASBLProjectRow[];
+    apartmentStatuses?: Map<string, ApartmentStatusId>;
     onProjectSelect: (projectId: string) => void;
     onMapInteract?: () => void;
 };
+
+function getStatusLabel(statusId: ApartmentStatusId): string {
+    return APARTMENT_STATUSES.find((s) => s.id === statusId)?.label ?? statusId;
+}
 
 function DeckGlOverlay({
     project,
     projects,
     pois = [],
+    perspective,
+    apartmentStatuses,
     onProjectSelect,
     onMapInteract,
 }: Props) {
@@ -104,8 +118,20 @@ function DeckGlOverlay({
                     pickable: true,
                     getPolygon: (d: TowerFloorSlice) => d.footprint,
                     getElevation: (d: TowerFloorSlice) => d.elevationMeters,
-                    getFillColor: (d: TowerFloorSlice) =>
-                        colors.towerFloorStripes[d.floorIndex % 2],
+                    getFillColor: (d: TowerFloorSlice) => {
+                        if (
+                            perspective === "sales" &&
+                            isSelected &&
+                            apartmentStatuses
+                        ) {
+                            const status = apartmentStatuses.get(d.id);
+                            return status
+                                ? APARTMENT_STATUS_COLORS[status]
+                                : APARTMENT_STATUS_FALLBACK;
+                        }
+
+                        return colors.towerFloorStripes[d.floorIndex % 2];
+                    },
                     getLineColor: colors.towerLine,
                     lineWidthMinPixels: 1,
                 }),
@@ -136,7 +162,7 @@ function DeckGlOverlay({
             }),
         );
 
-        if (pois.length > 0) {
+        if (perspective === "user" && pois.length > 0) {
             layers.push(
                 new ArcLayer({
                     id: "asbl-poi-arcs",
@@ -205,6 +231,13 @@ function DeckGlOverlay({
 
                 lines.push(`G+${tower.floorCount} · ${tower.heightMeters}m`);
 
+                if (perspective === "sales" && apartmentStatuses) {
+                    const status = apartmentStatuses.get(object.id);
+                    if (status) {
+                        lines.push(getStatusLabel(status));
+                    }
+                }
+
                 return lines.join("\n");
             }
 
@@ -250,7 +283,16 @@ function DeckGlOverlay({
                 }
             },
         });
-    }, [pois, project, projects, overlay, hoveredPoiId, projectCenter]);
+    }, [
+        pois,
+        overlay,
+        project,
+        projects,
+        perspective,
+        hoveredPoiId,
+        projectCenter,
+        apartmentStatuses,
+    ]);
 
     return null;
 }

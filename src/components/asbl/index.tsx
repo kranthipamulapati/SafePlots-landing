@@ -1,13 +1,15 @@
 /** @format */
 
-import { useMemo, useState, useCallback } from "react";
+import { useMemo, useState, useEffect, useCallback } from "react";
 import { Map, APIProvider } from "@vis.gl/react-google-maps";
 
+import SalesLegend from "./components/sales-legend";
 import NearbyPlaces from "./components/nearby-places";
 import DeckGlOverlay from "./components/deck-gl-overlay";
 import ProjectOverview from "./components/project-overview";
 import MapViewControls from "./components/map-view-controls";
 import MapCameraRotation from "./components/map-camera-rotation";
+import PerspectiveSwitch from "./components/perspective-switch";
 
 import {
     googleMapsMapId,
@@ -15,22 +17,53 @@ import {
     mapTypeControlOptions,
     fullscreenControlOptions,
 } from "./config";
+import {
+    getPoisForCategory,
+    getSalesStatusCounts,
+    assignRandomApartmentStatuses,
+} from "./app";
 import { ASBL_PROJECTS } from "./data";
-import { getPoisForCategory } from "./app";
 import { icrisatGeoCenter } from "./constants";
-import type { AsblPoiCategoryId } from "./types";
+
+import type { AsblPoiCategoryId, Perspective } from "./types";
 
 function AsblShowcase() {
     const [autoRotate, setAutoRotate] = useState(true);
     const [project, setProject] = useState(ASBL_PROJECTS[0]);
+    const [perspective, setPerspective] = useState<Perspective>("user");
     const [poiCategory, setPoiCategory] = useState<AsblPoiCategoryId>();
 
     const stopAutoRotate = useCallback(() => setAutoRotate(false), []);
 
+    const apartmentStatuses = useMemo(() => {
+        if (perspective !== "sales") return undefined;
+        return assignRandomApartmentStatuses(project);
+    }, [perspective, project]);
+
+    const statusCounts = useMemo(() => {
+        if (!apartmentStatuses) {
+            return {
+                available: 0,
+                booked: 0,
+                sold: 0,
+                hold: 0,
+                not_released: 0,
+            };
+        }
+
+        return getSalesStatusCounts(apartmentStatuses);
+    }, [apartmentStatuses]);
+
     const pois = useMemo(() => {
-        if (!poiCategory) return [];
+        if (perspective !== "user" || !poiCategory) return [];
         return getPoisForCategory(project, poiCategory);
-    }, [project, poiCategory]);
+    }, [perspective, project, poiCategory]);
+
+    useEffect(() => {
+        if (perspective === "sales") {
+            setPoiCategory(undefined);
+        }
+    }, [perspective]);
 
     if (!googleMapsApiKey) {
         return (
@@ -62,10 +95,19 @@ function AsblShowcase() {
                         }
                     />
 
-                    <NearbyPlaces
-                        selectedPoiCategory={poiCategory}
-                        onPoiCategoryChange={setPoiCategory}
+                    <PerspectiveSwitch
+                        perspective={perspective}
+                        onPerspectiveChange={setPerspective}
                     />
+
+                    {perspective === "user" ? (
+                        <NearbyPlaces
+                            selectedPoiCategory={poiCategory}
+                            onPoiCategoryChange={setPoiCategory}
+                        />
+                    ) : (
+                        <SalesLegend statusCounts={statusCounts} />
+                    )}
 
                     <MapViewControls
                         autoRotate={autoRotate}
@@ -92,6 +134,8 @@ function AsblShowcase() {
                         pois={pois}
                         project={project}
                         projects={ASBL_PROJECTS}
+                        perspective={perspective}
+                        apartmentStatuses={apartmentStatuses}
                         onMapInteract={stopAutoRotate}
                         onProjectSelect={(projectId) =>
                             setProject(

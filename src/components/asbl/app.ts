@@ -9,7 +9,10 @@ import type {
     TowerFloorSlice,
     ASBLApartmentGrid,
     AsblPoiCategoryId,
+    ApartmentStatusId,
 } from "./types";
+
+import { APARTMENT_STATUS_WEIGHTS } from "./constants";
 
 function getTowerData(project: ASBLProjectRow): TowerData[] {
     return project.towers_config.map((tower, index) => ({
@@ -255,10 +258,57 @@ function getPoisForCategory(
     }));
 }
 
+function pickWeightedRandomStatus(): ApartmentStatusId {
+    const totalWeight = APARTMENT_STATUS_WEIGHTS.reduce(
+        (sum, entry) => sum + entry.weight,
+        0,
+    );
+    let roll = Math.random() * totalWeight;
+
+    for (const entry of APARTMENT_STATUS_WEIGHTS) {
+        roll -= entry.weight;
+        if (roll <= 0) return entry.id;
+    }
+
+    return APARTMENT_STATUS_WEIGHTS[APARTMENT_STATUS_WEIGHTS.length - 1].id;
+}
+
+function assignRandomApartmentStatuses(
+    project: ASBLProjectRow,
+): Map<string, ApartmentStatusId> {
+    const statusMap = new Map<string, ApartmentStatusId>();
+
+    for (const slice of getTowerFloorSlices(project)) {
+        statusMap.set(slice.id, pickWeightedRandomStatus());
+    }
+
+    return statusMap;
+}
+
+function getSalesStatusCounts(
+    statusMap: Map<string, ApartmentStatusId>,
+): Record<ApartmentStatusId, number> {
+    const counts: Record<ApartmentStatusId, number> = {
+        available: 0,
+        booked: 0,
+        sold: 0,
+        hold: 0,
+        not_released: 0,
+    };
+
+    for (const status of statusMap.values()) {
+        counts[status] += 1;
+    }
+
+    return counts;
+}
+
 export {
     getProjectCenter,
     getTowerLabelData,
     getProjectSummary,
     getPoisForCategory,
     getTowerFloorSlices,
+    getSalesStatusCounts,
+    assignRandomApartmentStatuses,
 };
