@@ -73,6 +73,17 @@ function DeckGlOverlay({
         return new GoogleMapsOverlay({ interleaved: true });
     }, [map]);
 
+    // Precompute floor slices once per project so the PolygonLayer `data`
+    // references stay stable. deck.gl skips re-tessellating the extruded
+    // towers when the data reference is unchanged (e.g. on POI hover).
+    const towerSlicesByProject = useMemo(() => {
+        const slices = new Map<string, TowerFloorSlice[]>();
+        for (const p of projects) {
+            slices.set(p.id, getTowerFloorSlices(p));
+        }
+        return slices;
+    }, [projects]);
+
     useEffect(() => {
         if (!overlay || !map) return;
         overlay.setMap(map);
@@ -113,7 +124,7 @@ function DeckGlOverlay({
                 }),
                 new PolygonLayer({
                     id: `asbl-${p.id}-towers`,
-                    data: getTowerFloorSlices(p),
+                    data: towerSlicesByProject.get(p.id),
                     extruded: true,
                     pickable: true,
                     getPolygon: (d: TowerFloorSlice) => d.footprint,
@@ -134,6 +145,13 @@ function DeckGlOverlay({
                     },
                     getLineColor: colors.towerLine,
                     lineWidthMinPixels: 1,
+                    updateTriggers: {
+                        getFillColor: [
+                            perspective,
+                            isSelected,
+                            apartmentStatuses,
+                        ],
+                    },
                 }),
             );
 
@@ -201,6 +219,9 @@ function DeckGlOverlay({
                         POI_CATEGORY_LINE_COLORS[d.category],
                     getLineColor: [255, 255, 255, 220],
                     lineWidthMinPixels: 2,
+                    updateTriggers: {
+                        getRadius: hoveredPoiId,
+                    },
                 }),
             );
         }
@@ -289,6 +310,7 @@ function DeckGlOverlay({
         hoveredPoiId,
         projectCenter,
         apartmentStatuses,
+        towerSlicesByProject,
     ]);
 
     return null;
