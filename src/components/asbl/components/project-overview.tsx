@@ -76,7 +76,7 @@ function ProjectOverview({ project, projects, onProjectChange }: Props) {
                         <div>
                             <dt className="text-xs text-slate-400">Density</dt>
                             <dd className="font-medium">
-                                {Math.round(summary.unitsPerAcre)} units/ac
+                                {Math.round(summary.unitsPerAcre)}/ac
                             </dd>
                         </div>
                     )}

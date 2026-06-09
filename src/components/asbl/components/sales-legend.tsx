@@ -9,23 +9,11 @@ type Props = {
 };
 
 export default function SalesLegend({ statusCounts }: Props) {
-    const summary = APARTMENT_STATUSES.filter(
-        (status) => statusCounts[status.id] > 0,
-    )
-        .map((status) => `${statusCounts[status.id]} ${status.label}`)
-        .join(" · ");
-
     return (
         <section className="mt-4 flex flex-col gap-2 border-t border-slate-700 pt-4">
             <h3 className="text-xs font-medium uppercase tracking-wide text-slate-400">
                 Unit status
             </h3>
-
-            {summary && (
-                <p className="text-xs leading-relaxed text-slate-300">
-                    {summary}
-                </p>
-            )}
 
             <ul className="flex flex-col gap-2">
                 {APARTMENT_STATUSES.map((status) => (

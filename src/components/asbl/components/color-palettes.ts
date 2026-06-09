@@ -39,7 +39,6 @@ const LABEL_COLORS = {
 const POI_CATEGORY_COLORS: Record<AsblPoiCategoryId, Rgba> = {
     school: [59, 130, 246, 200],
     office: [168, 85, 247, 200],
-    transit: [234, 179, 8, 200],
     hospital: [239, 68, 68, 200],
     mall: [236, 72, 153, 200],
     dining: [249, 115, 22, 200],
@@ -48,7 +47,6 @@ const POI_CATEGORY_COLORS: Record<AsblPoiCategoryId, Rgba> = {
 const POI_CATEGORY_LINE_COLORS: Record<AsblPoiCategoryId, Rgba> = {
     school: [96, 165, 250, 255],
     office: [192, 132, 252, 255],
-    transit: [250, 204, 21, 255],
     hospital: [248, 113, 113, 255],
     mall: [244, 114, 182, 255],
     dining: [251, 146, 60, 255],

@@ -66,11 +66,6 @@ export const ASBL_POI_CATEGORIES: AsblPoiCategory[] = [
         description: "Schools & Colleges",
     },
     {
-        id: "transit",
-        label: "Transit",
-        description: "Metro, Airport, ORR, Bus & Rail",
-    },
-    {
         id: "dining",
         label: "Dining",
         description: "Cafes & Restaurants",

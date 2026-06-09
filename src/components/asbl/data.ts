@@ -607,48 +607,6 @@ export const ASBL_PROJECTS: ASBLProjectRow[] = [
                     placeId: "ChIJJ0Hahm6VyzsRwcTTOwz627Y",
                 },
             ],
-            transit: [
-                {
-                    location: {
-                        lat: 17.4367684,
-                        lng: 78.40071019999999,
-                    },
-                    name: "Madhapur Metro Station",
-                    placeId: "ChIJb4TCzUWRyzsRikD2sGrFnLg",
-                },
-                {
-                    location: {
-                        lat: 17.4416072,
-                        lng: 78.3771677,
-                    },
-                    name: "Raidurgam Metro",
-                    placeId: "ChIJedZKYueTyzsRvVaX8s57g-8",
-                },
-                {
-                    location: {
-                        lat: 17.4079751,
-                        lng: 78.32952720000002,
-                    },
-                    name: "Nehru ORR Exit - 1 (Financial district)",
-                    placeId: "ChIJGwN-WQCVyzsRU6bb00Q2pCo",
-                },
-                {
-                    location: {
-                        lat: 17.3817754,
-                        lng: 78.3499484,
-                    },
-                    name: "ORR Narsingi Exit Toll Gate - 18A",
-                    placeId: "ChIJGb-Scq2VyzsR5b9TAv8zt7I",
-                },
-                {
-                    location: {
-                        lat: 17.4074764,
-                        lng: 78.35397449999999,
-                    },
-                    name: "Nehru ORR EXIT - 19 Towards Nanakramguda",
-                    placeId: "ChIJxz6oZQCVyzsRDh4yP8mPbaI",
-                },
-            ],
         },
         possession: "2029-06-29 18:30:00.000Z",
         area_in_acres: 4.9,
@@ -1290,48 +1248,6 @@ export const ASBL_PROJECTS: ASBLProjectRow[] = [
                     placeId: "ChIJJ0Hahm6VyzsRwcTTOwz627Y",
                 },
             ],
-            transit: [
-                {
-                    location: {
-                        lat: 17.4367684,
-                        lng: 78.40071019999999,
-                    },
-                    name: "Madhapur Metro Station",
-                    placeId: "ChIJb4TCzUWRyzsRikD2sGrFnLg",
-                },
-                {
-                    location: {
-                        lat: 17.4416072,
-                        lng: 78.3771677,
-                    },
-                    name: "Raidurgam Metro",
-                    placeId: "ChIJedZKYueTyzsRvVaX8s57g-8",
-                },
-                {
-                    location: {
-                        lat: 17.4079751,
-                        lng: 78.32952720000002,
-                    },
-                    name: "Nehru ORR Exit - 1 (Financial district)",
-                    placeId: "ChIJGwN-WQCVyzsRU6bb00Q2pCo",
-                },
-                {
-                    location: {
-                        lat: 17.3817754,
-                        lng: 78.3499484,
-                    },
-                    name: "ORR Narsingi Exit Toll Gate - 18A",
-                    placeId: "ChIJGb-Scq2VyzsR5b9TAv8zt7I",
-                },
-                {
-                    location: {
-                        lat: 17.4074764,
-                        lng: 78.35397449999999,
-                    },
-                    name: "Nehru ORR EXIT - 19 Towards Nanakramguda",
-                    placeId: "ChIJxz6oZQCVyzsRDh4yP8mPbaI",
-                },
-            ],
         },
         possession: "2027-05-30 18:30:00.000Z",
         area_in_acres: 7.9,
@@ -1969,48 +1885,6 @@ export const ASBL_PROJECTS: ASBLProjectRow[] = [
                     placeId: "ChIJJ0Hahm6VyzsRwcTTOwz627Y",
                 },
             ],
-            transit: [
-                {
-                    location: {
-                        lat: 17.4367684,
-                        lng: 78.40071019999999,
-                    },
-                    name: "Madhapur Metro Station",
-                    placeId: "ChIJb4TCzUWRyzsRikD2sGrFnLg",
-                },
-                {
-                    location: {
-                        lat: 17.4416072,
-                        lng: 78.3771677,
-                    },
-                    name: "Raidurgam Metro",
-                    placeId: "ChIJedZKYueTyzsRvVaX8s57g-8",
-                },
-                {
-                    location: {
-                        lat: 17.4079751,
-                        lng: 78.32952720000002,
-                    },
-                    name: "Nehru ORR Exit - 1 (Financial district)",
-                    placeId: "ChIJGwN-WQCVyzsRU6bb00Q2pCo",
-                },
-                {
-                    location: {
-                        lat: 17.3817754,
-                        lng: 78.3499484,
-                    },
-                    name: "ORR Narsingi Exit Toll Gate - 18A",
-                    placeId: "ChIJGb-Scq2VyzsR5b9TAv8zt7I",
-                },
-                {
-                    location: {
-                        lat: 17.4074764,
-                        lng: 78.35397449999999,
-                    },
-                    name: "Nehru ORR EXIT - 19 Towards Nanakramguda",
-                    placeId: "ChIJxz6oZQCVyzsRDh4yP8mPbaI",
-                },
-            ],
         },
         possession: "2030-05-30 18:30:00.000Z",
         area_in_acres: 5,
@@ -2610,32 +2484,6 @@ export const ASBL_PROJECTS: ASBLProjectRow[] = [
                     },
                     name: "S M MODEL SCHOOL",
                     placeId: "ChIJv44evweRyzsRbtKxwGiX9xg",
-                },
-            ],
-            transit: [
-                {
-                    location: {
-                        lat: 17.476826,
-                        lng: 78.42211460000001,
-                    },
-                    name: "Dr B.R. Ambedkar Balanagar Metro Station",
-                    placeId: "ChIJDZc-f6WRyzsRywMwFTzr6JY",
-                },
-                {
-                    location: {
-                        lat: 17.4674643,
-                        lng: 78.4444614,
-                    },
-                    name: "Balanagar Bus Stop",
-                    placeId: "ChIJz6Of3PaQyzsRSfuAh22cY4g",
-                },
-                {
-                    location: {
-                        lat: 17.5576448,
-                        lng: 78.3144636,
-                    },
-                    name: "ORR Exit Number 4",
-                    placeId: "ChIJk4HfELSNyzsR4bS7bC69AdI",
                 },
             ],
         },

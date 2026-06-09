@@ -5,7 +5,6 @@ type Coordinate = { lat: number; lng: number };
 type AsblPoiCategoryId =
     | "school"
     | "office"
-    | "transit"
     | "hospital"
     | "mall"
     | "dining";
