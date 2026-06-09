@@ -75,7 +75,6 @@ export const ASBL_POI_CATEGORIES: AsblPoiCategory[] = [
         label: "Malls",
         description: "Shopping Malls",
     },
-
     {
         id: "hospital",
         label: "Hospitals",

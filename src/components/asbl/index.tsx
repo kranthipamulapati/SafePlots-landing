@@ -35,24 +35,23 @@ function AsblShowcase() {
 
     const stopAutoRotate = useCallback(() => setAutoRotate(false), []);
 
+    const selectProject = useCallback((projectId: string) => {
+        const next = ASBL_PROJECTS.find((p) => p.id === projectId);
+        if (next) setProject(next);
+    }, []);
+
     const apartmentStatuses = useMemo(() => {
         if (perspective !== "sales") return undefined;
         return assignRandomApartmentStatuses(project);
     }, [perspective, project]);
 
-    const statusCounts = useMemo(() => {
-        if (!apartmentStatuses) {
-            return {
-                available: 0,
-                booked: 0,
-                sold: 0,
-                hold: 0,
-                not_released: 0,
-            };
-        }
-
-        return getSalesStatusCounts(apartmentStatuses);
-    }, [apartmentStatuses]);
+    const statusCounts = useMemo(
+        () =>
+            apartmentStatuses
+                ? getSalesStatusCounts(apartmentStatuses)
+                : null,
+        [apartmentStatuses],
+    );
 
     const pois = useMemo(() => {
         if (perspective !== "user" || !poiCategory) return [];
@@ -86,13 +85,7 @@ function AsblShowcase() {
                     <ProjectOverview
                         project={project}
                         projects={ASBL_PROJECTS}
-                        onProjectChange={(e) =>
-                            setProject(
-                                ASBL_PROJECTS.find(
-                                    (p) => p.id === e.target.value,
-                                )!,
-                            )
-                        }
+                        onProjectChange={(e) => selectProject(e.target.value)}
                     />
 
                     <PerspectiveSwitch
@@ -105,9 +98,9 @@ function AsblShowcase() {
                             selectedPoiCategory={poiCategory}
                             onPoiCategoryChange={setPoiCategory}
                         />
-                    ) : (
+                    ) : statusCounts ? (
                         <SalesLegend statusCounts={statusCounts} />
-                    )}
+                    ) : null}
 
                     <MapViewControls
                         autoRotate={autoRotate}
@@ -137,11 +130,7 @@ function AsblShowcase() {
                         perspective={perspective}
                         apartmentStatuses={apartmentStatuses}
                         onMapInteract={stopAutoRotate}
-                        onProjectSelect={(projectId) =>
-                            setProject(
-                                ASBL_PROJECTS.find((p) => p.id === projectId)!,
-                            )
-                        }
+                        onProjectSelect={selectProject}
                     />
 
                     <MapCameraRotation

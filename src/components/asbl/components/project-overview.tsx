@@ -1,12 +1,14 @@
 /** @format */
 
+import type { ChangeEvent } from "react";
+
 import { getProjectSummary } from "../app";
 import type { ASBLProjectRow } from "../types";
 
 type Props = {
     project: ASBLProjectRow;
     projects: ASBLProjectRow[];
-    onProjectChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+    onProjectChange: (event: ChangeEvent<HTMLSelectElement>) => void;
 };
 
 function ProjectOverview({ project, projects, onProjectChange }: Props) {
