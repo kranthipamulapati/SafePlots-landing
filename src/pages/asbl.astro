@@ -13,6 +13,13 @@ import appCss from "../components/asbl/app.css?url";
         <link rel="stylesheet" href={appCss} />
     </head>
     <body>
-        <AsblShowcase client:only="react" />
+        <AsblShowcase client:only="react">
+            <div
+                slot="fallback"
+                class="flex min-h-dvh items-center justify-center bg-slate-950 text-sm text-slate-400"
+            >
+                Loading map…
+            </div>
+        </AsblShowcase>
     </body>
 </html>
