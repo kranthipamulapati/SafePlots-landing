@@ -2,15 +2,8 @@
 
 export default function AsblMap() {
     return (
-        <div
-            style={{
-                padding: "2rem",
-                background: "#0f172a",
-                color: "white",
-                minHeight: "100dvh",
-            }}
-        >
-            ASBL showcase — React island works
+        <div className="flex min-h-dvh items-center justify-center bg-slate-950 text-white">
+            ASBL showcase — Tailwind works
         </div>
     );
 }

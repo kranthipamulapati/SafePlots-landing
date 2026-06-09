@@ -1,0 +1,7 @@
+/** @format */
+
+@import "tailwindcss";
+
+/* Only scan ASBL files — don't pull classes from the rest of landing */
+@source "./**/*.{tsx,ts}";
+@source "../../pages/asbl.astro";
