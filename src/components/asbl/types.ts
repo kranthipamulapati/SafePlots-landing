@@ -1,8 +1,8 @@
 /** @format */
 
-export type Coordinate = { lat: number; lng: number };
+type Coordinate = { lat: number; lng: number };
 
-export type AsblPoiCategoryId =
+type AsblPoiCategoryId =
     | "school"
     | "office"
     | "transit"
@@ -10,21 +10,21 @@ export type AsblPoiCategoryId =
     | "mall"
     | "dining";
 
-export type AsblPoiRecord = {
+type AsblPoiRecord = {
     placeId: string;
     name: string;
     location: Coordinate;
 };
 
-export type AsblProjectPoi = Record<AsblPoiCategoryId, AsblPoiRecord[]>;
+type AsblProjectPoi = Record<AsblPoiCategoryId, AsblPoiRecord[]>;
 
-export type ASBLApartmentGrid = {
+type ASBLApartmentGrid = {
     rows: number;
     columns: number;
     cells?: Array<Array<string | number>>;
 };
 
-export type ASBLTowerConfig = {
+type ASBLTowerConfig = {
     label: string;
     floor_count: number;
     floor_height_meters: number;
@@ -32,7 +32,7 @@ export type ASBLTowerConfig = {
     apartment_grid?: ASBLApartmentGrid;
 };
 
-export type ASBLProjectRow = {
+type ASBLProjectRow = {
     id: string;
     name: string;
     possession: string;
@@ -45,17 +45,17 @@ export type ASBLProjectRow = {
     updated: string;
 };
 
-export type AsblPoiCategory = {
+type AsblPoiCategory = {
     id: AsblPoiCategoryId;
     label: string;
     description: string;
 };
 
-export type AsblPoi = AsblPoiRecord & {
+type AsblPoi = AsblPoiRecord & {
     category: AsblPoiCategoryId;
 };
 
-export type TowerData = {
+type TowerData = {
     id: string;
     projectId: string;
     projectName: string;
@@ -67,7 +67,7 @@ export type TowerData = {
     apartmentGrid?: ASBLApartmentGrid;
 };
 
-export type TowerFloorSlice = {
+type TowerFloorSlice = {
     id: string;
     tower: TowerData;
     floorIndex: number;
@@ -78,13 +78,30 @@ export type TowerFloorSlice = {
     elevationMeters: number;
 };
 
-export type TowerLabelData = {
+type TowerLabelData = {
     id: string;
     label: string;
     isSelectedProject: boolean;
     position: [number, number, number];
 };
 
-export type FloorStripeColors = [Rgba, Rgba];
+type FloorStripeColors = [Rgba, Rgba];
 
-export type Rgba = [number, number, number, number];
+type Rgba = [number, number, number, number];
+
+export type {
+    Rgba,
+    AsblPoi,
+    TowerData,
+    Coordinate,
+    AsblPoiRecord,
+    AsblProjectPoi,
+    ASBLProjectRow,
+    TowerLabelData,
+    AsblPoiCategory,
+    TowerFloorSlice,
+    ASBLTowerConfig,
+    ASBLApartmentGrid,
+    AsblPoiCategoryId,
+    FloorStripeColors,
+};

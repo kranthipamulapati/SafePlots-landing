@@ -4,7 +4,7 @@ import { useRef, useEffect } from "react";
 
 import { useMap } from "@vis.gl/react-google-maps";
 
-const DEGREES_PER_SECOND = 2.5;
+import { DEGREES_PER_SECOND } from "../config";
 
 type Props = {
     autoRotate: boolean;

@@ -1,7 +1,7 @@
 /** @format */
 
 import { useMemo, useState, useCallback } from "react";
-import { Map, ControlPosition, APIProvider } from "@vis.gl/react-google-maps";
+import { Map, APIProvider } from "@vis.gl/react-google-maps";
 
 import NearbyPlaces from "./components/nearby-places";
 import DeckGlOverlay from "./components/deck-gl-overlay";
@@ -9,21 +9,18 @@ import ProjectOverview from "./components/project-overview";
 import MapViewControls from "./components/map-view-controls";
 import MapCameraRotation from "./components/map-camera-rotation";
 
+import {
+    googleMapsMapId,
+    googleMapsApiKey,
+    mapTypeControlOptions,
+    fullscreenControlOptions,
+} from "./config";
 import { ASBL_PROJECTS } from "./data";
 import { getPoisForCategory } from "./app";
+import { icrisatGeoCenter } from "./constants";
 import type { AsblPoiCategoryId } from "./types";
-import { googleMapsMapId, googleMapsApiKey, icrisatGeoCenter } from "./config";
 
-const mapTypeControlOptions = {
-    position: ControlPosition.TOP_RIGHT,
-    mapTypeIds: ["hybrid", "roadmap", "satellite"],
-};
-
-const fullscreenControlOptions = {
-    position: ControlPosition.BOTTOM_RIGHT,
-};
-
-export default function AsblShowcase() {
+function AsblShowcase() {
     const [autoRotate, setAutoRotate] = useState(true);
     const [project, setProject] = useState(ASBL_PROJECTS[0]);
     const [poiCategory, setPoiCategory] = useState<AsblPoiCategoryId>();
@@ -64,10 +61,12 @@ export default function AsblShowcase() {
                             )
                         }
                     />
+
                     <NearbyPlaces
                         selectedPoiCategory={poiCategory}
                         onPoiCategoryChange={setPoiCategory}
                     />
+
                     <MapViewControls
                         autoRotate={autoRotate}
                         onAutoRotateChange={setAutoRotate}
@@ -100,6 +99,7 @@ export default function AsblShowcase() {
                             )
                         }
                     />
+
                     <MapCameraRotation
                         autoRotate={autoRotate}
                         onAutoRotateChange={setAutoRotate}
@@ -109,3 +109,5 @@ export default function AsblShowcase() {
         </APIProvider>
     );
 }
+
+export default AsblShowcase;

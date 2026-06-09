@@ -1,7 +1,7 @@
 /** @format */
 
-import { ASBL_POI_CATEGORIES } from "../data";
 import type { AsblPoiCategoryId } from "../types";
+import { ASBL_POI_CATEGORIES } from "../constants";
 
 type Props = {
     selectedPoiCategory: AsblPoiCategoryId | undefined;

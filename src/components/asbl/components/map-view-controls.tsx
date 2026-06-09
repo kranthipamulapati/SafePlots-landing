@@ -5,10 +5,7 @@ type Props = {
     onAutoRotateChange: (autoRotate: boolean) => void;
 };
 
-export default function MapViewControls({
-    autoRotate,
-    onAutoRotateChange,
-}: Props) {
+function MapViewControls({ autoRotate, onAutoRotateChange }: Props) {
     return (
         <section className="mt-4 flex flex-col gap-2 border-t border-slate-700 pt-4">
             <h3 className="text-xs font-medium uppercase tracking-wide text-slate-400">
@@ -35,3 +32,5 @@ export default function MapViewControls({
         </section>
     );
 }
+
+export default MapViewControls;
