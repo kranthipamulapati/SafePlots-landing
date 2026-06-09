@@ -649,6 +649,18 @@ export const ASBL_PROJECTS: ASBLProjectRow[] = [
         updated: "2026-06-08 03:54:54.663Z",
         towers_config: [
             {
+                apartment_grid: {
+                    cells: [
+                        ["3", "3"],
+                        ["3", "3"],
+                        ["3", "3"],
+                        ["3", "3"],
+                        ["3", "3"],
+                        ["3", "3"],
+                    ],
+                    columns: 2,
+                    rows: 6,
+                },
                 floor_count: 39,
                 floor_height_meters: 4,
                 footprint: [
@@ -672,6 +684,15 @@ export const ASBL_PROJECTS: ASBLProjectRow[] = [
                 label: "Tower A",
             },
             {
+                apartment_grid: {
+                    cells: [
+                        ["3", "3"],
+                        ["3", "3"],
+                        ["3", "3"],
+                    ],
+                    columns: 2,
+                    rows: 3,
+                },
                 floor_count: 39,
                 floor_height_meters: 4,
                 footprint: [
@@ -695,6 +716,15 @@ export const ASBL_PROJECTS: ASBLProjectRow[] = [
                 label: "Tower B",
             },
             {
+                apartment_grid: {
+                    cells: [
+                        ["3", "3"],
+                        ["3", "3"],
+                        ["3", "3"],
+                    ],
+                    columns: 2,
+                    rows: 3,
+                },
                 floor_count: 39,
                 floor_height_meters: 4,
                 footprint: [
@@ -718,6 +748,18 @@ export const ASBL_PROJECTS: ASBLProjectRow[] = [
                 label: "Tower C",
             },
             {
+                apartment_grid: {
+                    cells: [
+                        ["3", "3"],
+                        ["3", "3"],
+                        ["3", "3"],
+                        ["3", "3"],
+                        ["3", "3"],
+                        ["3", "3"],
+                    ],
+                    columns: 2,
+                    rows: 6,
+                },
                 floor_count: 39,
                 floor_height_meters: 4,
                 footprint: [
@@ -1959,6 +2001,15 @@ export const ASBL_PROJECTS: ASBLProjectRow[] = [
         updated: "2026-06-08 04:15:04.394Z",
         towers_config: [
             {
+                apartment_grid: {
+                    cells: [
+                        ["3", "3"],
+                        ["3", "3"],
+                        ["3", "3"],
+                    ],
+                    columns: 2,
+                    rows: 3,
+                },
                 floor_count: 20,
                 floor_height_meters: 4,
                 footprint: [
@@ -1982,6 +2033,14 @@ export const ASBL_PROJECTS: ASBLProjectRow[] = [
                 label: "Tower A",
             },
             {
+                apartment_grid: {
+                    cells: [
+                        ["3", "3", "3", "3", "3"],
+                        ["3", "3", "3", "3", "3"],
+                    ],
+                    columns: 5,
+                    rows: 2,
+                },
                 floor_count: 19,
                 floor_height_meters: 4,
                 footprint: [
@@ -2005,6 +2064,14 @@ export const ASBL_PROJECTS: ASBLProjectRow[] = [
                 label: "Tower B",
             },
             {
+                apartment_grid: {
+                    cells: [
+                        ["3", "3", "3", "3", "3"],
+                        ["3", "3", "3", "3", "3"],
+                    ],
+                    columns: 5,
+                    rows: 2,
+                },
                 floor_count: 20,
                 floor_height_meters: 4,
                 footprint: [
@@ -2028,6 +2095,18 @@ export const ASBL_PROJECTS: ASBLProjectRow[] = [
                 label: "Tower C",
             },
             {
+                apartment_grid: {
+                    cells: [
+                        ["3", "3"],
+                        ["3", "3"],
+                        ["3", "3"],
+                        ["3", "3"],
+                        ["3", "3"],
+                        ["3", "3"],
+                    ],
+                    columns: 2,
+                    rows: 6,
+                },
                 floor_count: 19,
                 floor_height_meters: 4,
                 footprint: [
