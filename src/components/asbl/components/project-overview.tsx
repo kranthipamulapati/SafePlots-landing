@@ -32,11 +32,7 @@ function ProjectOverview({ project, projects, onProjectChange }: Props) {
                 </select>
             </label>
 
-            <section className="flex flex-col gap-2 border-t border-slate-700 pt-4">
-                <h3 className="text-xs font-medium uppercase tracking-wide text-slate-400">
-                    Summary
-                </h3>
-
+            <section className="flex flex-col">
                 <dl className="grid grid-cols-3 gap-2">
                     <div>
                         <dt className="text-xs text-slate-400">Towers</dt>
