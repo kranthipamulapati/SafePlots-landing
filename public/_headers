@@ -5,7 +5,7 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Strict-Transport-Security: max-age=31536000
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://maps.googleapis.com https://maps.gstatic.com https://static.cloudflareinsights.com https://us-assets.i.posthog.com https://us.i.posthog.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://placehold.co https://*.google.com https://*.gstatic.com https://*.googleapis.com; connect-src 'self' https://maps.googleapis.com https://*.googleapis.com https://*.gstatic.com https://database.safeplots.com https://us.i.posthog.com https://us-assets.i.posthog.com; worker-src 'self' blob:; frame-src https://*.google.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self';
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com https://static.cloudflareinsights.com https://us-assets.i.posthog.com https://us.i.posthog.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://placehold.co https://*.google.com https://*.gstatic.com https://*.googleapis.com; connect-src 'self' https://maps.googleapis.com https://*.googleapis.com https://*.gstatic.com https://database.safeplots.com https://us.i.posthog.com https://us-assets.i.posthog.com; worker-src 'self' blob:; frame-src https://*.google.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self';
 
 # HTML files - always revalidate
 /*.html
