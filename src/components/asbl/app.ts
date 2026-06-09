@@ -1,18 +1,15 @@
 /** @format */
 
-import type { ASBLProjectRow, ASBLApartmentGrid } from "./types.ts";
-
-type TowerData = {
-    id: string;
-    projectId: string;
-    projectName: string;
-    label: string;
-    footprint: [number, number][];
-    heightMeters: number;
-    floorCount: number;
-    floorHeightMeters: number;
-    apartmentGrid?: ASBLApartmentGrid;
-};
+import type {
+    AsblPoi,
+    TowerData,
+    Coordinate,
+    ASBLProjectRow,
+    TowerLabelData,
+    TowerFloorSlice,
+    ASBLApartmentGrid,
+    AsblPoiCategoryId,
+} from "./types.ts";
 
 function getTowerData(project: ASBLProjectRow): TowerData[] {
     return project.towers_config.map((tower, index) => ({
@@ -27,17 +24,6 @@ function getTowerData(project: ASBLProjectRow): TowerData[] {
         apartmentGrid: tower.apartment_grid,
     }));
 }
-
-type TowerFloorSlice = {
-    id: string;
-    tower: TowerData;
-    floorIndex: number;
-    rowIndex?: number;
-    colIndex?: number;
-    cellLabel?: string;
-    footprint: [number, number, number][];
-    elevationMeters: number;
-};
 
 function bilinearPoint(
     p00: [number, number],
@@ -193,13 +179,6 @@ function getTowerFloorSlices(project: ASBLProjectRow): TowerFloorSlice[] {
     return slices;
 }
 
-type TowerLabelData = {
-    id: string;
-    label: string;
-    isSelectedProject: boolean;
-    position: [number, number, number];
-};
-
 function getTowerLabelData(
     project: ASBLProjectRow,
     isSelectedProject: boolean,
@@ -251,5 +230,35 @@ function getProjectSummary(project: ASBLProjectRow) {
     };
 }
 
-export type { TowerFloorSlice };
-export { getTowerLabelData, getProjectSummary, getTowerFloorSlices };
+function getProjectCenter(project: ASBLProjectRow): Coordinate {
+    const { coordinates } = project;
+
+    return {
+        lat:
+            coordinates.reduce((sum, coordinate) => sum + coordinate.lat, 0) /
+            coordinates.length,
+        lng:
+            coordinates.reduce((sum, coordinate) => sum + coordinate.lng, 0) /
+            coordinates.length,
+    };
+}
+
+function getPoisForCategory(
+    project: ASBLProjectRow,
+    category: AsblPoiCategoryId,
+): AsblPoi[] {
+    const records = project.POI?.[category] ?? [];
+
+    return records.map((record) => ({
+        ...record,
+        category,
+    }));
+}
+
+export {
+    getProjectCenter,
+    getTowerLabelData,
+    getProjectSummary,
+    getPoisForCategory,
+    getTowerFloorSlices,
+};

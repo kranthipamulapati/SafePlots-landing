@@ -51,11 +51,36 @@ export type AsblPoiCategory = {
     description: string;
 };
 
-export type LatLng = {
-    lat: number;
-    lng: number;
-};
-
 export type AsblPoi = AsblPoiRecord & {
     category: AsblPoiCategoryId;
+};
+
+export type TowerData = {
+    id: string;
+    projectId: string;
+    projectName: string;
+    label: string;
+    footprint: [number, number][];
+    heightMeters: number;
+    floorCount: number;
+    floorHeightMeters: number;
+    apartmentGrid?: ASBLApartmentGrid;
+};
+
+export type TowerFloorSlice = {
+    id: string;
+    tower: TowerData;
+    floorIndex: number;
+    rowIndex?: number;
+    colIndex?: number;
+    cellLabel?: string;
+    footprint: [number, number, number][];
+    elevationMeters: number;
+};
+
+export type TowerLabelData = {
+    id: string;
+    label: string;
+    isSelectedProject: boolean;
+    position: [number, number, number];
 };

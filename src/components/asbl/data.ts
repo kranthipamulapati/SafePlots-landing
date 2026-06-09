@@ -1,6 +1,40 @@
 /** @format */
 
-import type { ASBLProjectRow } from "./types";
+import type { ASBLProjectRow, AsblPoiCategory } from "./types";
+
+export const ASBL_POI_CATEGORIES: AsblPoiCategory[] = [
+    {
+        id: "office",
+        label: "Offices",
+        description: "Offices & IT parks",
+    },
+    {
+        id: "school",
+        label: "Schools",
+        description: "Schools & Colleges",
+    },
+    {
+        id: "transit",
+        label: "Transit",
+        description: "Metro, Airport, ORR, Bus & Rail",
+    },
+    {
+        id: "dining",
+        label: "Dining",
+        description: "Cafes & Restaurants",
+    },
+    {
+        id: "mall",
+        label: "Malls",
+        description: "Shopping Malls",
+    },
+
+    {
+        id: "hospital",
+        label: "Hospitals",
+        description: "Hospitals & Major Clinics",
+    },
+];
 
 export const ASBL_PROJECTS: ASBLProjectRow[] = [
     {

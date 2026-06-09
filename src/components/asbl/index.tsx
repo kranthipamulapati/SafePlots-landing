@@ -1,7 +1,7 @@
 /** @format */
 
 import { ASBL_PROJECTS } from "./data";
-import { getProjectSummary } from "./asbl";
+import { getProjectSummary } from "./app";
 
 export default function AsblMap() {
     const project = ASBL_PROJECTS[0];
