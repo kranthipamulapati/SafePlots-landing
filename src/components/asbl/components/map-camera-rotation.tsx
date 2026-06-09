@@ -6,12 +6,19 @@ import { useMap } from "@vis.gl/react-google-maps";
 
 import { DEGREES_PER_SECOND } from "../constants";
 
+import type { Coordinate } from "../types";
+
 type Props = {
     autoRotate: boolean;
+    rotationCenter: Coordinate;
     onAutoRotateChange: (autoRotate: boolean) => void;
 };
 
-function MapCameraRotation({ autoRotate, onAutoRotateChange }: Props) {
+function MapCameraRotation({
+    autoRotate,
+    rotationCenter,
+    onAutoRotateChange,
+}: Props) {
     const map = useMap();
     const isAutoRotationUpdateRef = useRef(false);
     const onAutoRotateChangeRef = useRef(onAutoRotateChange);
@@ -61,6 +68,7 @@ function MapCameraRotation({ autoRotate, onAutoRotateChange }: Props) {
             isAutoRotationUpdateRef.current = true;
             const heading = map.getHeading() ?? 0;
             map.moveCamera({
+                center: rotationCenter,
                 heading: (heading + DEGREES_PER_SECOND * deltaSeconds) % 360,
             });
             requestAnimationFrame(() => {
@@ -72,7 +80,7 @@ function MapCameraRotation({ autoRotate, onAutoRotateChange }: Props) {
 
         frameId = requestAnimationFrame(tick);
         return () => cancelAnimationFrame(frameId);
-    }, [map, autoRotate]);
+    }, [map, autoRotate, rotationCenter]);
 
     return null;
 }

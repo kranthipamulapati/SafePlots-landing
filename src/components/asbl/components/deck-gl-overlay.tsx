@@ -82,11 +82,8 @@ function DeckGlOverlay({
     useEffect(() => {
         if (!map || !project) return;
 
-        map.panTo({
-            lat: project.coordinates[0].lat,
-            lng: project.coordinates[0].lng,
-        });
-    }, [map, project]);
+        map.panTo(projectCenter);
+    }, [map, project, projectCenter]);
 
     useEffect(() => {
         if (!map || !overlay) return;
