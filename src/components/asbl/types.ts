@@ -44,3 +44,18 @@ export type ASBLProjectRow = {
     created: string;
     updated: string;
 };
+
+export type AsblPoiCategory = {
+    id: AsblPoiCategoryId;
+    label: string;
+    description: string;
+};
+
+export type LatLng = {
+    lat: number;
+    lng: number;
+};
+
+export type AsblPoi = AsblPoiRecord & {
+    category: AsblPoiCategoryId;
+};
