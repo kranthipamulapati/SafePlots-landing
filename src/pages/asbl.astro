@@ -1,0 +1,18 @@
+---
+import AsblShowcase from "../components/asbl";
+import appCss from "../components/asbl/app.css?url";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ASBL Showcase | SafePlots</title>
+        <meta name="robots" content="noindex" />
+        <link rel="stylesheet" href={appCss} />
+    </head>
+    <body>
+        <AsblShowcase client:only="react" />
+    </body>
+</html>

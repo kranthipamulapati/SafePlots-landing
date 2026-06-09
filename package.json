@@ -16,11 +16,21 @@
         "purgecss": "npx purgecss --css src/styles/app.css --content \"src/**/*.astro\" \"src/scripts/**/*.js\" --safelist active dropdown-open fade-out --output ._purge_tmp && node -e \"const fs=require('node:fs');fs.copyFileSync('._purge_tmp/app.css','src/styles/app.css');fs.rmSync('._purge_tmp',{recursive:true,force:true});\""
     },
     "dependencies": {
-        "astro": "6.4.2"
+        "@astrojs/react": "5.0.7",
+        "@tailwindcss/vite": "4.3.0",
+        "@vis.gl/react-google-maps": "1.8.3",
+        "astro": "6.4.2",
+        "deck.gl": "9.3.3",
+        "react": "19.2.7",
+        "react-dom": "19.2.7",
+        "tailwindcss": "4.3.0"
     },
     "devDependencies": {
         "@playwright/test": "1.59.1",
+        "@types/google.maps": "3.65.1",
         "@types/node": "25.6.0",
+        "@types/react": "19.2.17",
+        "@types/react-dom": "19.2.3",
         "wrangler": "4.85.0"
     }
 }
