@@ -2,8 +2,6 @@
 
 import { ControlPosition } from "@vis.gl/react-google-maps";
 
-const DEGREES_PER_SECOND = 2.5;
-
 const fullscreenControlOptions = {
     position: ControlPosition.BOTTOM_RIGHT,
 };
@@ -19,7 +17,6 @@ const googleMapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 export {
     googleMapsMapId,
     googleMapsApiKey,
-    DEGREES_PER_SECOND,
     mapTypeControlOptions,
     fullscreenControlOptions,
 };

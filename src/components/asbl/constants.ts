@@ -7,6 +7,8 @@ export const icrisatGeoCenter = {
     lng: 78.275954,
 };
 
+export const DEGREES_PER_SECOND = 2.5;
+
 export const ASBL_POI_CATEGORIES: AsblPoiCategory[] = [
     {
         id: "office",
