@@ -2,12 +2,7 @@
 
 type Coordinate = { lat: number; lng: number };
 
-type AsblPoiCategoryId =
-    | "school"
-    | "office"
-    | "hospital"
-    | "mall"
-    | "dining";
+type AsblPoiCategoryId = "school" | "office" | "hospital" | "mall" | "dining";
 
 type AsblPoiRecord = {
     placeId: string;
@@ -90,6 +85,8 @@ type Rgba = [number, number, number, number];
 
 type Perspective = "user" | "sales";
 
+type MapThemeId = "light" | "dark";
+
 type ApartmentStatusId =
     | "available"
     | "booked"
@@ -109,6 +106,7 @@ export type {
     AsblPoi,
     TowerData,
     Coordinate,
+    MapThemeId,
     Perspective,
     AsblPoiRecord,
     AsblProjectPoi,

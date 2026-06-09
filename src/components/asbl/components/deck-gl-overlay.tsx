@@ -68,12 +68,13 @@ function DeckGlOverlay({
 
     const [hoveredPoiId, setHoveredPoiId] = useState<string | null>(null);
     const projectCenter = useMemo(() => getProjectCenter(project), [project]);
-    const overlay = useMemo(
-        () => new GoogleMapsOverlay({ interleaved: true }),
-        [],
-    );
+    const overlay = useMemo(() => {
+        if (!map) return null;
+        return new GoogleMapsOverlay({ interleaved: true });
+    }, [map]);
 
     useEffect(() => {
+        if (!overlay || !map) return;
         overlay.setMap(map);
         return () => overlay.setMap(null);
     }, [map, overlay]);
@@ -88,6 +89,8 @@ function DeckGlOverlay({
     }, [map, project]);
 
     useEffect(() => {
+        if (!map || !overlay) return;
+
         const layers = [];
         const labelData = [];
         const { dimmed, selected } = BUILDING_COLORS;
@@ -217,17 +220,13 @@ function DeckGlOverlay({
             }
 
             if ("tower" in object && "floorIndex" in object) {
-                const { tower, floorIndex, rowIndex, colIndex } = object;
+                const { tower, floorIndex } = object;
                 const floorLabel =
                     floorIndex === 0 ? "Ground" : `Floor ${floorIndex}`;
                 const lines = [
                     `${tower.projectName} · ${tower.label}`,
                     floorLabel,
                 ];
-
-                if (rowIndex !== undefined && colIndex !== undefined) {
-                    lines.push(`Row ${rowIndex + 1} · Col ${colIndex + 1}`);
-                }
 
                 lines.push(`G+${tower.floorCount} · ${tower.heightMeters}m`);
 
@@ -284,6 +283,7 @@ function DeckGlOverlay({
             },
         });
     }, [
+        map,
         pois,
         overlay,
         project,
