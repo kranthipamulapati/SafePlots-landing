@@ -35,7 +35,7 @@ function ProjectOverview({ project, projects, onProjectChange }: Props) {
             </label>
 
             <section className="flex flex-col">
-                <dl className="grid grid-cols-3 gap-2">
+                <dl className="grid grid-cols-2 gap-2 md:grid-cols-3">
                     <div>
                         <dt className="text-xs text-slate-400">Towers</dt>
                         <dd className="font-medium">{summary.towerCount}</dd>

@@ -1,5 +1,7 @@
 /** @format */
 
+import CollapsibleSection from "./collapsible-section";
+
 import { APARTMENT_STATUSES } from "../constants";
 
 import type { ApartmentStatusId } from "../types";
@@ -10,11 +12,7 @@ type Props = {
 
 export default function SalesLegend({ statusCounts }: Props) {
     return (
-        <section className="mt-4 flex flex-col gap-2 border-t border-slate-700 pt-4">
-            <h3 className="text-xs font-medium uppercase tracking-wide text-slate-400">
-                Unit status
-            </h3>
-
+        <CollapsibleSection title="Unit status">
             <ul className="flex flex-col gap-2">
                 {APARTMENT_STATUSES.map((status) => (
                     <li
@@ -31,7 +29,7 @@ export default function SalesLegend({ statusCounts }: Props) {
 
                         <span className="flex min-w-0 flex-1 flex-col gap-0.5">
                             <span className="font-medium">{status.label}</span>
-                            <span className="text-xs text-slate-400">
+                            <span className="hidden text-xs text-slate-400 sm:block">
                                 {status.description}
                             </span>
                         </span>
@@ -42,6 +40,6 @@ export default function SalesLegend({ statusCounts }: Props) {
                     </li>
                 ))}
             </ul>
-        </section>
+        </CollapsibleSection>
     );
 }

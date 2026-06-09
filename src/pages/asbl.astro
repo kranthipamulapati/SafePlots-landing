@@ -7,7 +7,10 @@ import AsblShowcase from "../components/asbl/index.tsx";
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
         <title>ASBL Showcase | SafePlots</title>
         <meta name="robots" content="noindex" />
         <link rel="stylesheet" href={appCss} />
@@ -16,7 +19,7 @@ import AsblShowcase from "../components/asbl/index.tsx";
         <AsblShowcase client:only="react">
             <div
                 slot="fallback"
-                class="flex min-h-dvh items-center justify-center bg-slate-950 text-sm text-slate-400"
+                class="asbl-safe-root flex items-center justify-center bg-slate-950 text-sm text-slate-400"
             >
                 Loading map…
             </div>

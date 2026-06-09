@@ -1,5 +1,7 @@
 /** @format */
 
+import CollapsibleSection from "./collapsible-section";
+
 import type { AsblPoiCategoryId } from "../types";
 import { ASBL_POI_CATEGORIES } from "../constants";
 
@@ -10,11 +12,7 @@ type Props = {
 
 function NearbyPlaces({ selectedPoiCategory, onPoiCategoryChange }: Props) {
     return (
-        <section className="mt-4 flex flex-col gap-2 border-t border-slate-700 pt-4">
-            <h3 className="text-xs font-medium uppercase tracking-wide text-slate-400">
-                Nearby places
-            </h3>
-
+        <CollapsibleSection title="Nearby places">
             <div className="flex flex-col gap-2">
                 {ASBL_POI_CATEGORIES.map((category) => {
                     const isSelected = selectedPoiCategory === category.id;
@@ -41,7 +39,7 @@ function NearbyPlaces({ selectedPoiCategory, onPoiCategoryChange }: Props) {
                                 </span>
 
                                 <span
-                                    className={`text-xs ${isSelected ? "text-[#6b5340]" : "text-slate-400"}`}
+                                    className={`hidden text-xs sm:block ${isSelected ? "text-[#6b5340]" : "text-slate-400"}`}
                                 >
                                     {category.description}
                                 </span>
@@ -59,7 +57,7 @@ function NearbyPlaces({ selectedPoiCategory, onPoiCategoryChange }: Props) {
                     );
                 })}
             </div>
-        </section>
+        </CollapsibleSection>
     );
 }
 
